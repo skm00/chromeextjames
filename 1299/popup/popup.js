@@ -252,49 +252,66 @@ if (selectAreagif) {
     setMode(buttonId);
     sendButtonClickData(buttonId);
 
-  const timestamp = new Date().toISOString();
-  chrome.storage.local.get({ buttonClickHistory: [] }, (result) => {
-    const clickHistory = result.buttonClickHistory;
-    clickHistory.push({ buttonId, timestamp });
-    chrome.storage.local.set({ buttonClickHistory: clickHistory });
-  });
+    const timestamp = new Date().toISOString();
+    chrome.storage.local.get({ buttonClickHistory: [] }, (result) => {
+      const clickHistory = result.buttonClickHistory;
+      clickHistory.push({ buttonId, timestamp });
+      chrome.storage.local.set({ buttonClickHistory: clickHistory });
+    });
 
-    if (!chrome?.tabs?.query) {
+    const canQueryTabs = Boolean(chrome?.tabs?.query);
+    if (!canQueryTabs) {
       showWarning("GIF recording unavailable: tab query access is restricted in this context.");
       return;
     }
 
-    const tabs = await chrome.tabs.query({});
-    const hasYouTubeTab = tabs.some(tab => {
-      if (!tab.url) return false;
-      try {
-        const url = new URL(tab.url);
-        return url.hostname === "www.youtube.com" ||
-               url.hostname === "youtube.com" ||
-               url.hostname === "youtu.be";
-      } catch {
-        return false;
-      }
-    });
+    try {
+      const tabs = await chrome.tabs.query({});
+      const hasYouTubeTab = tabs.some((tab) => {
+        if (!tab.url) return false;
+        try {
+          const url = new URL(tab.url);
+          return (
+            url.hostname === "www.youtube.com" ||
+            url.hostname === "youtube.com" ||
+            url.hostname === "youtu.be"
+          );
+        } catch {
+          return false;
+        }
+      });
 
-    if (hasYouTubeTab) {
+      if (hasYouTubeTab) {
+        selectAreagif.textContent = defaultGifLabel;
+        selectAreagif.style.backgroundColor = "#ffecb8";
+        selectAreagif.style.color = "#000";
+        showWarning("GIF recording is blocked while YouTube is open. Please close all YouTube tabs.");
+        return;
+      }
+
+      selectAreagif.textContent = "Starting GIF Recorder...";
+      selectAreagif.style.backgroundColor = "#4CAF50";
+      selectAreagif.style.color = "white";
+
+      const activeTabs = await chrome.tabs.query({ active: true, currentWindow: true });
+      if (!activeTabs || activeTabs.length === 0) {
+        selectAreagif.textContent = defaultGifLabel;
+        showWarning("No active tab found to start GIF recording.");
+        return;
+      }
+
+      await chrome.scripting.executeScript({
+        target: { tabId: activeTabs[0].id },
+        files: ["./js/capture-areagif.js"],
+      });
+      console.log("Injected capture-areagif.js into tab:", activeTabs[0].id); // Debug log
+    } catch (error) {
+      console.error("Failed to start GIF recording:", error);
       selectAreagif.textContent = defaultGifLabel;
       selectAreagif.style.backgroundColor = "#ffecb8";
       selectAreagif.style.color = "#000";
-      showWarning("GIF recording is blocked while YouTube is open. Please close all YouTube tabs.");
-      return;
+      showWarning("Failed to start GIF recording. Please try again.");
     }
-
-    selectAreagif.textContent = "Starting GIF Recorder...";
-    selectAreagif.style.backgroundColor = "#4CAF50";
-    selectAreagif.style.color = "white";
-
-    const [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
-    await chrome.scripting.executeScript({
-      target: { tabId: tab.id },
-      files: ["./js/capture-areagif.js"]
-    });
-    console.log("Injected capture-areagif.js into tab:", tab.id);  // Debug log
   });
 }
 
