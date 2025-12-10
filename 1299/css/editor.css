@@ -1,0 +1,118 @@
+.tui-image-editor-header-logo,
+.tui-image-editor-header-buttons {
+    display: none !important;
+}
+ 
+ /* Menu container */
+#menu {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    margin-top: -8px;
+}
+
+/* Buttons */
+#menu :is(button, a) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 50%;
+    text-decoration: none;
+    background-color: #f0f0f0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+#menu :is(button:hover, a:hover) {
+    background-color: #e0e0e0;
+    transform: scale(1.1);
+}
+
+/* Icons */
+#menu i {
+    font-size: 20px;
+    color: #333;
+}
+
+/* Tooltip on hover */
+#menu :is(button[title], a[title]) {
+    position: relative;
+}
+
+#menu :is(button[title]:hover::after, a[title]:hover::after) {
+    content: attr(title);
+    position: absolute;
+    bottom: -30px;
+    background-color: #333;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    white-space: nowrap;
+}
+
+.blockElem {
+    display: block !important;
+}
+
+button#chatgptButton {
+    position: relative;
+    z-index: 2;
+}
+
+button#chatgptButton ul {
+    list-style: none;
+    width: max-content;
+    display: none;
+    position: absolute;
+    content: "";
+    top: calc(100% + 25px);
+    right: 50%;
+    translate: 50%;
+    padding: 0;
+    cursor: default;
+    background-color: #f0f0f0;
+    border-radius: 1rem;
+    overflow: hidden;
+    transition: all 0.2s ease-in-out;
+    z-index: 2;
+}
+
+button#chatgptButton:hover ul {
+    transform: scale(0.909090909);
+    top: calc(100% + 2.5px);
+}
+
+button#chatgptButton ul li {
+    padding: 0.5em;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+
+button#chatgptButton ul li + li {
+    border-top: 1px solid rgba(107, 101, 101, 0.671);
+}
+
+button#chatgptButton ul li:hover {
+    background-color: #e0e0e0;
+}
+
+#annotationDashboard {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    width: 18%;
+    height: 100%;
+    max-height: 95dvh;
+    overflow-y: auto;
+    padding: 10px;
+    background: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}

@@ -1,0 +1,44 @@
+{
+   "action": {
+      "default_icon": {
+         "19": "img/icon19.png",
+         "38": "img/icon38.png"
+      },
+      "default_popup": "popup/popup.html",
+      "default_title": "__MSG_screenshotplugin_default_title__"
+   },
+   "background": {
+      "service_worker": "./worker_wrapper.js"
+   },
+   "content_scripts": [ {
+      "html": [ "popup/popup.html" ],
+      "js": [ "/libs/jquery-3.2.1.min.js", "js/event.js", "js/content_script.js", "js/popup.js", "js/content_scripts.js", "popup/popup.js", "/recording/js/BackgroundService.js", "/recording/js/PopupPage.js", "/libs/html2canvas.min.js", "/libs/fabric.min.js", "content/content.js" ],
+      "matches": [ "http://*/*", "https://*/*", "\u003Call_urls>", "https://chatgpt.com/*", "https://www.youtube.com/*", "https://youtube.com/*", "https://www.gstatic.com/*", "https://scrsht.com/*", "https://www.google.com/*", "https://google.com/*", "https://whatsapp.com/*" ],
+      "run_at": "document_end"
+   } ],
+   "content_security_policy": {
+      "extension_pages": "script-src 'self'; object-src 'self'; "
+   },
+   "default_locale": "en",
+   "description": "__MSG_screenshotplugin_short_description__",
+   "homepage_url": "https://scrsht.com",
+   "host_permissions": [ "http://*/*", "https://*/*", "\u003Call_urls>", "https://chatgpt.com/*", "https://www.youtube.com/*", "https://youtube.com/*", "https://www.gstatic.com/*", "https://scrsht.com/*", "https://www.google.com/*", "https://google.com/*", "https://whatsapp.com/*", "https://mail.google.com/*", "https://web.whatsapp.com/*", "https://www.youtube.com/*", "https://way2enjoy.com/*" ],
+   "icons": {
+      "128": "img/icon128.png",
+      "19": "img/icon19.png",
+      "24": "img/icon24.png",
+      "256": "img/icon256.png",
+      "32": "img/icon32.png",
+      "38": "img/icon38.png"
+   },
+    "manifest_version": 3,
+   "name": "__MSG_screenshotplugin_name__",
+   "permissions": [ "activeTab", "storage", "unlimitedStorage", "notifications", "clipboardWrite", "downloads", "cookies", "contextMenus", "scripting", "windows" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.2.99",
+   "web_accessible_resources": [ {
+      "matches": [ "\u003Call_urls>" ],
+      "resources": [ "toolbar_res/*", "libs/*", "js/*", "html/*", "img/*", "_locales/*", "css/*", "libs/jquery-3.2.1.min.js", "js/event.js", "js/content_script.js", "js/content.js", "js/popup.js", "js/add.js", "js/content_scripts.js", "popup/popup.js", "/recording/js/BackgroundService.js", "/recording/js/PopupPage.js", "/libs/jspdf.umd.min.js", "libs/html2canvas.min.js", "libs/html2pdf.bundle.min.js", "popup/popup.html", "content/content.js","js/gif.js", "js/gif.worker.js","js/capture-areagif.js" ],
+      "use_dynamic_url": true
+   } ]
+}

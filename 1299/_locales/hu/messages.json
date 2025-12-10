@@ -1,0 +1,455 @@
+{
+   "area_copy": {
+      "message": "Másolás"
+   },
+   "edit_curve1": {
+      "message": "Curved arrow, Right click for undo"
+   },
+   "editor_arrow10": {
+      "message": "10"
+   },
+   "editor_arrow11": {
+      "message": "11"
+   },
+   "editor_arrow12": {
+      "message": "12"
+   },
+   "editor_arrow13": {
+      "message": "13"
+   },
+   "editor_arrow14": {
+      "message": "14"
+   },
+   "editor_arrow15": {
+      "message": "15"
+   },
+   "editor_arrow16": {
+      "message": "16"
+   },
+   "editor_arrow17": {
+      "message": "17"
+   },
+   "editor_arrow18": {
+      "message": "18"
+   },
+   "editor_arrow19": {
+      "message": "19"
+   },
+   "editor_arrow2": {
+      "message": "2"
+   },
+   "editor_arrow20": {
+      "message": "20"
+   },
+   "editor_arrow21": {
+      "message": "21"
+   },
+   "editor_arrow3": {
+      "message": "3"
+   },
+   "editor_arrow4": {
+      "message": "4"
+   },
+   "editor_arrow5": {
+      "message": "5"
+   },
+   "editor_arrow6": {
+      "message": "6"
+   },
+   "editor_arrow7": {
+      "message": "7"
+   },
+   "editor_arrow8": {
+      "message": "8"
+   },
+   "editor_arrow9": {
+      "message": "9"
+   },
+   "editor_clipboard": {
+      "message": "MÁSOLÁS"
+   },
+   "editor_content": {
+      "message": "Szöveg"
+   },
+   "editor_copy": {
+      "message": "MÁSOLÁS IDE"
+   },
+   "editor_copy_clipboard": {
+      "message": "Sikeres"
+   },
+   "editor_copy_tip": {
+      "message": "Sikeresen másolva"
+   },
+   "popup_recording_tab": {
+      "message": "Ez a lap"
+   },
+   "popup_screenshot": {
+      "message": "Képernyőkép"
+   },
+   "popup_screenshot_editcontent": {
+      "message": "Weboldal szövegtartalmának szerkesztése"
+   },
+   "popup_screenshot_select": {
+      "message": "Kiválasztott terület"
+   },
+   "popup_screenshot_uploadfiles": {
+      "message": "Helyi és vágólap képek megjegyzése"
+   },
+   "popup_screenshot_visible": {
+      "message": "Látható rész"
+   },
+   "popup_screenshot_whole": {
+      "message": "Teljes oldal"
+   },
+   "popup_uploadd": {
+      "message": "Feltöltés"
+   },
+   "preview_video_download": {
+      "message": "Letöltés"
+   },
+   "record_cancel": {
+      "message": "Mégse"
+   },
+   "record_save": {
+      "message": "Mentés"
+   },
+   "screenshot_app_about": {
+      "message": "Névjegy"
+   },
+   "screenshot_app_copyright": {
+      "message": "%company% Minden jog fenntartva."
+   },
+   "screenshot_app_exit": {
+      "message": "Kilépés"
+   },
+   "screenshot_app_help": {
+      "message": "Segítség"
+   },
+   "screenshot_app_hotkey_failtoregister1": {
+      "message": "Nem sikerült regisztrálni a gyorsbillentyűt:"
+   },
+   "screenshot_app_hotkey_failtoregister2": {
+      "message": "Mintha egy másik alkalmazás használná már. Kattints erre az üzenetre a beállítások eléréséhez."
+   },
+   "screenshot_app_language_code": {
+      "message": "HU"
+   },
+   "screenshot_app_language_name": {
+      "message": "Magyar"
+   },
+   "screenshot_app_language_name_eng": {
+      "message": "Hungarian"
+   },
+   "screenshot_app_menu_gallery": {
+      "message": "Galériám (%username%)"
+   },
+   "screenshot_app_menu_sign_in": {
+      "message": "Bejelentkezés"
+   },
+   "screenshot_app_menu_sign_out": {
+      "message": "Kijelentkezés"
+   },
+   "screenshot_app_options": {
+      "message": "Beállítások"
+   },
+   "screenshot_app_options_autoclose": {
+      "message": "Feltöltőablak automatikus bezárása"
+   },
+   "screenshot_app_options_autocopy": {
+      "message": "Automatikusan másolja ki a linket feltöltés után"
+   },
+   "screenshot_app_options_capturecursor": {
+      "message": "Kurzor rögzítése a képernyőmentésen"
+   },
+   "screenshot_app_options_configure_system_proxy": {
+      "message": "Beállítás"
+   },
+   "screenshot_app_options_current_system_proxy": {
+      "message": "Rendszer proxy"
+   },
+   "screenshot_app_options_error_hotkeyequal": {
+      "message": "Különböző funkciókra nem állíthatod be ugyanazokat a gyorsbillentyűket. Kérlek változtasd meg az egyik gyorsbillentyűt."
+   },
+   "screenshot_app_options_error_hotkeyinvalid": {
+      "message": "A gyorsbillentyűid közül az egyik érvénytelen. Ha le szeretnéd tiltani a gyorsbillentyűt, kérlek vedd ki a pipát a megfelelő jelölőnégyzetből."
+   },
+   "screenshot_app_options_formats": {
+      "message": "Formátumok"
+   },
+   "screenshot_app_options_general": {
+      "message": "Általános"
+   },
+   "screenshot_app_options_hotkeygeneral": {
+      "message": "Általános gyorsbillentyű"
+   },
+   "screenshot_app_options_hotkeys": {
+      "message": "Gyorsbillentyűk"
+   },
+   "screenshot_app_options_hotkeysavefullscreen": {
+      "message": "Azonnali teljesképernyős mentés"
+   },
+   "screenshot_app_options_hotkeyuploadfullscreen": {
+      "message": "Azonnali teljesképernyős feltöltés"
+   },
+   "screenshot_app_options_httpsproxy": {
+      "message": "HTTP(S) proxy"
+   },
+   "screenshot_app_options_jpegquality": {
+      "message": "JPEG minőség"
+   },
+   "screenshot_app_options_keepselection": {
+      "message": "Kijelölt terület pozíciójának megtartása"
+   },
+   "screenshot_app_options_language": {
+      "message": "Nyelv"
+   },
+   "screenshot_app_options_manualproxy": {
+      "message": "Kézi proxy beállítás"
+   },
+   "screenshot_app_options_noproxy": {
+      "message": "Nincs proxy"
+   },
+   "screenshot_app_options_optimize_always": {
+      "message": "Mindig"
+   },
+   "screenshot_app_options_optimize_never": {
+      "message": "Soha"
+   },
+   "screenshot_app_options_optimize_screenshots": {
+      "message": "Képernyőmentés optimalizálása (OptiPNG)"
+   },
+   "screenshot_app_options_optimize_uploadonly": {
+      "message": "Csak feltöltéskor"
+   },
+   "screenshot_app_options_proxy": {
+      "message": "Proxy"
+   },
+   "screenshot_app_options_proxyport": {
+      "message": "Port"
+   },
+   "screenshot_app_options_showbubbles": {
+      "message": "Értesítések mutatása a másolásról és a mentésről"
+   },
+   "screenshot_app_options_system_proxy_not_set": {
+      "message": "Nincs beállítva (közvetlen kapcsolat)"
+   },
+   "screenshot_app_options_systemproxy": {
+      "message": "A rendszer proxy beállítások használata"
+   },
+   "screenshot_app_options_uploadformat": {
+      "message": "Feltöltés más formátummal"
+   },
+   "screenshot_app_signed_in_as": {
+      "message": "Bejelentkezve, mint"
+   },
+   "screenshot_app_signin_dialog_caption": {
+      "message": "Bejelentkezés"
+   },
+   "screenshot_app_signin_error_caption": {
+      "message": "scrsht bejelentkezési hiba"
+   },
+   "screenshot_app_signin_error_text": {
+      "message": "scrsht: Hiba lépett fel bejelentkezés közben. Kérlek próbáld újra."
+   },
+   "screenshot_app_take_screenshot": {
+      "message": "Képernyőmentés készítése"
+   },
+   "screenshot_app_terms": {
+      "message": "scrsht Általános Szerződési Feltételek"
+   },
+   "screenshot_app_tray_tooltip": {
+      "message": "Nyomd le a(z) \"%hotkey_main%\" gombot a billentyűzeteden a képernyőmentés felvételéhez"
+   },
+   "screenshot_plugin_announce_do_not_show": {
+      "message": "Ne mutasd újra ezt az üzenetet"
+   },
+   "screenshot_plugin_cancel": {
+      "message": "Mégsem"
+   },
+   "screenshot_plugin_chrome_38_retina_bug": {
+      "message": ""
+   },
+   "screenshot_plugin_chrome_bug_copy": {
+      "message": ""
+   },
+   "screenshot_plugin_clear": {
+      "message": "Kijelölés törlése"
+   },
+   "screenshot_plugin_close": {
+      "message": "Bezárás"
+   },
+   "screenshot_plugin_copy": {
+      "message": "Másolás"
+   },
+   "screenshot_plugin_ctypes_error": {
+      "message": "Hiba: Firefox CTypes nem tudta betölteni a scrsht-ot."
+   },
+   "screenshot_plugin_edit_arrow": {
+      "message": "Nyíl"
+   },
+   "screenshot_plugin_edit_arrow_circle": {
+      "message": "Circle+Line use Right Click/CTRL+ Z for Undo"
+   },
+   "screenshot_plugin_edit_arrow_rect": {
+      "message": "Rectangle+Line  use Right Click/CTRL+ Z for Undo"
+   },
+   "screenshot_plugin_edit_blur": {
+      "message": "Elmosódás"
+   },
+   "screenshot_plugin_edit_circle": {
+      "message": "Kör"
+   },
+   "screenshot_plugin_edit_color": {
+      "message": "Szín"
+   },
+   "screenshot_plugin_edit_line": {
+      "message": "Vonal"
+   },
+   "screenshot_plugin_edit_marker": {
+      "message": "Jelölő"
+   },
+   "screenshot_plugin_edit_pencil": {
+      "message": "Toll"
+   },
+   "screenshot_plugin_edit_rect": {
+      "message": "Téglalap"
+   },
+   "screenshot_plugin_edit_text": {
+      "message": "Szöveg"
+   },
+   "screenshot_plugin_edit_undo": {
+      "message": "Visszavonás"
+   },
+   "screenshot_plugin_editonline": {
+      "message": "Képernyőmentés szerkesztése online"
+   },
+   "screenshot_plugin_error_capt": {
+      "message": "Hiba!"
+   },
+   "screenshot_plugin_fullscreen": {
+      "message": "Teljes képernyő"
+   },
+   "screenshot_plugin_go_to_mac_store": {
+      "message": "Elnézést kérünk a kellemetlenségekért, de a scrsht alkalmazás csak Windows számítógépeken működik."
+   },
+   "screenshot_plugin_image_hosting_incorrect_response": {
+      "message": "Hibás JSON szerkezet a válasz a képtárhely szervertől"
+   },
+   "screenshot_plugin_incorrect_size": {
+      "message": "Hibás méret"
+   },
+   "screenshot_plugin_npapi_deprecated_message": {
+      "message": ""
+   },
+   "screenshot_plugin_npapi_not_found": {
+      "message": ""
+   },
+   "screenshot_plugin_open": {
+      "message": "Megnyitás"
+   },
+   "screenshot_plugin_optimize_dialog_capt": {
+      "message": "Képernyőmentés optimalizálása"
+   },
+   "screenshot_plugin_other_os": {
+      "message": ""
+   },
+   "screenshot_plugin_print": {
+      "message": "Nyomtatás"
+   },
+   "screenshot_plugin_retry": {
+      "message": "Újra"
+   },
+   "screenshot_plugin_save": {
+      "message": "Mentés"
+   },
+   "screenshot_plugin_screenshot_copied_to_clipboard": {
+      "message": "A képernyőmentésed a vágólapra lett másolva"
+   },
+   "screenshot_plugin_screenshot_error_reload_browser": {
+      "message": ""
+   },
+   "screenshot_plugin_screenshot_saved": {
+      "message": "A képernyőmentés elmentve %filename%-ként. Kattints ide a mappában való megnyitásra."
+   },
+   "screenshot_plugin_screenshot_uploaded_link_copied": {
+      "message": "Képernyőmentés feltöltve. A link a vágólapra lett másolva."
+   },
+   "screenshot_plugin_share": {
+      "message": "Megosztás a közösségi portálokon"
+   },
+   "screenshot_plugin_share_facebook": {
+      "message": "Megosztás a Facebookon"
+   },
+   "screenshot_plugin_share_googlesearch": {
+      "message": "Hasonló képek keresése itt: Google"
+   },
+   "screenshot_plugin_share_pinterest": {
+      "message": "Megosztás a Pinteresten"
+   },
+   "screenshot_plugin_share_sendmail": {
+      "message": "Elküldése email által"
+   },
+   "screenshot_plugin_share_tineyesearch": {
+      "message": "Hasonló képek keresése itt: Tineye"
+   },
+   "screenshot_plugin_share_twitter": {
+      "message": "Megosztás a Twitteren"
+   },
+   "screenshot_plugin_share_vk": {
+      "message": "Megosztás a VK-n"
+   },
+   "screenshot_plugin_share_whatsapp": {
+      "message": "Share on Whatsapp"
+   },
+   "screenshot_plugin_tooltip": {
+      "message": "Terület kijelölése"
+   },
+   "screenshot_plugin_upl_fail_cancel_uploading_screenshot": {
+      "message": "Mégsem - képernyőmentés feltöltésének megszakítása"
+   },
+   "screenshot_plugin_upl_fail_check_proxy_settings": {
+      "message": "Kérlek győződj meg arról, hogy a beállítás helyes és a proxy nem tiltja le a scrsht kéréseit."
+   },
+   "screenshot_plugin_upl_fail_continue_open_scrsht_proxy": {
+      "message": "Folytatás - a scrsht proxy beállítások megnyitása"
+   },
+   "screenshot_plugin_upl_fail_continue_open_system_proxy": {
+      "message": "Folytatás - a rendszer proxy beállítások megnyitása"
+   },
+   "screenshot_plugin_upl_fail_scrsht_uses_proxy": {
+      "message": "A scrsht jelenleg az alábbi proxy beállítást használja:: %proxy%"
+   },
+   "screenshot_plugin_upl_fail_scrsht_uses_system_proxy": {
+      "message": "A scrsht jelenleg az alábbi proxy beállítást használja: %proxy%"
+   },
+   "screenshot_plugin_upl_fail_try_again_with_current_settings": {
+      "message": "Újra - újra, a jelenlegi beállításokkal"
+   },
+   "screenshot_plugin_upload": {
+      "message": "Feltöltés a scrsht.com-ra"
+   },
+   "screenshot_plugin_upload_error_capt": {
+      "message": "Feltöltési hiba"
+   },
+   "screenshot_plugin_upload_error_detailed_info": {
+      "message": "Részletes információk"
+   },
+   "screenshot_plugin_upload_failed": {
+      "message": "Feltöltés sikertelen."
+   },
+   "screenshot_plugin_upload_failed_retry": {
+      "message": "Sikertelen feltöltés. Megpróbáljuk újra?"
+   },
+   "screenshot_plugin_uploading_window_capt": {
+      "message": "Kép feltöltése"
+   },
+   "screenshotplugin_default_title": {
+      "message": "Képernyőmentés készítése"
+   },
+   "screenshotplugin_name": {
+      "message": "Képernyőkép készítése és képernyőfelvétel"
+   },
+   "screenshotplugin_short_description": {
+      "message": "Képernyőkép oldalról, teljes oldalról, lap, ablak vagy képernyő felvétele, mentés képként, PDF-ként vagy feltöltés szerverre. Válasszon ki egy területet, szerkessze a képernyőképét."
+   }
+}

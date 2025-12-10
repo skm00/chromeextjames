@@ -1,0 +1,452 @@
+{
+   "area_copy": {
+      "message": "Sao chép"
+   },
+   "edit_curve1": {
+      "message": "Curved arrow, Right click for undo"
+   },
+   "editor_arrow10": {
+      "message": "10"
+   },
+   "editor_arrow11": {
+      "message": "11"
+   },
+   "editor_arrow12": {
+      "message": "12"
+   },
+   "editor_arrow13": {
+      "message": "13"
+   },
+   "editor_arrow14": {
+      "message": "14"
+   },
+   "editor_arrow15": {
+      "message": "15"
+   },
+   "editor_arrow16": {
+      "message": "16"
+   },
+   "editor_arrow17": {
+      "message": "17"
+   },
+   "editor_arrow18": {
+      "message": "18"
+   },
+   "editor_arrow19": {
+      "message": "19"
+   },
+   "editor_arrow2": {
+      "message": "2"
+   },
+   "editor_arrow20": {
+      "message": "20"
+   },
+   "editor_arrow21": {
+      "message": "21"
+   },
+   "editor_arrow3": {
+      "message": "3"
+   },
+   "editor_arrow4": {
+      "message": "4"
+   },
+   "editor_arrow5": {
+      "message": "5"
+   },
+   "editor_arrow6": {
+      "message": "6"
+   },
+   "editor_arrow7": {
+      "message": "7"
+   },
+   "editor_arrow8": {
+      "message": "8"
+   },
+   "editor_arrow9": {
+      "message": "9"
+   },
+   "editor_clipboard": {
+      "message": "SAO CHÉP"
+   },
+   "editor_content": {
+      "message": "Văn bản"
+   },
+   "editor_copy": {
+      "message": "SAO CHÉP VÀO"
+   },
+   "editor_copy_clipboard": {
+      "message": "Thành công"
+   },
+   "editor_copy_tip": {
+      "message": "Sao chép thành công"
+   },
+   "popup_recording_tab": {
+      "message": "Tab này"
+   },
+   "popup_screenshot": {
+      "message": "Ảnh chụp màn hình"
+   },
+   "popup_screenshot_editcontent": {
+      "message": "Chỉnh sửa nội dung văn bản của trang web"
+   },
+   "popup_screenshot_select": {
+      "message": "Khu vực đã chọn"
+   },
+   "popup_screenshot_uploadfiles": {
+      "message": "Chú thích ảnh cục bộ hoặc từ clipboard"
+   },
+   "popup_screenshot_visible": {
+      "message": "Phần hiển thị"
+   },
+   "popup_screenshot_whole": {
+      "message": "Toàn bộ trang"
+   },
+   "popup_uploadd": {
+      "message": "Tải lên"
+   },
+   "preview_video_download": {
+      "message": "Tải xuống"
+   },
+   "record_cancel": {
+      "message": "Hủy"
+   },
+   "record_save": {
+      "message": "Lưu"
+   },
+   "screenshot_app_about": {
+      "message": "Thông tin"
+   },
+   "screenshot_app_copyright": {
+      "message": "%company% Mọi quyền được bảo lưu."
+   },
+   "screenshot_app_exit": {
+      "message": "Thoát"
+   },
+   "screenshot_app_help": {
+      "message": "Trợ giúp"
+   },
+   "screenshot_app_hotkey_failtoregister1": {
+      "message": "Thiết lập phím tắt không thành công"
+   },
+   "screenshot_app_hotkey_failtoregister2": {
+      "message": "Có khả năng ứng dụng khác đang sử dụng nó. Nhấn vào thông điệp này để mở hộp thoại tùy chọn."
+   },
+   "screenshot_app_language_code": {
+      "message": "VI"
+   },
+   "screenshot_app_language_name": {
+      "message": "Tiếng Việtnam"
+   },
+   "screenshot_app_language_name_eng": {
+      "message": "Vietnamese"
+   },
+   "screenshot_app_menu_gallery": {
+      "message": "Bộ sưu tập của tôi (%username%)"
+   },
+   "screenshot_app_menu_sign_in": {
+      "message": "Đăng nhập..."
+   },
+   "screenshot_app_menu_sign_out": {
+      "message": "Đăng xuất"
+   },
+   "screenshot_app_options": {
+      "message": "Tùy chọn"
+   },
+   "screenshot_app_options_autoclose": {
+      "message": "Tự động đóng cửa sổ tải lên"
+   },
+   "screenshot_app_options_autocopy": {
+      "message": "Tự động sao chép đường dẫn sau khi tải lên"
+   },
+   "screenshot_app_options_capturecursor": {
+      "message": "Bao gồm con trỏ chuột vào ảnh chụp màn hình"
+   },
+   "screenshot_app_options_configure_system_proxy": {
+      "message": "Cấu hình"
+   },
+   "screenshot_app_options_current_system_proxy": {
+      "message": "Proxy hệ thống"
+   },
+   "screenshot_app_options_error_hotkeyequal": {
+      "message": "Bạn không thể cài đặt các hotkey giống nhau cho các chức năng khác nhau. Hãy thay đổi một trong số các hotkey."
+   },
+   "screenshot_app_options_error_hotkeyinvalid": {
+      "message": "Một trong những phím tắt của bạn  không đáp ứng. Nếu bạn muốn vô hiệu hóa phím tắt này, xin vui lòng bỏ check ở mục tương ứng"
+   },
+   "screenshot_app_options_formats": {
+      "message": "Định dạng:"
+   },
+   "screenshot_app_options_general": {
+      "message": "Thông thường"
+   },
+   "screenshot_app_options_hotkeygeneral": {
+      "message": "Phím tắt thông dụng"
+   },
+   "screenshot_app_options_hotkeys": {
+      "message": "Phím tắt"
+   },
+   "screenshot_app_options_hotkeysavefullscreen": {
+      "message": "Lưu ảnh (toàn màn hình)"
+   },
+   "screenshot_app_options_hotkeyuploadfullscreen": {
+      "message": "Tải lên nhanh (toàn màn hình)"
+   },
+   "screenshot_app_options_httpsproxy": {
+      "message": "HTTP(S) proxy"
+   },
+   "screenshot_app_options_jpegquality": {
+      "message": "Chất lượng ảnh JPEG"
+   },
+   "screenshot_app_options_keepselection": {
+      "message": "Giữ vị trí vùng đã chọn"
+   },
+   "screenshot_app_options_language": {
+      "message": "Ngôn ngữ"
+   },
+   "screenshot_app_options_manualproxy": {
+      "message": "Cấu hình proxy bằng tay"
+   },
+   "screenshot_app_options_noproxy": {
+      "message": "Không sử dụng proxy"
+   },
+   "screenshot_app_options_optimize_always": {
+      "message": "Luôn luôn"
+   },
+   "screenshot_app_options_optimize_never": {
+      "message": "Không thiết lập"
+   },
+   "screenshot_app_options_optimize_screenshots": {
+      "message": "Tối ưu hóa ảnh chụp màn hình (OptiPNG)"
+   },
+   "screenshot_app_options_optimize_uploadonly": {
+      "message": "Chỉ khi tải lên"
+   },
+   "screenshot_app_options_proxy": {
+      "message": "Proxy"
+   },
+   "screenshot_app_options_proxyport": {
+      "message": "Cổng"
+   },
+   "screenshot_app_options_showbubbles": {
+      "message": "Hiện các thông báo lưu và sao chép"
+   },
+   "screenshot_app_options_system_proxy_not_set": {
+      "message": "Không thiết lập (kết nối trực tiếp)"
+   },
+   "screenshot_app_options_systemproxy": {
+      "message": "Sử dụng cài đặt proxy hệ thống"
+   },
+   "screenshot_app_options_uploadformat": {
+      "message": "Tải ảnh sử dụng định dạng"
+   },
+   "screenshot_app_signed_in_as": {
+      "message": "Đã đăng nhập như"
+   },
+   "screenshot_app_signin_dialog_caption": {
+      "message": "Đăng nhập"
+   },
+   "screenshot_app_signin_error_caption": {
+      "message": "Đăng nhập scrsht lỗi"
+   },
+   "screenshot_app_signin_error_text": {
+      "message": "scrsht: Có lỗi xảy ra trong quá trình đăng nhập. Hãy thử lại."
+   },
+   "screenshot_app_take_screenshot": {
+      "message": "Chụp màn hình"
+   },
+   "screenshot_app_terms": {
+      "message": "Chính sách của chúng tôi"
+   },
+   "screenshot_app_tray_tooltip": {
+      "message": "Nhấp \"%hotkey_main%\" trên bàn phím để chụp màn hình"
+   },
+   "screenshot_plugin_announce_do_not_show": {
+      "message": "Không hiển thị thông điệp này nữa"
+   },
+   "screenshot_plugin_cancel": {
+      "message": "Hủy bỏ"
+   },
+   "screenshot_plugin_chrome_38_retina_bug": {
+      "message": ""
+   },
+   "screenshot_plugin_clear": {
+      "message": "Xóa vùng chọn"
+   },
+   "screenshot_plugin_close": {
+      "message": "Đóng"
+   },
+   "screenshot_plugin_copy": {
+      "message": "Sao chép"
+   },
+   "screenshot_plugin_ctypes_error": {
+      "message": "Firefox Ctypes đã không thể tìm được scrsht. "
+   },
+   "screenshot_plugin_edit_arrow": {
+      "message": "Mũi tên"
+   },
+   "screenshot_plugin_edit_arrow_circle": {
+      "message": "Circle+Line use Right Click/CTRL+ Z for Undo"
+   },
+   "screenshot_plugin_edit_arrow_rect": {
+      "message": "Rectangle+Line  use Right Click/CTRL+ Z for Undo"
+   },
+   "screenshot_plugin_edit_blur": {
+      "message": "Hiệu ứng mờ"
+   },
+   "screenshot_plugin_edit_circle": {
+      "message": "Hình tròn"
+   },
+   "screenshot_plugin_edit_color": {
+      "message": "Màu"
+   },
+   "screenshot_plugin_edit_line": {
+      "message": "Đường thẳng"
+   },
+   "screenshot_plugin_edit_marker": {
+      "message": "Đánh dấu"
+   },
+   "screenshot_plugin_edit_pencil": {
+      "message": "Bút vẽ"
+   },
+   "screenshot_plugin_edit_rect": {
+      "message": "Hình chữ nhật"
+   },
+   "screenshot_plugin_edit_text": {
+      "message": "Text"
+   },
+   "screenshot_plugin_edit_undo": {
+      "message": "Undo"
+   },
+   "screenshot_plugin_editonline": {
+      "message": "Chỉnh sửa ảnh chụp màn hình trực tuyến"
+   },
+   "screenshot_plugin_error_capt": {
+      "message": "Lỗi"
+   },
+   "screenshot_plugin_fullscreen": {
+      "message": "Chọn toàn màn hình"
+   },
+   "screenshot_plugin_go_to_mac_store": {
+      "message": "scrsht chỉ chạy trên Hệ điều hành Windows."
+   },
+   "screenshot_plugin_image_hosting_incorrect_response": {
+      "message": "Cấu trúc hồi đạp JSON từ máy chủ lưu ảnh không chính xác"
+   },
+   "screenshot_plugin_incorrect_size": {
+      "message": "Sai kích thước"
+   },
+   "screenshot_plugin_npapi_deprecated_message": {
+      "message": ""
+   },
+   "screenshot_plugin_npapi_not_found": {
+      "message": ""
+   },
+   "screenshot_plugin_open": {
+      "message": "Mở"
+   },
+   "screenshot_plugin_optimize_dialog_capt": {
+      "message": "Tối ưu hóa ảnh chụp màn hình"
+   },
+   "screenshot_plugin_other_os": {
+      "message": ""
+   },
+   "screenshot_plugin_print": {
+      "message": "In"
+   },
+   "screenshot_plugin_retry": {
+      "message": "Thử lại"
+   },
+   "screenshot_plugin_save": {
+      "message": "Lưu"
+   },
+   "screenshot_plugin_screenshot_copied_to_clipboard": {
+      "message": "Ảnh chụp màn hình của bạn đã được sao chép vào clipboard"
+   },
+   "screenshot_plugin_screenshot_error_reload_browser": {
+      "message": ""
+   },
+   "screenshot_plugin_screenshot_saved": {
+      "message": "Screenshot đã được lưu tại %filename%. Nhấn vào đây để mở."
+   },
+   "screenshot_plugin_screenshot_uploaded_link_copied": {
+      "message": "Ảnh chụp màn hình đã được tải lên. Đường dẫn đã được copy vào clipboard."
+   },
+   "screenshot_plugin_share": {
+      "message": "Chia sẻ lên mạng xã hội"
+   },
+   "screenshot_plugin_share_facebook": {
+      "message": "Chia sẻ lên Facebook"
+   },
+   "screenshot_plugin_share_googlesearch": {
+      "message": "Tìm kiếm ảnh tượng tự trên Google"
+   },
+   "screenshot_plugin_share_pinterest": {
+      "message": "Chia sẻ lên mạng xã hội Pinterest"
+   },
+   "screenshot_plugin_share_sendmail": {
+      "message": "Gửi qua email"
+   },
+   "screenshot_plugin_share_tineyesearch": {
+      "message": "Tìm kiếm ảnh tương tự trên Tineye"
+   },
+   "screenshot_plugin_share_twitter": {
+      "message": "Chia sẻ lên Twitter"
+   },
+   "screenshot_plugin_share_vk": {
+      "message": "Chia sẻ lên VK"
+   },
+   "screenshot_plugin_share_whatsapp": {
+      "message": "Share on Whatsapp"
+   },
+   "screenshot_plugin_tooltip": {
+      "message": "Chọn vùng"
+   },
+   "screenshot_plugin_upl_fail_cancel_uploading_screenshot": {
+      "message": "Hủy - hủy việc tải lên ảnh chụp màn hình"
+   },
+   "screenshot_plugin_upl_fail_check_proxy_settings": {
+      "message": "Hãy đảm bảo rằng cấu hình chính xác và proxy không chặn các yêu cầu của scrsht."
+   },
+   "screenshot_plugin_upl_fail_continue_open_scrsht_proxy": {
+      "message": "Tiếp tục - mở cấu hình proxy scrsht"
+   },
+   "screenshot_plugin_upl_fail_continue_open_system_proxy": {
+      "message": "Tiếp tục - mở cấu hình proxy hệ thống"
+   },
+   "screenshot_plugin_upl_fail_scrsht_uses_proxy": {
+      "message": "scrsht đang sử dụng proxy: %proxy%"
+   },
+   "screenshot_plugin_upl_fail_scrsht_uses_system_proxy": {
+      "message": "scrsht sử dụng cài đặt proxy hệ thống hiện tại: %proxy%"
+   },
+   "screenshot_plugin_upl_fail_try_again_with_current_settings": {
+      "message": "Thử lại - thử lại sử dụng các cài đặt hiện tại"
+   },
+   "screenshot_plugin_upload": {
+      "message": "Tải lên scrsht.com"
+   },
+   "screenshot_plugin_upload_error_capt": {
+      "message": "Có lỗi trong quá trình tải lên"
+   },
+   "screenshot_plugin_upload_error_detailed_info": {
+      "message": "Chi tiết"
+   },
+   "screenshot_plugin_upload_failed": {
+      "message": "Upload thất bại."
+   },
+   "screenshot_plugin_upload_failed_retry": {
+      "message": "Upload thất bại. Thử lại?"
+   },
+   "screenshot_plugin_uploading_window_capt": {
+      "message": "Tải ảnh lên"
+   },
+   "screenshotplugin_default_title": {
+      "message": "Chụp màn hình"
+   },
+   "screenshotplugin_name": {
+      "message": "Chụp màn hình & Ghi màn hình"
+   },
+   "screenshotplugin_short_description": {
+      "message": "Chụp trang, toàn bộ trang, ghi lại tab, cửa sổ hoặc màn hình, lưu dưới dạng hình ảnh, PDF hoặc tải lên máy chủ. Chọn vùng, chỉnh sửa ảnh chụp màn hình của bạn."
+   }
+}

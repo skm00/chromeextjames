@@ -1,0 +1,71 @@
+<!doctype html><html lang="zh"><head><meta charset="UTF-8"><title></title><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1">
+
+<!-- <script defer="defer" src="../editor/editor.js"></script>
+ -->
+ <script defer="defer" src="../editor/editor.js"></script>
+
+ 
+<link href="../editor/editor.css" rel="stylesheet">
+
+</head>
+
+ <link rel="stylesheet" href="../css/editor.css">
+    <!-- <link rel="stylesheet" href="../css/tui-color-picker.min.css"> -->
+    <!-- <link rel="stylesheet" href="../css/tui-image-editor.min.css"> -->
+    <link rel="stylesheet" href="../recording/libs/fontawesome/css/all.min.css">
+
+    <!-- <script src="../libs/tui-color-picker.min.js"></script> -->
+    <!-- <script src="../libs/tui-code-snippet.min.js"></script> -->
+    <script src="../libs/fabric.min.js"></script>
+    <!-- <script src="../libs/tui-image-editor.min.js"></script> -->
+    <script src="../libs/jspdf.umd.min.js"></script>
+    <script src="../libs/html2pdf.bundle.min.js"></script>
+
+    <script src="../js/editor2.js"></script>
+
+
+
+
+
+<style>
+.large-icon {
+    font-size: 20px;
+    padding-top: 7px;
+    vertical-align: top;
+}
+</style>
+
+
+
+<body>
+
+<div style="vertical-align: middle; margin-left: 15px; margin-top: 5px;position:relative;display:block;z-index:999999999999;width: 52px">
+ <button id="annotateBtn" style="border: transparent;padding-top: 5px;" title="Annotate">
+       <img src="../toolbar_res/number-3.png" width="22px"  />
+    </button>
+    <a id="scrshtHistory" title="View all screenshots" href="../html/scrsht_history.html" target="_blank">
+        <i class="fa-solid fa-images large-icon"></i>
+    </a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp
+ 
+</div>
+
+
+
+
+
+<div id="app"></div>
+
+
+<div id="annotationDashboard" style="margin-top:30px;">
+   <div style="display:inline !important; position:fixed !important;"> <span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<button id="hidepanel" title="Hide annotation bar" style="padding: 0px;color: #171717;border: none;border-radius: 5px;cursor: pointer;">
+        
+Hide panel    </button>
+
+ </div>
+
+</div>
+
+</body>
+
+</html>

@@ -1,0 +1,455 @@
+{
+   "area_copy": {
+      "message": "Kopiraj"
+   },
+   "edit_curve1": {
+      "message": "Curved arrow, Right click for undo"
+   },
+   "editor_arrow10": {
+      "message": "10"
+   },
+   "editor_arrow11": {
+      "message": "11"
+   },
+   "editor_arrow12": {
+      "message": "12"
+   },
+   "editor_arrow13": {
+      "message": "13"
+   },
+   "editor_arrow14": {
+      "message": "14"
+   },
+   "editor_arrow15": {
+      "message": "15"
+   },
+   "editor_arrow16": {
+      "message": "16"
+   },
+   "editor_arrow17": {
+      "message": "17"
+   },
+   "editor_arrow18": {
+      "message": "18"
+   },
+   "editor_arrow19": {
+      "message": "19"
+   },
+   "editor_arrow2": {
+      "message": "2"
+   },
+   "editor_arrow20": {
+      "message": "20"
+   },
+   "editor_arrow21": {
+      "message": "21"
+   },
+   "editor_arrow3": {
+      "message": "3"
+   },
+   "editor_arrow4": {
+      "message": "4"
+   },
+   "editor_arrow5": {
+      "message": "5"
+   },
+   "editor_arrow6": {
+      "message": "6"
+   },
+   "editor_arrow7": {
+      "message": "7"
+   },
+   "editor_arrow8": {
+      "message": "8"
+   },
+   "editor_arrow9": {
+      "message": "9"
+   },
+   "editor_clipboard": {
+      "message": "KOPIRAJ"
+   },
+   "editor_content": {
+      "message": "Tekst"
+   },
+   "editor_copy": {
+      "message": "KOPIRAJ U"
+   },
+   "editor_copy_clipboard": {
+      "message": "Uspješno"
+   },
+   "editor_copy_tip": {
+      "message": "Uspješno kopirano"
+   },
+   "popup_recording_tab": {
+      "message": "Ova kartica"
+   },
+   "popup_screenshot": {
+      "message": "Snimka zaslona"
+   },
+   "popup_screenshot_editcontent": {
+      "message": "Uredi tekstualni sadržaj web stranice"
+   },
+   "popup_screenshot_select": {
+      "message": "Odabrano područje"
+   },
+   "popup_screenshot_uploadfiles": {
+      "message": "Označi lokalnu ili sliku iz međuspremnika"
+   },
+   "popup_screenshot_visible": {
+      "message": "Vidljivi dio"
+   },
+   "popup_screenshot_whole": {
+      "message": "Cijela stranica"
+   },
+   "popup_uploadd": {
+      "message": "Učitaj"
+   },
+   "preview_video_download": {
+      "message": "Preuzmi"
+   },
+   "record_cancel": {
+      "message": "Odustani"
+   },
+   "record_save": {
+      "message": "Spremi"
+   },
+   "screenshot_app_about": {
+      "message": "O"
+   },
+   "screenshot_app_copyright": {
+      "message": "%company% Sva prava zadržana."
+   },
+   "screenshot_app_exit": {
+      "message": "Izađi"
+   },
+   "screenshot_app_help": {
+      "message": "Pomoć"
+   },
+   "screenshot_app_hotkey_failtoregister1": {
+      "message": "Neuspješna registracija tipkovnom kraticom:"
+   },
+   "screenshot_app_hotkey_failtoregister2": {
+      "message": "Moguće da neka druga aplikacija već koristi. Kliknite na ovu poruku da otvorite izbore dijaloškog okvira."
+   },
+   "screenshot_app_language_code": {
+      "message": "HR"
+   },
+   "screenshot_app_language_name": {
+      "message": "Hrvatski"
+   },
+   "screenshot_app_language_name_eng": {
+      "message": "Croatian"
+   },
+   "screenshot_app_menu_gallery": {
+      "message": "Moja galerija (%username%)"
+   },
+   "screenshot_app_menu_sign_in": {
+      "message": "Prijava..."
+   },
+   "screenshot_app_menu_sign_out": {
+      "message": "Odjava"
+   },
+   "screenshot_app_options": {
+      "message": "Postavke"
+   },
+   "screenshot_app_options_autoclose": {
+      "message": "Automatski zatvori prozor prijenosa"
+   },
+   "screenshot_app_options_autocopy": {
+      "message": "Automatski kopiraj poveznicu nakon prijenosa"
+   },
+   "screenshot_app_options_capturecursor": {
+      "message": "Snimi pokazivač na snimci zaslona"
+   },
+   "screenshot_app_options_configure_system_proxy": {
+      "message": "Podesi"
+   },
+   "screenshot_app_options_current_system_proxy": {
+      "message": "Sustav proxy"
+   },
+   "screenshot_app_options_error_hotkeyequal": {
+      "message": "Ne možete postaviti istu tipkovnu kraticu za različite funkcije. Molimo promijenite jednu od tipkovnih kratica."
+   },
+   "screenshot_app_options_error_hotkeyinvalid": {
+      "message": "Jedna od tvojih kratica ne radi. Ako želite onemogućiti tu kraticu, molimo isključite odgovarajuću kućicu."
+   },
+   "screenshot_app_options_formats": {
+      "message": "Formati"
+   },
+   "screenshot_app_options_general": {
+      "message": "Općenito"
+   },
+   "screenshot_app_options_hotkeygeneral": {
+      "message": "Glavna kratica"
+   },
+   "screenshot_app_options_hotkeys": {
+      "message": "Kratice"
+   },
+   "screenshot_app_options_hotkeysavefullscreen": {
+      "message": "Brzo spremi cijeli zaslon"
+   },
+   "screenshot_app_options_hotkeyuploadfullscreen": {
+      "message": "Brzi prijenos čitavog zaslona"
+   },
+   "screenshot_app_options_httpsproxy": {
+      "message": "HTTP(S) proxy"
+   },
+   "screenshot_app_options_jpegquality": {
+      "message": "JPEG kvaliteta"
+   },
+   "screenshot_app_options_keepselection": {
+      "message": "Zadrži izabrano mjesto"
+   },
+   "screenshot_app_options_language": {
+      "message": "Jezik"
+   },
+   "screenshot_app_options_manualproxy": {
+      "message": "Ručne proxy postavke"
+   },
+   "screenshot_app_options_noproxy": {
+      "message": "Bez proxy"
+   },
+   "screenshot_app_options_optimize_always": {
+      "message": "Uvijek"
+   },
+   "screenshot_app_options_optimize_never": {
+      "message": "Nikad"
+   },
+   "screenshot_app_options_optimize_screenshots": {
+      "message": "Uredi snimke zaslona (OptiPNG)"
+   },
+   "screenshot_app_options_optimize_uploadonly": {
+      "message": "Samo kod prijenosa"
+   },
+   "screenshot_app_options_proxy": {
+      "message": "Proxy"
+   },
+   "screenshot_app_options_proxyport": {
+      "message": "Ulaz"
+   },
+   "screenshot_app_options_showbubbles": {
+      "message": "Prikaži obavijesti o kopiranju i spremanju"
+   },
+   "screenshot_app_options_system_proxy_not_set": {
+      "message": "Nije postavljeno (izravno povezivanje)"
+   },
+   "screenshot_app_options_systemproxy": {
+      "message": "Koristi sustav proxy postavki"
+   },
+   "screenshot_app_options_uploadformat": {
+      "message": "Prenesite koristeći format"
+   },
+   "screenshot_app_signed_in_as": {
+      "message": "Prijavljen kao"
+   },
+   "screenshot_app_signin_dialog_caption": {
+      "message": "Prijavi se"
+   },
+   "screenshot_app_signin_error_caption": {
+      "message": "Greška kod prijave na scrsht"
+   },
+   "screenshot_app_signin_error_text": {
+      "message": "scrsht: Pojavila se greška kod prijave. Molimo pokušajte ponovno."
+   },
+   "screenshot_app_take_screenshot": {
+      "message": "Snimi zaslon"
+   },
+   "screenshot_app_terms": {
+      "message": "scrsht Uvjeti korištenja"
+   },
+   "screenshot_app_tray_tooltip": {
+      "message": "Pritisni \"%hotkey_main%\" na svojoj tipkovnici da snimiš zaslon"
+   },
+   "screenshot_plugin_announce_do_not_show": {
+      "message": "Ne pokazuj više ovu poruku"
+   },
+   "screenshot_plugin_cancel": {
+      "message": "Poništi"
+   },
+   "screenshot_plugin_chrome_38_retina_bug": {
+      "message": ""
+   },
+   "screenshot_plugin_chrome_bug_copy": {
+      "message": ""
+   },
+   "screenshot_plugin_clear": {
+      "message": "Izbriši odabrano"
+   },
+   "screenshot_plugin_close": {
+      "message": "Zatvori"
+   },
+   "screenshot_plugin_copy": {
+      "message": "Kopiraj"
+   },
+   "screenshot_plugin_ctypes_error": {
+      "message": "Greška: Firefox CTypes nije uspio učitati scrsht."
+   },
+   "screenshot_plugin_edit_arrow": {
+      "message": "Strelica"
+   },
+   "screenshot_plugin_edit_arrow_circle": {
+      "message": "Circle+Line use Right Click/CTRL+ Z for Undo"
+   },
+   "screenshot_plugin_edit_arrow_rect": {
+      "message": "Rectangle+Line  use Right Click/CTRL+ Z for Undo"
+   },
+   "screenshot_plugin_edit_blur": {
+      "message": "Zatamnjeno"
+   },
+   "screenshot_plugin_edit_circle": {
+      "message": "Krug"
+   },
+   "screenshot_plugin_edit_color": {
+      "message": "Boja"
+   },
+   "screenshot_plugin_edit_line": {
+      "message": "Linija"
+   },
+   "screenshot_plugin_edit_marker": {
+      "message": "Flomaster"
+   },
+   "screenshot_plugin_edit_pencil": {
+      "message": "Olovka"
+   },
+   "screenshot_plugin_edit_rect": {
+      "message": "Pravokutnik"
+   },
+   "screenshot_plugin_edit_text": {
+      "message": "Tekst"
+   },
+   "screenshot_plugin_edit_undo": {
+      "message": "Vrati"
+   },
+   "screenshot_plugin_editonline": {
+      "message": "Uredi snimku zaslona na mreži"
+   },
+   "screenshot_plugin_error_capt": {
+      "message": "Greška"
+   },
+   "screenshot_plugin_fullscreen": {
+      "message": "Odaberi puni zaslon"
+   },
+   "screenshot_plugin_go_to_mac_store": {
+      "message": "Ispričavamo se zbog neugodnosti, ali scrsht dodatak radi samo na Windows računalima."
+   },
+   "screenshot_plugin_image_hosting_incorrect_response": {
+      "message": "Neispravna JSON konstrukcija u odazivu poslužitelja za slike"
+   },
+   "screenshot_plugin_incorrect_size": {
+      "message": "Pogrešna veličina"
+   },
+   "screenshot_plugin_npapi_deprecated_message": {
+      "message": ""
+   },
+   "screenshot_plugin_npapi_not_found": {
+      "message": ""
+   },
+   "screenshot_plugin_open": {
+      "message": "Otvori"
+   },
+   "screenshot_plugin_optimize_dialog_capt": {
+      "message": "Uredi snimku zaslona"
+   },
+   "screenshot_plugin_other_os": {
+      "message": ""
+   },
+   "screenshot_plugin_print": {
+      "message": "Ispis"
+   },
+   "screenshot_plugin_retry": {
+      "message": "Ponovi"
+   },
+   "screenshot_plugin_save": {
+      "message": "Spremi"
+   },
+   "screenshot_plugin_screenshot_copied_to_clipboard": {
+      "message": "Vaša snimka zaslona je kopirana u međuspremnik"
+   },
+   "screenshot_plugin_screenshot_error_reload_browser": {
+      "message": ""
+   },
+   "screenshot_plugin_screenshot_saved": {
+      "message": "Snimka zaslona je spremljena u %filename%. Pritisnite ovdje da otvorite mapu."
+   },
+   "screenshot_plugin_screenshot_uploaded_link_copied": {
+      "message": "Snimka zaslona je prenesena. Poveznica je kopirana u međuspremnik."
+   },
+   "screenshot_plugin_share": {
+      "message": "Podijeli na društvenim mrežama"
+   },
+   "screenshot_plugin_share_facebook": {
+      "message": "Podijeli na Facebook"
+   },
+   "screenshot_plugin_share_googlesearch": {
+      "message": "Traži slične slike na Google"
+   },
+   "screenshot_plugin_share_pinterest": {
+      "message": "Dijeli na Pinterest"
+   },
+   "screenshot_plugin_share_sendmail": {
+      "message": "Pošalji e-poštom"
+   },
+   "screenshot_plugin_share_tineyesearch": {
+      "message": "Traži slične slike na Tineye"
+   },
+   "screenshot_plugin_share_twitter": {
+      "message": "Podijeli na Twitter"
+   },
+   "screenshot_plugin_share_vk": {
+      "message": "Podijeli na VK"
+   },
+   "screenshot_plugin_share_whatsapp": {
+      "message": "Share on Whatsapp"
+   },
+   "screenshot_plugin_tooltip": {
+      "message": "Odaberi područje"
+   },
+   "screenshot_plugin_upl_fail_cancel_uploading_screenshot": {
+      "message": "Poništi - poništi prijenos snimke zaslona"
+   },
+   "screenshot_plugin_upl_fail_check_proxy_settings": {
+      "message": "Molimo, provjerite da je konfiguracija ispravna i da proxy ne blokira scrsht zahtjeve."
+   },
+   "screenshot_plugin_upl_fail_continue_open_scrsht_proxy": {
+      "message": "Nastavi - otvori scrsht proxy konfiguraciju"
+   },
+   "screenshot_plugin_upl_fail_continue_open_system_proxy": {
+      "message": "Nastavi - otvori proxy sistemsku konfiguraciju"
+   },
+   "screenshot_plugin_upl_fail_scrsht_uses_proxy": {
+      "message": "Trenutno scrsht je podešen da koristi ovaj proxy: %proxy%"
+   },
+   "screenshot_plugin_upl_fail_scrsht_uses_system_proxy": {
+      "message": "scrsht koristi trenutne proxy postavke: %proxy%"
+   },
+   "screenshot_plugin_upl_fail_try_again_with_current_settings": {
+      "message": "Pokušajte ponovno - ponovi koristeći trenutne postavke"
+   },
+   "screenshot_plugin_upload": {
+      "message": "Prenesi na scrsht.com"
+   },
+   "screenshot_plugin_upload_error_capt": {
+      "message": "Greška u prijenosu"
+   },
+   "screenshot_plugin_upload_error_detailed_info": {
+      "message": "Detaljne informacije"
+   },
+   "screenshot_plugin_upload_failed": {
+      "message": "Prijenos neuspješan."
+   },
+   "screenshot_plugin_upload_failed_retry": {
+      "message": "Prijenos neuspješan. Ponoviti?"
+   },
+   "screenshot_plugin_uploading_window_capt": {
+      "message": "Prijenos slike"
+   },
+   "screenshotplugin_default_title": {
+      "message": "Snimi zaslon"
+   },
+   "screenshotplugin_name": {
+      "message": "Snimanje zaslona i snimanje ekrana"
+   },
+   "screenshotplugin_short_description": {
+      "message": "Snimite zaslon stranice, cijelu stranicu, snimite karticu, prozor ili zaslon, spremite kao sliku, PDF ili prenesite na poslužitelj. Odaberite područje, uredite svoju snimku zaslona."
+   }
+}

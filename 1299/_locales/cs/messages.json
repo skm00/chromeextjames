@@ -1,0 +1,455 @@
+{
+   "area_copy": {
+      "message": "Kopírovat"
+   },
+   "edit_curve1": {
+      "message": "Curved arrow, Right click for undo"
+   },
+   "editor_arrow10": {
+      "message": "10"
+   },
+   "editor_arrow11": {
+      "message": "11"
+   },
+   "editor_arrow12": {
+      "message": "12"
+   },
+   "editor_arrow13": {
+      "message": "13"
+   },
+   "editor_arrow14": {
+      "message": "14"
+   },
+   "editor_arrow15": {
+      "message": "15"
+   },
+   "editor_arrow16": {
+      "message": "16"
+   },
+   "editor_arrow17": {
+      "message": "17"
+   },
+   "editor_arrow18": {
+      "message": "18"
+   },
+   "editor_arrow19": {
+      "message": "19"
+   },
+   "editor_arrow2": {
+      "message": "2"
+   },
+   "editor_arrow20": {
+      "message": "20"
+   },
+   "editor_arrow21": {
+      "message": "21"
+   },
+   "editor_arrow3": {
+      "message": "3"
+   },
+   "editor_arrow4": {
+      "message": "4"
+   },
+   "editor_arrow5": {
+      "message": "5"
+   },
+   "editor_arrow6": {
+      "message": "6"
+   },
+   "editor_arrow7": {
+      "message": "7"
+   },
+   "editor_arrow8": {
+      "message": "8"
+   },
+   "editor_arrow9": {
+      "message": "9"
+   },
+   "editor_clipboard": {
+      "message": "Kopírovat"
+   },
+   "editor_content": {
+      "message": "Text"
+   },
+   "editor_copy": {
+      "message": "Kopírovat do"
+   },
+   "editor_copy_clipboard": {
+      "message": "Úspěch"
+   },
+   "editor_copy_tip": {
+      "message": "Úspěšně zkopírováno"
+   },
+   "popup_recording_tab": {
+      "message": "Tato karta"
+   },
+   "popup_screenshot": {
+      "message": "Snímek obrazovky"
+   },
+   "popup_screenshot_editcontent": {
+      "message": "Upravit textový obsah webové stránky"
+   },
+   "popup_screenshot_select": {
+      "message": "Vybraná oblast"
+   },
+   "popup_screenshot_uploadfiles": {
+      "message": "Anotace místního nebo schránkového obrázku"
+   },
+   "popup_screenshot_visible": {
+      "message": "Viditelná část"
+   },
+   "popup_screenshot_whole": {
+      "message": "Celá stránka"
+   },
+   "popup_uploadd": {
+      "message": "Nahrát"
+   },
+   "preview_video_download": {
+      "message": "Stáhnout"
+   },
+   "record_cancel": {
+      "message": "Zrušit"
+   },
+   "record_save": {
+      "message": "Uložit"
+   },
+   "screenshot_app_about": {
+      "message": "O"
+   },
+   "screenshot_app_copyright": {
+      "message": "%company% Všechna práva vyhrazena."
+   },
+   "screenshot_app_exit": {
+      "message": "Ukončit"
+   },
+   "screenshot_app_help": {
+      "message": "Nápověda"
+   },
+   "screenshot_app_hotkey_failtoregister1": {
+      "message": "Nepodařilo se zaregistrovat klávesovou zkratku:"
+   },
+   "screenshot_app_hotkey_failtoregister2": {
+      "message": "Pravděpodobně je používán další aplikací. Klikněte na tuto zprávu a otevřte možnosti dialogového okna."
+   },
+   "screenshot_app_language_code": {
+      "message": "CS"
+   },
+   "screenshot_app_language_name": {
+      "message": "Čeština"
+   },
+   "screenshot_app_language_name_eng": {
+      "message": "Czech"
+   },
+   "screenshot_app_menu_gallery": {
+      "message": "Moje galerie (%username%)"
+   },
+   "screenshot_app_menu_sign_in": {
+      "message": "Přihlásit se..."
+   },
+   "screenshot_app_menu_sign_out": {
+      "message": "Odhlásit se"
+   },
+   "screenshot_app_options": {
+      "message": "Možnosti"
+   },
+   "screenshot_app_options_autoclose": {
+      "message": "Automaticky zavírat uploadovací okno"
+   },
+   "screenshot_app_options_autocopy": {
+      "message": "Automaticky kopírovat odkaz po nahrání"
+   },
+   "screenshot_app_options_capturecursor": {
+      "message": "Zachytit kurzor na snímku"
+   },
+   "screenshot_app_options_configure_system_proxy": {
+      "message": "Konfigurovat"
+   },
+   "screenshot_app_options_current_system_proxy": {
+      "message": "System proxy"
+   },
+   "screenshot_app_options_error_hotkeyequal": {
+      "message": "Nemůžete založit stejné klávesové zkratky pro různé funkce. Prosím změnte jednu z klavesových zkratek."
+   },
+   "screenshot_app_options_error_hotkeyinvalid": {
+      "message": "Jedna z Vašich klávesových zkratek je neplatná. Chcete-li zakázat klávesové zkratky, prosím zrušte zaškrtnutí příslušného políčka."
+   },
+   "screenshot_app_options_formats": {
+      "message": "Formáty"
+   },
+   "screenshot_app_options_general": {
+      "message": "Obecný"
+   },
+   "screenshot_app_options_hotkeygeneral": {
+      "message": "Obecné klávesové zkratky"
+   },
+   "screenshot_app_options_hotkeys": {
+      "message": "Klávesové zkratky"
+   },
+   "screenshot_app_options_hotkeysavefullscreen": {
+      "message": "Okamžité uložení celé obrazovky"
+   },
+   "screenshot_app_options_hotkeyuploadfullscreen": {
+      "message": "Okamžité nahrání celé obrazovky"
+   },
+   "screenshot_app_options_httpsproxy": {
+      "message": "HTTP(S) proxy"
+   },
+   "screenshot_app_options_jpegquality": {
+      "message": "JPEG kvalita"
+   },
+   "screenshot_app_options_keepselection": {
+      "message": "Držte polohu vybrané oblasti"
+   },
+   "screenshot_app_options_language": {
+      "message": "Jazyk"
+   },
+   "screenshot_app_options_manualproxy": {
+      "message": "Ruční konfigurace proxy"
+   },
+   "screenshot_app_options_noproxy": {
+      "message": "Žadné proxy"
+   },
+   "screenshot_app_options_optimize_always": {
+      "message": "Vždy"
+   },
+   "screenshot_app_options_optimize_never": {
+      "message": "Nikdy"
+   },
+   "screenshot_app_options_optimize_screenshots": {
+      "message": "Optimalizovat snímek (OptiPNG)"
+   },
+   "screenshot_app_options_optimize_uploadonly": {
+      "message": "Pouze pokud je nahráváno"
+   },
+   "screenshot_app_options_proxy": {
+      "message": "Proxy"
+   },
+   "screenshot_app_options_proxyport": {
+      "message": "Port"
+   },
+   "screenshot_app_options_showbubbles": {
+      "message": "Ukazovat oznámení o kopírování a ukládání"
+   },
+   "screenshot_app_options_system_proxy_not_set": {
+      "message": "Není nastaveno (přímé spojení)"
+   },
+   "screenshot_app_options_systemproxy": {
+      "message": "Použít nastavení proxy podle systému"
+   },
+   "screenshot_app_options_uploadformat": {
+      "message": "Nahrát používající formát"
+   },
+   "screenshot_app_signed_in_as": {
+      "message": "Přihlášen jako"
+   },
+   "screenshot_app_signin_dialog_caption": {
+      "message": "Přihlášování"
+   },
+   "screenshot_app_signin_error_caption": {
+      "message": "scrsht - problém s přihlášením"
+   },
+   "screenshot_app_signin_error_text": {
+      "message": "scrsht: Během přihlašování se vyskytl problém. Prosím zkuste to znovu."
+   },
+   "screenshot_app_take_screenshot": {
+      "message": "Pořídit snímek"
+   },
+   "screenshot_app_terms": {
+      "message": "Provozní podmínky scrshtu"
+   },
+   "screenshot_app_tray_tooltip": {
+      "message": "Stiskněte \"%hotkey_main%\" na Vaší klávesnici pro pořízení snímku"
+   },
+   "screenshot_plugin_announce_do_not_show": {
+      "message": "Nezobrazovat tuto zprávu znova"
+   },
+   "screenshot_plugin_cancel": {
+      "message": "Zrušit"
+   },
+   "screenshot_plugin_chrome_38_retina_bug": {
+      "message": ""
+   },
+   "screenshot_plugin_chrome_bug_copy": {
+      "message": ""
+   },
+   "screenshot_plugin_clear": {
+      "message": "Odstranit výběr"
+   },
+   "screenshot_plugin_close": {
+      "message": "Zavřít"
+   },
+   "screenshot_plugin_copy": {
+      "message": "Kopírovat"
+   },
+   "screenshot_plugin_ctypes_error": {
+      "message": "Chyba: Firefox CTypes nedokázal načíst scrsht. "
+   },
+   "screenshot_plugin_edit_arrow": {
+      "message": "Šipka"
+   },
+   "screenshot_plugin_edit_arrow_circle": {
+      "message": "Circle+Line use Right Click/CTRL+ Z for Undo"
+   },
+   "screenshot_plugin_edit_arrow_rect": {
+      "message": "Rectangle+Line  use Right Click/CTRL+ Z for Undo"
+   },
+   "screenshot_plugin_edit_blur": {
+      "message": "Rozmazat"
+   },
+   "screenshot_plugin_edit_circle": {
+      "message": "Kruh"
+   },
+   "screenshot_plugin_edit_color": {
+      "message": "Barva"
+   },
+   "screenshot_plugin_edit_line": {
+      "message": "Čára"
+   },
+   "screenshot_plugin_edit_marker": {
+      "message": "Zvýrazňovač"
+   },
+   "screenshot_plugin_edit_pencil": {
+      "message": "Pero"
+   },
+   "screenshot_plugin_edit_rect": {
+      "message": "Obdélník"
+   },
+   "screenshot_plugin_edit_text": {
+      "message": "Text"
+   },
+   "screenshot_plugin_edit_undo": {
+      "message": "Vrátit zpět"
+   },
+   "screenshot_plugin_editonline": {
+      "message": "Editovat snímek online"
+   },
+   "screenshot_plugin_error_capt": {
+      "message": "Chyba"
+   },
+   "screenshot_plugin_fullscreen": {
+      "message": "Vybrat celou obrazovku"
+   },
+   "screenshot_plugin_go_to_mac_store": {
+      "message": "Omlouváme se za nepříjemnosti, ale rozšíření scrshtu pracuje pouze počítačích s Windows."
+   },
+   "screenshot_plugin_image_hosting_incorrect_response": {
+      "message": "Nesprávná JSON struktura v odpovědi z hostingového serveru"
+   },
+   "screenshot_plugin_incorrect_size": {
+      "message": "Špatná velikost"
+   },
+   "screenshot_plugin_npapi_deprecated_message": {
+      "message": ""
+   },
+   "screenshot_plugin_npapi_not_found": {
+      "message": ""
+   },
+   "screenshot_plugin_open": {
+      "message": "Otevřít"
+   },
+   "screenshot_plugin_optimize_dialog_capt": {
+      "message": "Optimalizovat snímek"
+   },
+   "screenshot_plugin_other_os": {
+      "message": ""
+   },
+   "screenshot_plugin_print": {
+      "message": "Vytisknout"
+   },
+   "screenshot_plugin_retry": {
+      "message": "Opakovat"
+   },
+   "screenshot_plugin_save": {
+      "message": "Uložit"
+   },
+   "screenshot_plugin_screenshot_copied_to_clipboard": {
+      "message": "Váš snímek byl zkopírován do schránky."
+   },
+   "screenshot_plugin_screenshot_error_reload_browser": {
+      "message": ""
+   },
+   "screenshot_plugin_screenshot_saved": {
+      "message": "Snímek je uložen do %filename%. Pro otevření složky klikněte sem."
+   },
+   "screenshot_plugin_screenshot_uploaded_link_copied": {
+      "message": "Snímek byl nahrán. Odkaz byl zkopírován do Vaší schránky."
+   },
+   "screenshot_plugin_share": {
+      "message": "Sdílet na sociálních sítích"
+   },
+   "screenshot_plugin_share_facebook": {
+      "message": "Sdílet na Facebooku"
+   },
+   "screenshot_plugin_share_googlesearch": {
+      "message": "Vyhledat podobné obrázky na Googlu"
+   },
+   "screenshot_plugin_share_pinterest": {
+      "message": "Sdílet na Pinterestu"
+   },
+   "screenshot_plugin_share_sendmail": {
+      "message": "Poslat přes email"
+   },
+   "screenshot_plugin_share_tineyesearch": {
+      "message": "Vyhledat podobné obrázky na Tineye"
+   },
+   "screenshot_plugin_share_twitter": {
+      "message": "Sdílet na Twitteru"
+   },
+   "screenshot_plugin_share_vk": {
+      "message": "Sdílet na VK"
+   },
+   "screenshot_plugin_share_whatsapp": {
+      "message": "Sdílejte na Whatsapp"
+   },
+   "screenshot_plugin_tooltip": {
+      "message": "Výběr oblasti"
+   },
+   "screenshot_plugin_upl_fail_cancel_uploading_screenshot": {
+      "message": "Zrušit - zrušit nahrávání snímku"
+   },
+   "screenshot_plugin_upl_fail_check_proxy_settings": {
+      "message": "Prosím ujistěte se, že je konfigurace správná a že proxy neblokuje žádosti scrshtu."
+   },
+   "screenshot_plugin_upl_fail_continue_open_scrsht_proxy": {
+      "message": "Pokračujte - otevřete konfiguraci proxy pro scrsht"
+   },
+   "screenshot_plugin_upl_fail_continue_open_system_proxy": {
+      "message": "Pokračovat - otevřít konfiguraci systémové proxy"
+   },
+   "screenshot_plugin_upl_fail_scrsht_uses_proxy": {
+      "message": "V současné době je scrsht nakofigurován k využívání tohoto proxy: %proxy%"
+   },
+   "screenshot_plugin_upl_fail_scrsht_uses_system_proxy": {
+      "message": "scrsht využívá v současné době nastavení systému proxy: %proxy%"
+   },
+   "screenshot_plugin_upl_fail_try_again_with_current_settings": {
+      "message": "Zkuste to znovu - opakujte aktuální nastavení"
+   },
+   "screenshot_plugin_upload": {
+      "message": "Nahrát na scrsht.com"
+   },
+   "screenshot_plugin_upload_error_capt": {
+      "message": "Chyba uploadu"
+   },
+   "screenshot_plugin_upload_error_detailed_info": {
+      "message": "Detailní informace"
+   },
+   "screenshot_plugin_upload_failed": {
+      "message": "Upload selhal."
+   },
+   "screenshot_plugin_upload_failed_retry": {
+      "message": "Nahrávání se nezdařilo. Opakovat?"
+   },
+   "screenshot_plugin_uploading_window_capt": {
+      "message": "Nahrávání obrázku"
+   },
+   "screenshotplugin_default_title": {
+      "message": "Pořídit snímek"
+   },
+   "screenshotplugin_name": {
+      "message": "Zachycení snímku obrazovky a nahrávání obrazovky"
+   },
+   "screenshotplugin_short_description": {
+      "message": "Snímek stránky, celé stránky, nahrávání karty, okna nebo obrazovky, uložení jako obrázek, PDF nebo nahrání na server. Vyberte oblast a upravte svůj snímek obrazovky."
+   }
+}

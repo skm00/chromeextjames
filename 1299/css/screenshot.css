@@ -1,0 +1,84 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    position: fixed;
+}
+
+#content {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+#announce, #announce button {
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    font-size: 1em;
+}
+    
+#announce {    
+    position: fixed;
+    z-index: 9999;
+    top: 10px;
+	left: 50%;   
+    transform: translateX(-50%); 
+    width: 600px;
+    margin: 0;
+	padding: 0 10px 0 10px;
+	font-size:14px;
+    background-color: rgba(0,0,0,0.9);
+    border-radius: 5px;
+    display: none;
+    color: white;
+    border: solid white 2px;
+	    text-decoration: none;
+    text-decoration-color: black;
+}
+
+#announce  a{
+    color: white;
+	    text-decoration: none;
+    text-decoration-color: black;
+}
+
+#announce  a:hover{
+    color: white;
+	    text-decoration: none;
+    text-decoration-color: black;
+}
+
+#announce  a:visited{
+    color: white;
+	    text-decoration: none;
+    text-decoration-color: black;
+	
+}
+
+#announce_close_cross {
+    width: 16px;
+    height: 16px;
+    float: right;
+    cursor: pointer;
+}
+
+#announce_message {
+    margin: 0px;
+}
+
+#announce_do_not_show_container {
+    float: left;
+}
+
+#announce_hide {
+    float: right;
+    cursor: pointer;
+    margin-top: -3px;
+}
+
+.colpick {
+    z-index: 1000;
+}
+.hide_tooool {
+    display: none !important;
+}

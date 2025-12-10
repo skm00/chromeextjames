@@ -1,0 +1,266 @@
+{
+   "area_copy": {
+      "message": "คัดลอก"
+   },
+   "edit_curve1": {
+      "message": "Curved arrow, Right click for undo"
+   },
+   "editor_arrow10": {
+      "message": "10"
+   },
+   "editor_arrow11": {
+      "message": "11"
+   },
+   "editor_arrow12": {
+      "message": "12"
+   },
+   "editor_arrow13": {
+      "message": "13"
+   },
+   "editor_arrow14": {
+      "message": "14"
+   },
+   "editor_arrow15": {
+      "message": "15"
+   },
+   "editor_arrow16": {
+      "message": "16"
+   },
+   "editor_arrow17": {
+      "message": "17"
+   },
+   "editor_arrow18": {
+      "message": "18"
+   },
+   "editor_arrow19": {
+      "message": "19"
+   },
+   "editor_arrow2": {
+      "message": "2"
+   },
+   "editor_arrow20": {
+      "message": "20"
+   },
+   "editor_arrow21": {
+      "message": "21"
+   },
+   "editor_arrow3": {
+      "message": "3"
+   },
+   "editor_arrow4": {
+      "message": "4"
+   },
+   "editor_arrow5": {
+      "message": "5"
+   },
+   "editor_arrow6": {
+      "message": "6"
+   },
+   "editor_arrow7": {
+      "message": "7"
+   },
+   "editor_arrow8": {
+      "message": "8"
+   },
+   "editor_arrow9": {
+      "message": "9"
+   },
+   "editor_clipboard": {
+      "message": "คัดลอก"
+   },
+   "editor_content": {
+      "message": "ข้อความ"
+   },
+   "editor_copy": {
+      "message": "คัดลอกไปยัง"
+   },
+   "editor_copy_clipboard": {
+      "message": "สำเร็จ"
+   },
+   "editor_copy_tip": {
+      "message": "คัดลอกสำเร็จ"
+   },
+   "popup_recording_tab": {
+      "message": "แท็บนี้"
+   },
+   "popup_screenshot": {
+      "message": "ภาพหน้าจอ"
+   },
+   "popup_screenshot_editcontent": {
+      "message": "แก้ไขเนื้อหาข้อความของหน้าเว็บ"
+   },
+   "popup_screenshot_select": {
+      "message": "พื้นที่ที่เลือก"
+   },
+   "popup_screenshot_uploadfiles": {
+      "message": "ใส่คำอธิบายภาพในไฟล์ท้องถิ่นหรือคลิปบอร์ด"
+   },
+   "popup_screenshot_visible": {
+      "message": "ส่วนที่มองเห็น"
+   },
+   "popup_screenshot_whole": {
+      "message": "ทั้งหน้า"
+   },
+   "popup_uploadd": {
+      "message": "อัปโหลด"
+   },
+   "preview_video_download": {
+      "message": "ดาวน์โหลด"
+   },
+   "record_cancel": {
+      "message": "ยกเลิก"
+   },
+   "record_save": {
+      "message": "บันทึก"
+   },
+   "screenshot_app_about": {
+      "message": "เกี่ยวกับ scrsht"
+   },
+   "screenshot_app_copyright": {
+      "message": "สงวนลิขสิทธิ์โดย %company%"
+   },
+   "screenshot_app_exit": {
+      "message": "ออกจากโปรแกรม"
+   },
+   "screenshot_app_language_code": {
+      "message": "TH"
+   },
+   "screenshot_app_language_name": {
+      "message": "ภาษาไทย"
+   },
+   "screenshot_app_language_name_eng": {
+      "message": "Thai"
+   },
+   "screenshot_app_menu_sign_in": {
+      "message": "กำลังเข้าระบบ..."
+   },
+   "screenshot_app_options_autoclose": {
+      "message": "ปิดหน้าต่างอัปโหลดอัตโนมัติ"
+   },
+   "screenshot_app_options_configure_system_proxy": {
+      "message": "กำหนดค่า"
+   },
+   "screenshot_app_options_formats": {
+      "message": "รูปแบบ"
+   },
+   "screenshot_app_options_httpsproxy": {
+      "message": "พร็อกซี่ HTTP(S)"
+   },
+   "screenshot_app_options_jpegquality": {
+      "message": "คุณภาพของ JPEG"
+   },
+   "screenshot_app_options_language": {
+      "message": "ภาษา"
+   },
+   "screenshot_app_options_uploadformat": {
+      "message": "อัปโหลดโดยใช้รูปแบบที่กำหนด"
+   },
+   "screenshot_app_take_screenshot": {
+      "message": "เก็บภาพหน้าจอ"
+   },
+   "screenshot_app_terms": {
+      "message": "ข้อกำหนดในการให้บริการ"
+   },
+   "screenshot_app_tray_tooltip": {
+      "message": "กดปุ่ม \"%hotkey_main%\" บนแป้นพิมพ์เพื่อทำการเก็บภาพหน้าจอ"
+   },
+   "screenshot_plugin_cancel": {
+      "message": "ยกเลิก"
+   },
+   "screenshot_plugin_clear": {
+      "message": "ล้าง"
+   },
+   "screenshot_plugin_close": {
+      "message": "ปิด"
+   },
+   "screenshot_plugin_copy": {
+      "message": "คัดลอก"
+   },
+   "screenshot_plugin_ctypes_error": {
+      "message": "ผิดพลาด: การโหลด CTypes ของ Firefox  "
+   },
+   "screenshot_plugin_edit_blur": {
+      "message": "เบลอ"
+   },
+   "screenshot_plugin_edit_color": {
+      "message": "ชุดสี"
+   },
+   "screenshot_plugin_edit_pencil": {
+      "message": "Pen"
+   },
+   "screenshot_plugin_editonline": {
+      "message": "แก้ไขรูปภาพ"
+   },
+   "screenshot_plugin_error_capt": {
+      "message": "ผิดพลาด"
+   },
+   "screenshot_plugin_fullscreen": {
+      "message": "เต็มหน้าจอ"
+   },
+   "screenshot_plugin_incorrect_size": {
+      "message": "ขนาดของรูปไม่ถูกต้อง"
+   },
+   "screenshot_plugin_open": {
+      "message": "เปิด"
+   },
+   "screenshot_plugin_print": {
+      "message": "พิมพ์"
+   },
+   "screenshot_plugin_save": {
+      "message": "บันทึก"
+   },
+   "screenshot_plugin_screenshot_error_reload_browser": {
+      "message": ""
+   },
+   "screenshot_plugin_share_facebook": {
+      "message": "แชร์ไปที่ Facebook"
+   },
+   "screenshot_plugin_share_googlesearch": {
+      "message": "ค้นหารูปที่คล้ายกันจาก Google"
+   },
+   "screenshot_plugin_share_pinterest": {
+      "message": "แชร์ไปยัง Pinterest"
+   },
+   "screenshot_plugin_share_sendmail": {
+      "message": "ส่งผ่าน Email"
+   },
+   "screenshot_plugin_share_tineyesearch": {
+      "message": "ค้นหารูปที่คล้ายกันจาก Tineye"
+   },
+   "screenshot_plugin_share_twitter": {
+      "message": "แชร์ไปที่ Twitter"
+   },
+   "screenshot_plugin_tooltip": {
+      "message": "เลือกพื้นที่ของภาพ"
+   },
+   "screenshot_plugin_upl_fail_scrsht_uses_proxy": {
+      "message": "ปัจจุบัน scrsht กำหนดค่าให้ใช้พร็อกซี่นี้: %proxy%"
+   },
+   "screenshot_plugin_upl_fail_scrsht_uses_system_proxy": {
+      "message": "scrsht ใช้ระบบการตั้งค่าพร็อกซี่ปัจจุบัน: %proxy%"
+   },
+   "screenshot_plugin_upload": {
+      "message": "อัพโหลดไปที่ scrsht.com"
+   },
+   "screenshot_plugin_upload_error_capt": {
+      "message": "อัปโหลดผิดพลาด"
+   },
+   "screenshot_plugin_upload_failed": {
+      "message": "อัปโหลดล้มเหลว"
+   },
+   "screenshot_plugin_upload_failed_retry": {
+      "message": "การอัพโหลดผิดพลาด, ท่านจะลองอีกครั้งหรือไม่?"
+   },
+   "screenshot_plugin_uploading_window_capt": {
+      "message": "กำลังอัพโหลดรูป"
+   },
+   "screenshotplugin_default_title": {
+      "message": "Take Screenshot"
+   },
+   "screenshotplugin_name": {
+      "message": "จับภาพหน้าจอและบันทึกหน้าจอ"
+   },
+   "screenshotplugin_short_description": {
+      "message": "จับภาพหน้าจอหน้าเว็บ ทั้งหน้าเว็บ บันทึกแท็บ หน้าต่าง หรือหน้าจอ บันทึกเป็นภาพ PDF หรืออัปโหลดไปยังเซิร์ฟเวอร์ เลือกพื้นที่และแก้ไขภาพหน้าจอของคุณ"
+   }
+}

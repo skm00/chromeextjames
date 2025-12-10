@@ -1,0 +1,455 @@
+{
+   "area_copy": {
+      "message": "Копировать"
+   },
+   "edit_curve1": {
+      "message": "Curved arrow, Right click for undo"
+   },
+   "editor_arrow10": {
+      "message": "10"
+   },
+   "editor_arrow11": {
+      "message": "11"
+   },
+   "editor_arrow12": {
+      "message": "12"
+   },
+   "editor_arrow13": {
+      "message": "13"
+   },
+   "editor_arrow14": {
+      "message": "14"
+   },
+   "editor_arrow15": {
+      "message": "15"
+   },
+   "editor_arrow16": {
+      "message": "16"
+   },
+   "editor_arrow17": {
+      "message": "17"
+   },
+   "editor_arrow18": {
+      "message": "18"
+   },
+   "editor_arrow19": {
+      "message": "19"
+   },
+   "editor_arrow2": {
+      "message": "2"
+   },
+   "editor_arrow20": {
+      "message": "20"
+   },
+   "editor_arrow21": {
+      "message": "21"
+   },
+   "editor_arrow3": {
+      "message": "3"
+   },
+   "editor_arrow4": {
+      "message": "4"
+   },
+   "editor_arrow5": {
+      "message": "5"
+   },
+   "editor_arrow6": {
+      "message": "6"
+   },
+   "editor_arrow7": {
+      "message": "7"
+   },
+   "editor_arrow8": {
+      "message": "8"
+   },
+   "editor_arrow9": {
+      "message": "9"
+   },
+   "editor_clipboard": {
+      "message": "КОПИРОВАТЬ"
+   },
+   "editor_content": {
+      "message": "Текст"
+   },
+   "editor_copy": {
+      "message": "КОПИРОВАТЬ В"
+   },
+   "editor_copy_clipboard": {
+      "message": "Успешно"
+   },
+   "editor_copy_tip": {
+      "message": "Успешно скопировано"
+   },
+   "popup_recording_tab": {
+      "message": "Эта вкладка"
+   },
+   "popup_screenshot": {
+      "message": "Скриншот"
+   },
+   "popup_screenshot_editcontent": {
+      "message": "Редактировать текстовое содержимое веб-страницы"
+   },
+   "popup_screenshot_select": {
+      "message": "Выбранная область"
+   },
+   "popup_screenshot_uploadfiles": {
+      "message": "Аннотировать локальное или буферное изображение"
+   },
+   "popup_screenshot_visible": {
+      "message": "Видимая часть"
+   },
+   "popup_screenshot_whole": {
+      "message": "Вся страница"
+   },
+   "popup_uploadd": {
+      "message": "Загрузить"
+   },
+   "preview_video_download": {
+      "message": "Скачать"
+   },
+   "record_cancel": {
+      "message": "Отмена"
+   },
+   "record_save": {
+      "message": "Сохранить"
+   },
+   "screenshot_app_about": {
+      "message": "О программе"
+   },
+   "screenshot_app_copyright": {
+      "message": "%company% все права защищены."
+   },
+   "screenshot_app_exit": {
+      "message": "Выход"
+   },
+   "screenshot_app_help": {
+      "message": "Помощь"
+   },
+   "screenshot_app_hotkey_failtoregister1": {
+      "message": "Не удалось зарегистрировать горячую клавишу:"
+   },
+   "screenshot_app_hotkey_failtoregister2": {
+      "message": "Скорее всего она уже используется другой программой. Кликните на это сообщение, чтобы открыть окно настроек."
+   },
+   "screenshot_app_language_code": {
+      "message": "RU"
+   },
+   "screenshot_app_language_name": {
+      "message": "Русский"
+   },
+   "screenshot_app_language_name_eng": {
+      "message": "Russian"
+   },
+   "screenshot_app_menu_gallery": {
+      "message": "Моя галерея (%username%)"
+   },
+   "screenshot_app_menu_sign_in": {
+      "message": "Войти..."
+   },
+   "screenshot_app_menu_sign_out": {
+      "message": "Выйти"
+   },
+   "screenshot_app_options": {
+      "message": "Настройки"
+   },
+   "screenshot_app_options_autoclose": {
+      "message": "Автоматически закрывать окно загрузки на сервер"
+   },
+   "screenshot_app_options_autocopy": {
+      "message": "Автоматически копировать ссылку после загрузки на сервер"
+   },
+   "screenshot_app_options_capturecursor": {
+      "message": "Сохранять курсор на скриншоте"
+   },
+   "screenshot_app_options_configure_system_proxy": {
+      "message": "Настроить"
+   },
+   "screenshot_app_options_current_system_proxy": {
+      "message": "Cистемный прокси"
+   },
+   "screenshot_app_options_error_hotkeyequal": {
+      "message": "Выбраны одинаковые горячие клавиши, измените одну из них."
+   },
+   "screenshot_app_options_error_hotkeyinvalid": {
+      "message": "Одна из ваших горячих клавиш недействительна. Если вы хотите полностью отключить горячую клавишу, уберите соответствующую ей галочку."
+   },
+   "screenshot_app_options_formats": {
+      "message": "Форматы"
+   },
+   "screenshot_app_options_general": {
+      "message": "Основные"
+   },
+   "screenshot_app_options_hotkeygeneral": {
+      "message": "Основная горячая клавиша"
+   },
+   "screenshot_app_options_hotkeys": {
+      "message": "Горячие клавиши"
+   },
+   "screenshot_app_options_hotkeysavefullscreen": {
+      "message": "Быстрое сохранение всего экрана"
+   },
+   "screenshot_app_options_hotkeyuploadfullscreen": {
+      "message": "Быстрая загрузка всего экрана на сервер"
+   },
+   "screenshot_app_options_httpsproxy": {
+      "message": "HTTP(S) прокси"
+   },
+   "screenshot_app_options_jpegquality": {
+      "message": "Качество JPEG"
+   },
+   "screenshot_app_options_keepselection": {
+      "message": "Сохранять позицию выделенной области"
+   },
+   "screenshot_app_options_language": {
+      "message": "Язык"
+   },
+   "screenshot_app_options_manualproxy": {
+      "message": "Ручная настройка прокси"
+   },
+   "screenshot_app_options_noproxy": {
+      "message": "Без прокси"
+   },
+   "screenshot_app_options_optimize_always": {
+      "message": "Всегда"
+   },
+   "screenshot_app_options_optimize_never": {
+      "message": "Никогда"
+   },
+   "screenshot_app_options_optimize_screenshots": {
+      "message": "Оптимизировать скриншоты (OptiPNG)"
+   },
+   "screenshot_app_options_optimize_uploadonly": {
+      "message": "Только при загрузке на сервер"
+   },
+   "screenshot_app_options_proxy": {
+      "message": "Прокси"
+   },
+   "screenshot_app_options_proxyport": {
+      "message": "Порт"
+   },
+   "screenshot_app_options_showbubbles": {
+      "message": "Показывать уведомления о копировании и сохранении"
+   },
+   "screenshot_app_options_system_proxy_not_set": {
+      "message": "Без прокси (прямое соединение)"
+   },
+   "screenshot_app_options_systemproxy": {
+      "message": "Использовать системные настройки прокси"
+   },
+   "screenshot_app_options_uploadformat": {
+      "message": "Загружать на сервер в формате"
+   },
+   "screenshot_app_signed_in_as": {
+      "message": "Вы вошли как:"
+   },
+   "screenshot_app_signin_dialog_caption": {
+      "message": "Войти"
+   },
+   "screenshot_app_signin_error_caption": {
+      "message": "scrsht: ошибка"
+   },
+   "screenshot_app_signin_error_text": {
+      "message": "scrsht: При входе в аккаунт произошла ошибка. Повторите попытку."
+   },
+   "screenshot_app_take_screenshot": {
+      "message": "Сделать скриншот"
+   },
+   "screenshot_app_terms": {
+      "message": "Условия использования scrsht"
+   },
+   "screenshot_app_tray_tooltip": {
+      "message": "Нажмите \"%hotkey_main%\" на клавиатуре для того, чтобы сделать скриншот"
+   },
+   "screenshot_plugin_announce_do_not_show": {
+      "message": "Больше не показывать это сообщение"
+   },
+   "screenshot_plugin_cancel": {
+      "message": "Отменить"
+   },
+   "screenshot_plugin_chrome_38_retina_bug": {
+      "message": ""
+   },
+   "screenshot_plugin_chrome_bug_copy": {
+      "message": ""
+   },
+   "screenshot_plugin_clear": {
+      "message": "Очистить"
+   },
+   "screenshot_plugin_close": {
+      "message": "Закрыть"
+   },
+   "screenshot_plugin_copy": {
+      "message": "Копировать"
+   },
+   "screenshot_plugin_ctypes_error": {
+      "message": "Ошибка: компонент Firefox CTypes не смог загрузить scrsht."
+   },
+   "screenshot_plugin_edit_arrow": {
+      "message": "Стрелка"
+   },
+   "screenshot_plugin_edit_arrow_circle": {
+      "message": "Circle+Line use Right Click/CTRL+ Z for Undo"
+   },
+   "screenshot_plugin_edit_arrow_rect": {
+      "message": "Rectangle+Line  use Right Click/CTRL+ Z for Undo"
+   },
+   "screenshot_plugin_edit_blur": {
+      "message": "Размытие"
+   },
+   "screenshot_plugin_edit_circle": {
+      "message": "Окружность"
+   },
+   "screenshot_plugin_edit_color": {
+      "message": "Цвет"
+   },
+   "screenshot_plugin_edit_line": {
+      "message": "Линия"
+   },
+   "screenshot_plugin_edit_marker": {
+      "message": "Маркер"
+   },
+   "screenshot_plugin_edit_pencil": {
+      "message": "Карандаш"
+   },
+   "screenshot_plugin_edit_rect": {
+      "message": "Прямоугольник"
+   },
+   "screenshot_plugin_edit_text": {
+      "message": "Текст"
+   },
+   "screenshot_plugin_edit_undo": {
+      "message": "Отменить"
+   },
+   "screenshot_plugin_editonline": {
+      "message": "Редактировать"
+   },
+   "screenshot_plugin_error_capt": {
+      "message": "Ошибка"
+   },
+   "screenshot_plugin_fullscreen": {
+      "message": "Выделить весь экран"
+   },
+   "screenshot_plugin_go_to_mac_store": {
+      "message": "Извините, но расширение scrsht доступно только на Windows-платформе."
+   },
+   "screenshot_plugin_image_hosting_incorrect_response": {
+      "message": "Неверный ответ от хостинга изображений"
+   },
+   "screenshot_plugin_incorrect_size": {
+      "message": "Неверный размер"
+   },
+   "screenshot_plugin_npapi_deprecated_message": {
+      "message": ""
+   },
+   "screenshot_plugin_npapi_not_found": {
+      "message": ""
+   },
+   "screenshot_plugin_open": {
+      "message": "Открыть"
+   },
+   "screenshot_plugin_optimize_dialog_capt": {
+      "message": "Оптимизация скриншотов"
+   },
+   "screenshot_plugin_other_os": {
+      "message": ""
+   },
+   "screenshot_plugin_print": {
+      "message": "Печать"
+   },
+   "screenshot_plugin_retry": {
+      "message": "Повторить"
+   },
+   "screenshot_plugin_save": {
+      "message": "Сохранить"
+   },
+   "screenshot_plugin_screenshot_copied_to_clipboard": {
+      "message": "Скриншот скопирован в буфер обмена"
+   },
+   "screenshot_plugin_screenshot_error_reload_browser": {
+      "message": ""
+   },
+   "screenshot_plugin_screenshot_saved": {
+      "message": "Скриншот сохранён в %filename%. Кликните для открытия папки со скриншотом."
+   },
+   "screenshot_plugin_screenshot_uploaded_link_copied": {
+      "message": "Скриншот загружен на сервер. Ссылка скопирована в буфер обмена."
+   },
+   "screenshot_plugin_share": {
+      "message": "Поделиться в социальных сетях"
+   },
+   "screenshot_plugin_share_facebook": {
+      "message": "Поделиться на Facebook"
+   },
+   "screenshot_plugin_share_googlesearch": {
+      "message": "Искать похожие изображения на Google"
+   },
+   "screenshot_plugin_share_pinterest": {
+      "message": "Поделиться на Pinterest"
+   },
+   "screenshot_plugin_share_sendmail": {
+      "message": "Отправить по email"
+   },
+   "screenshot_plugin_share_tineyesearch": {
+      "message": "Искать похожие изображения на Tineye"
+   },
+   "screenshot_plugin_share_twitter": {
+      "message": "Поделиться в Twitter"
+   },
+   "screenshot_plugin_share_vk": {
+      "message": "Поделиться ВКонтакте"
+   },
+   "screenshot_plugin_share_whatsapp": {
+      "message": "Share on Whatsapp"
+   },
+   "screenshot_plugin_tooltip": {
+      "message": "Выберите область"
+   },
+   "screenshot_plugin_upl_fail_cancel_uploading_screenshot": {
+      "message": "Отмена - отменить загрузку скриншота"
+   },
+   "screenshot_plugin_upl_fail_check_proxy_settings": {
+      "message": "Пожалуйста, убедитесь, что настройки прокси верны и он не блокирует запросы от scrsht."
+   },
+   "screenshot_plugin_upl_fail_continue_open_scrsht_proxy": {
+      "message": "Продолжить - открыть настройки прокси scrsht"
+   },
+   "screenshot_plugin_upl_fail_continue_open_system_proxy": {
+      "message": "Продолжить - открыть системные настройки прокси"
+   },
+   "screenshot_plugin_upl_fail_scrsht_uses_proxy": {
+      "message": "scrsht настроен на использование прокси: %proxy%"
+   },
+   "screenshot_plugin_upl_fail_scrsht_uses_system_proxy": {
+      "message": "scrsht использует системные настройки прокси: %proxy%"
+   },
+   "screenshot_plugin_upl_fail_try_again_with_current_settings": {
+      "message": "Повторить - повторить загрузку с текущими настройками"
+   },
+   "screenshot_plugin_upload": {
+      "message": "Загрузить на scrsht.com"
+   },
+   "screenshot_plugin_upload_error_capt": {
+      "message": "Ошибка загрузки на сервер"
+   },
+   "screenshot_plugin_upload_error_detailed_info": {
+      "message": "Подробная информация"
+   },
+   "screenshot_plugin_upload_failed": {
+      "message": "Не удалось загрузить скриншот."
+   },
+   "screenshot_plugin_upload_failed_retry": {
+      "message": "Ошибка загрузки на сервер. Повторить?"
+   },
+   "screenshot_plugin_uploading_window_capt": {
+      "message": "Загрузка изображения на сервер"
+   },
+   "screenshotplugin_default_title": {
+      "message": "Сделать скриншот"
+   },
+   "screenshotplugin_name": {
+      "message": "Скриншот и запись экрана"
+   },
+   "screenshotplugin_short_description": {
+      "message": "Сделайте снимок страницы, всей страницы, запишите вкладку, окно или экран, сохраните как изображение, PDF или загрузите на сервер. Выберите область, отредактируйте свой скриншот."
+   }
+}

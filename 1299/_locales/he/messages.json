@@ -1,0 +1,455 @@
+{
+   "area_copy": {
+      "message": "העתק"
+   },
+   "edit_curve1": {
+      "message": "Curved arrow, Right click for undo"
+   },
+   "editor_arrow10": {
+      "message": "10"
+   },
+   "editor_arrow11": {
+      "message": "11"
+   },
+   "editor_arrow12": {
+      "message": "12"
+   },
+   "editor_arrow13": {
+      "message": "13"
+   },
+   "editor_arrow14": {
+      "message": "14"
+   },
+   "editor_arrow15": {
+      "message": "15"
+   },
+   "editor_arrow16": {
+      "message": "16"
+   },
+   "editor_arrow17": {
+      "message": "17"
+   },
+   "editor_arrow18": {
+      "message": "18"
+   },
+   "editor_arrow19": {
+      "message": "19"
+   },
+   "editor_arrow2": {
+      "message": "2"
+   },
+   "editor_arrow20": {
+      "message": "20"
+   },
+   "editor_arrow21": {
+      "message": "21"
+   },
+   "editor_arrow3": {
+      "message": "3"
+   },
+   "editor_arrow4": {
+      "message": "4"
+   },
+   "editor_arrow5": {
+      "message": "5"
+   },
+   "editor_arrow6": {
+      "message": "6"
+   },
+   "editor_arrow7": {
+      "message": "7"
+   },
+   "editor_arrow8": {
+      "message": "8"
+   },
+   "editor_arrow9": {
+      "message": "9"
+   },
+   "editor_clipboard": {
+      "message": "העתק"
+   },
+   "editor_content": {
+      "message": "טקסט"
+   },
+   "editor_copy": {
+      "message": "העתק אל"
+   },
+   "editor_copy_clipboard": {
+      "message": "הצלחה"
+   },
+   "editor_copy_tip": {
+      "message": "ההעתקה הצליחה"
+   },
+   "popup_recording_tab": {
+      "message": "כרטיסייה זו"
+   },
+   "popup_screenshot": {
+      "message": "צילום מסך"
+   },
+   "popup_screenshot_editcontent": {
+      "message": "ערוך תוכן טקסט של דף האינטרנט"
+   },
+   "popup_screenshot_select": {
+      "message": "האזור שנבחר"
+   },
+   "popup_screenshot_uploadfiles": {
+      "message": "הוסף הערות לתמונה מקומית ולתמונת לוח הגזירים"
+   },
+   "popup_screenshot_visible": {
+      "message": "החלק הנראה"
+   },
+   "popup_screenshot_whole": {
+      "message": "כל הדף"
+   },
+   "popup_uploadd": {
+      "message": "העלה"
+   },
+   "preview_video_download": {
+      "message": "הורדה"
+   },
+   "record_cancel": {
+      "message": "ביטול"
+   },
+   "record_save": {
+      "message": "שמור"
+   },
+   "screenshot_app_about": {
+      "message": "אודות"
+   },
+   "screenshot_app_copyright": {
+      "message": "%company% כל הזכויות שמורות."
+   },
+   "screenshot_app_exit": {
+      "message": "יציאה"
+   },
+   "screenshot_app_help": {
+      "message": "עזרה"
+   },
+   "screenshot_app_hotkey_failtoregister1": {
+      "message": "שגיאה ברישום המקש:"
+   },
+   "screenshot_app_hotkey_failtoregister2": {
+      "message": "ככל הנראה יישון אחר משתמש במקש זה. הקלק על הודעה זו לפתוח תפריט אפשרויות."
+   },
+   "screenshot_app_language_code": {
+      "message": "HE"
+   },
+   "screenshot_app_language_name": {
+      "message": "עברית"
+   },
+   "screenshot_app_language_name_eng": {
+      "message": "Hebrew"
+   },
+   "screenshot_app_menu_gallery": {
+      "message": "הגלריה שלי (%username%)"
+   },
+   "screenshot_app_menu_sign_in": {
+      "message": "התחבר..."
+   },
+   "screenshot_app_menu_sign_out": {
+      "message": "התנתק"
+   },
+   "screenshot_app_options": {
+      "message": "אפשרויות"
+   },
+   "screenshot_app_options_autoclose": {
+      "message": "סגור חלון העלאה באופן אוטומטי"
+   },
+   "screenshot_app_options_autocopy": {
+      "message": "העתק קישור אוטומטית לאחר העלאה"
+   },
+   "screenshot_app_options_capturecursor": {
+      "message": "צלם את הסמן בצילום המסך"
+   },
+   "screenshot_app_options_configure_system_proxy": {
+      "message": "הגדרה"
+   },
+   "screenshot_app_options_current_system_proxy": {
+      "message": "מערכת פרוקסי"
+   },
+   "screenshot_app_options_error_hotkeyequal": {
+      "message": "אינך יכול לבחור מקש אחד לשני פונקציות שונות. אנא שנה את בחירתך."
+   },
+   "screenshot_app_options_error_hotkeyinvalid": {
+      "message": "אחד ממקשיך אינו חוקי. אם ברצונך לתקן בעיה זו, אנא הסר הסימון מתיבת הסימון שלו ."
+   },
+   "screenshot_app_options_formats": {
+      "message": "פורמטים"
+   },
+   "screenshot_app_options_general": {
+      "message": "כללי"
+   },
+   "screenshot_app_options_hotkeygeneral": {
+      "message": "מקשי קיצור כלליים"
+   },
+   "screenshot_app_options_hotkeys": {
+      "message": "מקשי קיצור"
+   },
+   "screenshot_app_options_hotkeysavefullscreen": {
+      "message": "שמירת צילומסך מלא, אוטומטית"
+   },
+   "screenshot_app_options_hotkeyuploadfullscreen": {
+      "message": "העלאת צילומסך מלא, אוטומטית"
+   },
+   "screenshot_app_options_httpsproxy": {
+      "message": "HTTP(S) proxy"
+   },
+   "screenshot_app_options_jpegquality": {
+      "message": "איכות ה- JPEG"
+   },
+   "screenshot_app_options_keepselection": {
+      "message": "שמור על מיקום האיזור המסומן"
+   },
+   "screenshot_app_options_language": {
+      "message": "שפה"
+   },
+   "screenshot_app_options_manualproxy": {
+      "message": "כיוון פרוקסי ידני"
+   },
+   "screenshot_app_options_noproxy": {
+      "message": "ללא פרוקסי"
+   },
+   "screenshot_app_options_optimize_always": {
+      "message": "תמיד"
+   },
+   "screenshot_app_options_optimize_never": {
+      "message": "לעולם לא"
+   },
+   "screenshot_app_options_optimize_screenshots": {
+      "message": "ממטב צילומסך (OptiPNG)"
+   },
+   "screenshot_app_options_optimize_uploadonly": {
+      "message": "רק בעת העלאה"
+   },
+   "screenshot_app_options_proxy": {
+      "message": "פרוקסי"
+   },
+   "screenshot_app_options_proxyport": {
+      "message": "פורט"
+   },
+   "screenshot_app_options_showbubbles": {
+      "message": "הראה חלון הודעה לגבי העתקה ושמירה"
+   },
+   "screenshot_app_options_system_proxy_not_set": {
+      "message": "לא הוגדר (חיבור ישיר)"
+   },
+   "screenshot_app_options_systemproxy": {
+      "message": "השתמש בהנחיות הפרוקסי של המערכת"
+   },
+   "screenshot_app_options_uploadformat": {
+      "message": "פורמט העלאת תמונות"
+   },
+   "screenshot_app_signed_in_as": {
+      "message": "מחובר כ:"
+   },
+   "screenshot_app_signin_dialog_caption": {
+      "message": "התחבר"
+   },
+   "screenshot_app_signin_error_caption": {
+      "message": "שגיאת התחברות"
+   },
+   "screenshot_app_signin_error_text": {
+      "message": "scrsht: אירעה שגיאה במהלך ההתחברות. אנא נסה שוב."
+   },
+   "screenshot_app_take_screenshot": {
+      "message": "צלם מסך"
+   },
+   "screenshot_app_terms": {
+      "message": "תנאי השימוש בלייט שוט"
+   },
+   "screenshot_app_tray_tooltip": {
+      "message": "לחץ על מקש \"%hotkey_main%\" כדי להשתמש בלייט שוט"
+   },
+   "screenshot_plugin_announce_do_not_show": {
+      "message": "אל תראה את ההודעה הזאת שוב"
+   },
+   "screenshot_plugin_cancel": {
+      "message": "בטל"
+   },
+   "screenshot_plugin_chrome_38_retina_bug": {
+      "message": ""
+   },
+   "screenshot_plugin_chrome_bug_copy": {
+      "message": ""
+   },
+   "screenshot_plugin_clear": {
+      "message": "נקה בחירה"
+   },
+   "screenshot_plugin_close": {
+      "message": "סגור"
+   },
+   "screenshot_plugin_copy": {
+      "message": "העתק"
+   },
+   "screenshot_plugin_ctypes_error": {
+      "message": "שגיאה: לייט שוט לא הצליחה לצלם את המסך. נסה לרענן את הד"
+   },
+   "screenshot_plugin_edit_arrow": {
+      "message": "חץ"
+   },
+   "screenshot_plugin_edit_arrow_circle": {
+      "message": "Circle+Line use Right Click/CTRL+ Z for Undo"
+   },
+   "screenshot_plugin_edit_arrow_rect": {
+      "message": "Rectangle+Line  use Right Click/CTRL+ Z for Undo"
+   },
+   "screenshot_plugin_edit_blur": {
+      "message": "טשטוש"
+   },
+   "screenshot_plugin_edit_circle": {
+      "message": "עיגול"
+   },
+   "screenshot_plugin_edit_color": {
+      "message": "צבע"
+   },
+   "screenshot_plugin_edit_line": {
+      "message": "קו"
+   },
+   "screenshot_plugin_edit_marker": {
+      "message": "מרקר"
+   },
+   "screenshot_plugin_edit_pencil": {
+      "message": "עט"
+   },
+   "screenshot_plugin_edit_rect": {
+      "message": "מסגרת"
+   },
+   "screenshot_plugin_edit_text": {
+      "message": "טקסט"
+   },
+   "screenshot_plugin_edit_undo": {
+      "message": "בטל"
+   },
+   "screenshot_plugin_editonline": {
+      "message": "ערוך צילום מסך אונליין"
+   },
+   "screenshot_plugin_error_capt": {
+      "message": "שגיאה"
+   },
+   "screenshot_plugin_fullscreen": {
+      "message": "בחר מסך מלא"
+   },
+   "screenshot_plugin_go_to_mac_store": {
+      "message": "אנו מצטערים על אי הנוחות, אך הרחבת לייט שוט רצה רק על מחשבים מבוססי"
+   },
+   "screenshot_plugin_image_hosting_incorrect_response": {
+      "message": "מבנה ה- JSON שגוי בתגובה של השרת המארח בתמונה"
+   },
+   "screenshot_plugin_incorrect_size": {
+      "message": "גודל לא נכון"
+   },
+   "screenshot_plugin_npapi_deprecated_message": {
+      "message": ""
+   },
+   "screenshot_plugin_npapi_not_found": {
+      "message": ""
+   },
+   "screenshot_plugin_open": {
+      "message": "פתח"
+   },
+   "screenshot_plugin_optimize_dialog_capt": {
+      "message": "ממטב צילומסך"
+   },
+   "screenshot_plugin_other_os": {
+      "message": ""
+   },
+   "screenshot_plugin_print": {
+      "message": "הדפס"
+   },
+   "screenshot_plugin_retry": {
+      "message": "נסה שוב"
+   },
+   "screenshot_plugin_save": {
+      "message": "שמור"
+   },
+   "screenshot_plugin_screenshot_copied_to_clipboard": {
+      "message": "צילומסך הועתק ללוח"
+   },
+   "screenshot_plugin_screenshot_error_reload_browser": {
+      "message": ""
+   },
+   "screenshot_plugin_screenshot_saved": {
+      "message": "צילומסך נשמר אל %filename%. לחץ כאן לפתיחת התיקיה."
+   },
+   "screenshot_plugin_screenshot_uploaded_link_copied": {
+      "message": "צילום מסך הועלה, קישור הועתק ללוח."
+   },
+   "screenshot_plugin_share": {
+      "message": "שתף ברשתות חברתיות"
+   },
+   "screenshot_plugin_share_facebook": {
+      "message": "שתף בפייסבוק"
+   },
+   "screenshot_plugin_share_googlesearch": {
+      "message": "חפש תמונות דומות בגוגל"
+   },
+   "screenshot_plugin_share_pinterest": {
+      "message": "שתף ב: Pinterest"
+   },
+   "screenshot_plugin_share_sendmail": {
+      "message": "שלח דרך דואר אלקטרוני"
+   },
+   "screenshot_plugin_share_tineyesearch": {
+      "message": "חפש תמונות דומות בטינאיי"
+   },
+   "screenshot_plugin_share_twitter": {
+      "message": "שתף בטוויטר"
+   },
+   "screenshot_plugin_share_vk": {
+      "message": "שתף ב: VK"
+   },
+   "screenshot_plugin_share_whatsapp": {
+      "message": "Share on Whatsapp"
+   },
+   "screenshot_plugin_tooltip": {
+      "message": "בחר איזור"
+   },
+   "screenshot_plugin_upl_fail_cancel_uploading_screenshot": {
+      "message": "בטל - בטל העלאת תצלום מסך"
+   },
+   "screenshot_plugin_upl_fail_check_proxy_settings": {
+      "message": "אנא ודא כי התצורה נכונה ופרוקסי לא יחסום שוב בקשות לייט שוט."
+   },
+   "screenshot_plugin_upl_fail_continue_open_scrsht_proxy": {
+      "message": "המשך - פתח את הגדרות הProxy של לייט שוט"
+   },
+   "screenshot_plugin_upl_fail_continue_open_system_proxy": {
+      "message": "המשך - פתח את הגדרות הProxy של המערכת"
+   },
+   "screenshot_plugin_upl_fail_scrsht_uses_proxy": {
+      "message": "כרגע לייט שוט מוגדרת להשתמש בפרוקסי הזה: %proxy%"
+   },
+   "screenshot_plugin_upl_fail_scrsht_uses_system_proxy": {
+      "message": "לייט שוט משתמשת בהגדרות הפרוקסי עבור המערכת הנוכחית: %proxy%"
+   },
+   "screenshot_plugin_upl_fail_try_again_with_current_settings": {
+      "message": "נסה שוב - לנסות שוב תוך שימוש בהגדרות הנוכחיות"
+   },
+   "screenshot_plugin_upload": {
+      "message": "העלה צילומסך ל scrsht.com"
+   },
+   "screenshot_plugin_upload_error_capt": {
+      "message": "העלאה נכשלה!"
+   },
+   "screenshot_plugin_upload_error_detailed_info": {
+      "message": "מידע מפורט"
+   },
+   "screenshot_plugin_upload_failed": {
+      "message": "ההעלאה נכשלה!"
+   },
+   "screenshot_plugin_upload_failed_retry": {
+      "message": "ההעלאה נכשלה. נסה שוב?"
+   },
+   "screenshot_plugin_uploading_window_capt": {
+      "message": "מעלה תמונה"
+   },
+   "screenshotplugin_default_title": {
+      "message": "צלם את המסך"
+   },
+   "screenshotplugin_name": {
+      "message": "צילום מסך והקלטת מסך"
+   },
+   "screenshotplugin_short_description": {
+      "message": "צילום עמוד, עמוד מלא, הקלטת לשונית, חלון או מסך, שמירה כתמונה, PDF או העלאה לשרת. בחר אזור, ערוך את צילום המסך שלך."
+   }
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SCRSHT Todo List</title>
+    <link rel="stylesheet" href="../recording/libs/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="../libs/quill.snow.css">
+    <link rel="stylesheet" href="../css/todo.css">
+</head>
+<body>
+    <div class="container">
+        <h1>SCRSHT Task Manager</h1>
+        <button class="btn btn-primary" id="newTaskBtn">+ New Task</button>
+        <div id="taskList" class="task-list"></div>
+    </div>
+
+    <!-- Editor Modal -->
+    <div id="editorModal" class="modal">
+        <div class="modal-content">
+            <h2 id="modalTitle">New Task</h2>
+            <input type="text" id="taskTitle" placeholder="Task Title" class="task-input">
+            <div id="editor" style="height: 200px; margin: 1rem 0;"></div>
+            <div class="due-date-section">
+                <label>Due Date: </label>
+                <input type="date" id="dueDate">
+            </div>
+            <button class="btn btn-primary" id="saveTaskBtn">Save Task</button>
+            <button class="btn" id="cancelBtn">Cancel</button>
+        </div>
+    </div>
+
+    <!-- Viewer Modal -->
+<div id="viewerModal" class="modal">
+    <div class="modal-content">
+        <button class="modal-close-btn" id="closeViewerBtn2">&times;</button>
+        <h2 id="viewTitle"></h2>
+        <div id="viewContent" class="task-content"></div>
+        <div class="due-date-info">
+            <span id="viewDueDate"></span>
+            <button class="btn" id="closeViewerBtn">Close</button>
+        </div>
+    </div>
+</div>
+
+    <script src="../libs/quill.js"></script>
+        <script src="../js/todo.js"></script>
+</body>
+</html>

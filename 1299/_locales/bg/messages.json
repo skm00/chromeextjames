@@ -1,0 +1,455 @@
+{
+   "area_copy": {
+      "message": "Копирай"
+   },
+   "edit_curve1": {
+      "message": "Curved arrow, Right click for undo"
+   },
+   "editor_arrow10": {
+      "message": "10"
+   },
+   "editor_arrow11": {
+      "message": "11"
+   },
+   "editor_arrow12": {
+      "message": "12"
+   },
+   "editor_arrow13": {
+      "message": "13"
+   },
+   "editor_arrow14": {
+      "message": "14"
+   },
+   "editor_arrow15": {
+      "message": "15"
+   },
+   "editor_arrow16": {
+      "message": "16"
+   },
+   "editor_arrow17": {
+      "message": "17"
+   },
+   "editor_arrow18": {
+      "message": "18"
+   },
+   "editor_arrow19": {
+      "message": "19"
+   },
+   "editor_arrow2": {
+      "message": "2"
+   },
+   "editor_arrow20": {
+      "message": "20"
+   },
+   "editor_arrow21": {
+      "message": "21"
+   },
+   "editor_arrow3": {
+      "message": "3"
+   },
+   "editor_arrow4": {
+      "message": "4"
+   },
+   "editor_arrow5": {
+      "message": "5"
+   },
+   "editor_arrow6": {
+      "message": "6"
+   },
+   "editor_arrow7": {
+      "message": "7"
+   },
+   "editor_arrow8": {
+      "message": "8"
+   },
+   "editor_arrow9": {
+      "message": "9"
+   },
+   "editor_clipboard": {
+      "message": "Копирай"
+   },
+   "editor_content": {
+      "message": "Текст"
+   },
+   "editor_copy": {
+      "message": "Копирай в"
+   },
+   "editor_copy_clipboard": {
+      "message": "Успешно"
+   },
+   "editor_copy_tip": {
+      "message": "Успешно копиране"
+   },
+   "popup_recording_tab": {
+      "message": "Този раздел"
+   },
+   "popup_screenshot": {
+      "message": "Екранна снимка"
+   },
+   "popup_screenshot_editcontent": {
+      "message": "Редактиране на текстово съдържание на уеб страницата"
+   },
+   "popup_screenshot_select": {
+      "message": "Избраната област"
+   },
+   "popup_screenshot_uploadfiles": {
+      "message": "Анотиране на локално или копирано изображение"
+   },
+   "popup_screenshot_visible": {
+      "message": "Видимата част"
+   },
+   "popup_screenshot_whole": {
+      "message": "Цялата страница"
+   },
+   "popup_uploadd": {
+      "message": "Качи"
+   },
+   "preview_video_download": {
+      "message": "Изтегляне"
+   },
+   "record_cancel": {
+      "message": "Отказ"
+   },
+   "record_save": {
+      "message": "Запази"
+   },
+   "screenshot_app_about": {
+      "message": "Относно"
+   },
+   "screenshot_app_copyright": {
+      "message": "%company% Всички права запазени"
+   },
+   "screenshot_app_exit": {
+      "message": "Изход"
+   },
+   "screenshot_app_help": {
+      "message": "Помощ"
+   },
+   "screenshot_app_hotkey_failtoregister1": {
+      "message": "Не успя да регистрира бърза клавишна комбинация"
+   },
+   "screenshot_app_hotkey_failtoregister2": {
+      "message": "Вероятно друго приложение вече го използва. Натисни на това съобщение за да отвориш опции"
+   },
+   "screenshot_app_language_code": {
+      "message": "BG"
+   },
+   "screenshot_app_language_name": {
+      "message": "Български език"
+   },
+   "screenshot_app_language_name_eng": {
+      "message": "Bulgarian"
+   },
+   "screenshot_app_menu_gallery": {
+      "message": "Моята галерия (%username%)"
+   },
+   "screenshot_app_menu_sign_in": {
+      "message": "Впиши се..."
+   },
+   "screenshot_app_menu_sign_out": {
+      "message": "Отпиши се"
+   },
+   "screenshot_app_options": {
+      "message": "Опции"
+   },
+   "screenshot_app_options_autoclose": {
+      "message": "Автоматично затвори прозореца за качване"
+   },
+   "screenshot_app_options_autocopy": {
+      "message": "Автоматично копирай линк след качване"
+   },
+   "screenshot_app_options_capturecursor": {
+      "message": "Заснеми курсора на скрииншот"
+   },
+   "screenshot_app_options_configure_system_proxy": {
+      "message": "Конфигурирай"
+   },
+   "screenshot_app_options_current_system_proxy": {
+      "message": "Системно прокси"
+   },
+   "screenshot_app_options_error_hotkeyequal": {
+      "message": "Не може да използвате същата клавишна комбинация за различни функции. Моля променете една от комбинациите."
+   },
+   "screenshot_app_options_error_hotkeyinvalid": {
+      "message": "Една от вашите бързи клавишни комбинации е невалидна. Ако искате да деактивирате бързата клавишна комбинация, моля махнете отметката на съответното квадратче"
+   },
+   "screenshot_app_options_formats": {
+      "message": "Формати"
+   },
+   "screenshot_app_options_general": {
+      "message": "Общ"
+   },
+   "screenshot_app_options_hotkeygeneral": {
+      "message": "Обща клавишна комбинация"
+   },
+   "screenshot_app_options_hotkeys": {
+      "message": "Комбинация от копчета"
+   },
+   "screenshot_app_options_hotkeysavefullscreen": {
+      "message": "Моментално запазване на целия екран"
+   },
+   "screenshot_app_options_hotkeyuploadfullscreen": {
+      "message": "Моментално качване на целия екран"
+   },
+   "screenshot_app_options_httpsproxy": {
+      "message": "HTTP(S) прокси"
+   },
+   "screenshot_app_options_jpegquality": {
+      "message": "JPEG качество"
+   },
+   "screenshot_app_options_keepselection": {
+      "message": "Запазете селектираната позиция"
+   },
+   "screenshot_app_options_language": {
+      "message": "Език"
+   },
+   "screenshot_app_options_manualproxy": {
+      "message": "Ръчно конфигуриране на прокси"
+   },
+   "screenshot_app_options_noproxy": {
+      "message": "Няма прокси"
+   },
+   "screenshot_app_options_optimize_always": {
+      "message": "Винаги"
+   },
+   "screenshot_app_options_optimize_never": {
+      "message": "Никога"
+   },
+   "screenshot_app_options_optimize_screenshots": {
+      "message": "Оптимизирай скрииншотове (OptiPNG)"
+   },
+   "screenshot_app_options_optimize_uploadonly": {
+      "message": "Само когато се качва"
+   },
+   "screenshot_app_options_proxy": {
+      "message": "Прокси"
+   },
+   "screenshot_app_options_proxyport": {
+      "message": "Порт"
+   },
+   "screenshot_app_options_showbubbles": {
+      "message": "Покажи известия за копиране и запазване"
+   },
+   "screenshot_app_options_system_proxy_not_set": {
+      "message": "Незададено (директна връзка)"
+   },
+   "screenshot_app_options_systemproxy": {
+      "message": "Използвайте системните прокси настройки"
+   },
+   "screenshot_app_options_uploadformat": {
+      "message": "Качи използвайки формата"
+   },
+   "screenshot_app_signed_in_as": {
+      "message": "Вписан като"
+   },
+   "screenshot_app_signin_dialog_caption": {
+      "message": "Впиши се"
+   },
+   "screenshot_app_signin_error_caption": {
+      "message": "Грешка при scrsht вписване"
+   },
+   "screenshot_app_signin_error_text": {
+      "message": "scrsht: Възникна грешка докато се вписвахте. Моля опитайте отново."
+   },
+   "screenshot_app_take_screenshot": {
+      "message": "Направи скрииншот"
+   },
+   "screenshot_app_terms": {
+      "message": "Условия за ползване на scrsht"
+   },
+   "screenshot_app_tray_tooltip": {
+      "message": "Натиснете бутона \"%hotkey_main%\" на вашата клавиатура, за да снимате"
+   },
+   "screenshot_plugin_announce_do_not_show": {
+      "message": "Не показвай това съобщение отново"
+   },
+   "screenshot_plugin_cancel": {
+      "message": "Откажи"
+   },
+   "screenshot_plugin_chrome_38_retina_bug": {
+      "message": ""
+   },
+   "screenshot_plugin_chrome_bug_copy": {
+      "message": ""
+   },
+   "screenshot_plugin_clear": {
+      "message": "Изчистване"
+   },
+   "screenshot_plugin_close": {
+      "message": "Затвори"
+   },
+   "screenshot_plugin_copy": {
+      "message": "Копиране"
+   },
+   "screenshot_plugin_ctypes_error": {
+      "message": "Грешка: Firefox Ctypes не успя да зареди scrsht.  "
+   },
+   "screenshot_plugin_edit_arrow": {
+      "message": "Стрелка"
+   },
+   "screenshot_plugin_edit_arrow_circle": {
+      "message": "Circle+Line use Right Click/CTRL+ Z for Undo"
+   },
+   "screenshot_plugin_edit_arrow_rect": {
+      "message": "Rectangle+Line  use Right Click/CTRL+ Z for Undo"
+   },
+   "screenshot_plugin_edit_blur": {
+      "message": "Замъгли"
+   },
+   "screenshot_plugin_edit_circle": {
+      "message": "Окръжност"
+   },
+   "screenshot_plugin_edit_color": {
+      "message": "Цвят"
+   },
+   "screenshot_plugin_edit_line": {
+      "message": "Линия"
+   },
+   "screenshot_plugin_edit_marker": {
+      "message": "Маркер"
+   },
+   "screenshot_plugin_edit_pencil": {
+      "message": "Писалка"
+   },
+   "screenshot_plugin_edit_rect": {
+      "message": "Триъгълник"
+   },
+   "screenshot_plugin_edit_text": {
+      "message": "Текст"
+   },
+   "screenshot_plugin_edit_undo": {
+      "message": "Премахване"
+   },
+   "screenshot_plugin_editonline": {
+      "message": "Онлайн редактиране"
+   },
+   "screenshot_plugin_error_capt": {
+      "message": "Грешка"
+   },
+   "screenshot_plugin_fullscreen": {
+      "message": "Избиране на целия екран"
+   },
+   "screenshot_plugin_go_to_mac_store": {
+      "message": "Извиняваме се за неудобството, но scrsht разширението работи само на Windows компютри."
+   },
+   "screenshot_plugin_image_hosting_incorrect_response": {
+      "message": "Неправилна JSON структура в отговор от снимков хостинг сървър"
+   },
+   "screenshot_plugin_incorrect_size": {
+      "message": "Неправилен размер"
+   },
+   "screenshot_plugin_npapi_deprecated_message": {
+      "message": ""
+   },
+   "screenshot_plugin_npapi_not_found": {
+      "message": ""
+   },
+   "screenshot_plugin_open": {
+      "message": "Отвори"
+   },
+   "screenshot_plugin_optimize_dialog_capt": {
+      "message": "Оптимизиране на скрииншот"
+   },
+   "screenshot_plugin_other_os": {
+      "message": ""
+   },
+   "screenshot_plugin_print": {
+      "message": "Принтиране"
+   },
+   "screenshot_plugin_retry": {
+      "message": "Опитай отново"
+   },
+   "screenshot_plugin_save": {
+      "message": "Запазване"
+   },
+   "screenshot_plugin_screenshot_copied_to_clipboard": {
+      "message": "Твоят скрииншот е копиран в клипбоард"
+   },
+   "screenshot_plugin_screenshot_error_reload_browser": {
+      "message": ""
+   },
+   "screenshot_plugin_screenshot_saved": {
+      "message": "Скрииншот е запазен в %filename%. Натиснете тук за да отворите папката"
+   },
+   "screenshot_plugin_screenshot_uploaded_link_copied": {
+      "message": "Скрииншота е качен. Линкът е копиран в клипбоард."
+   },
+   "screenshot_plugin_share": {
+      "message": "Сподели в социални мрежи"
+   },
+   "screenshot_plugin_share_facebook": {
+      "message": "Сподели в Facebook"
+   },
+   "screenshot_plugin_share_googlesearch": {
+      "message": "Търсене на подобни изображения в Google"
+   },
+   "screenshot_plugin_share_pinterest": {
+      "message": "Сподели в Pinterest"
+   },
+   "screenshot_plugin_share_sendmail": {
+      "message": "Изпрати чрез email"
+   },
+   "screenshot_plugin_share_tineyesearch": {
+      "message": "Търсене на подобни изображения в Tineye"
+   },
+   "screenshot_plugin_share_twitter": {
+      "message": "Сподели в Twitter"
+   },
+   "screenshot_plugin_share_vk": {
+      "message": "Сподели в VK"
+   },
+   "screenshot_plugin_share_whatsapp": {
+      "message": "Споделете в Whatsapp"
+   },
+   "screenshot_plugin_tooltip": {
+      "message": "Избери област"
+   },
+   "screenshot_plugin_upl_fail_cancel_uploading_screenshot": {
+      "message": "Откажи - откажи качването на скрииншот"
+   },
+   "screenshot_plugin_upl_fail_check_proxy_settings": {
+      "message": "Моля уверете се, че конфигурацията е правилна и прокси настройките не блокират scrsht рекуести."
+   },
+   "screenshot_plugin_upl_fail_continue_open_scrsht_proxy": {
+      "message": "Продължи - отвори scrsht прокси конфигурация"
+   },
+   "screenshot_plugin_upl_fail_continue_open_system_proxy": {
+      "message": "Продължи - отвори системните прокси конфигурации"
+   },
+   "screenshot_plugin_upl_fail_scrsht_uses_proxy": {
+      "message": "Понастоящем scrsht е конфигуриран да използва това прокси: %proxy%"
+   },
+   "screenshot_plugin_upl_fail_scrsht_uses_system_proxy": {
+      "message": "scrsht използва сегашните proxy настройки: %proxy%"
+   },
+   "screenshot_plugin_upl_fail_try_again_with_current_settings": {
+      "message": "Опитай отново - опитай използвайки сегашните настройки"
+   },
+   "screenshot_plugin_upload": {
+      "message": "Качване в scrsht.com"
+   },
+   "screenshot_plugin_upload_error_capt": {
+      "message": "Грешка при качване"
+   },
+   "screenshot_plugin_upload_error_detailed_info": {
+      "message": "Детайлна информация"
+   },
+   "screenshot_plugin_upload_failed": {
+      "message": "Провалено качване"
+   },
+   "screenshot_plugin_upload_failed_retry": {
+      "message": "Качването е прекъснато. Ще опитате ли отново?"
+   },
+   "screenshot_plugin_uploading_window_capt": {
+      "message": "Качване на изображението"
+   },
+   "screenshotplugin_default_title": {
+      "message": "Направи скрииншот"
+   },
+   "screenshotplugin_name": {
+      "message": "Заснемане на екран и запис на екрана"
+   },
+   "screenshotplugin_short_description": {
+      "message": "Заснемане на страница, цяла страница, запис на раздел, прозорец или екран, запазване като изображение, PDF или качване на сървър. Изберете област, редактирайте вашата снимка на екрана."
+   }
+}

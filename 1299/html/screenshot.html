@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../css/editor.css">
+    <link rel="stylesheet" href="../css/tui-color-picker.min.css">
+    <link rel="stylesheet" href="../css/tui-image-editor.min.css">
+    <link rel="stylesheet" href="../recording/libs/fontawesome/css/all.min.css">
+
+    <script src="../libs/tui-color-picker.min.js"></script>
+    <script src="../libs/tui-code-snippet.min.js"></script>
+    <script src="../libs/fabric.min.js"></script>
+    <script src="../libs/tui-image-editor.min.js"></script>
+    <script src="../libs/jspdf.umd.min.js"></script>
+    <script src="../libs/html2pdf.bundle.min.js"></script>
+
+    <script src="../js/editor.js"></script>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+	
+	
+	
+	
+	
+    <title>scrsht screenshot</title>
+</head>
+<style>
+.tui-image-editor-container .tui-image-editor-help-menu.top
+{
+    display: block !important;
+}
+
+.tui-image-editor-container .tui-image-editor-help-menu.top .tie-btn-history,
+.tui-image-editor-container .tui-image-editor-help-menu.top .tie-btn-delete,
+.tui-image-editor-container .tui-image-editor-help-menu.top .tie-btn-deleteAll,
+.tui-image-editor-container .tui-image-editor-help-menu.top .tie-btn-hand,
+.tui-image-editor-container .tui-image-editor-help-menu.top .tie-btn-zoomOut,
+.tui-image-editor-container .tui-image-editor-help-menu.top .tie-btn-zoomIn 
+
+{
+    display: none !important;
+}
+
+.tui-image-editor-container .tui-image-editor-main
+{
+ top: 2px !important;
+}
+.tui-image-editor-container .tui-image-editor-submenu .tui-image-editor-submenu-item .tui-image-editor-newline
+{
+
+    display: inline;width: 30%;
+}
+.tui-image-editor-container .tui-image-editor-submenu
+{
+height:60px !important;
+bottom: -10px;
+}
+.tui-image-editor-container.bottom .tui-image-editor-submenu>div
+{
+padding-bottom: 0px !important;
+}
+
+.tui-image-editor-container .tui-image-editor-controls
+{
+height:40px !important;
+
+}
+.tui-image-editor-container .tui-image-editor-main-container
+{
+bottom:50px !important;
+background-color:transparent !important;
+}
+
+.tui-image-editor-container
+{
+background-color:transparent !important;
+}
+
+
+/* Progress Bar Container */
+#progressContainer {
+  display: none; /* Initially hidden */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 30px;
+  background: #f3f3f3;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+  position: relative; /* Relative for child positioning */
+}
+
+/* Progress Bar */
+#progressBar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%; /* Initial width (no progress) */
+  height: 100%; /* Full height of the container */
+  background: linear-gradient(90deg, #007bff, #00d2ff); /* Gradient */
+  transition: width 0.2s ease-in-out; /* Smooth progress */
+  z-index: 1;
+}
+
+/* Progress Number */
+#progressNumber {
+  position: absolute;
+  right: 10px; /* Place at the end of the progress bar */
+  top: 50%; /* Center vertically */
+  transform: translateY(-50%); /* Align perfectly in the center */
+  z-index: 2; /* Stay above the progress bar */
+  font-size: 16px;
+  font-weight: bold;
+  color: #ffffff; /* Default color (white) */
+  visibility: hidden; /* Initially hidden */
+}
+
+
+/* Dropdown Options */
+.gptOptions {
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.gptOptions li {
+    padding: 10px 15px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+	width:175px;
+    cursor: pointer;
+    border-bottom: 1px solid #f1f1f1;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.gptOptions li:last-child {
+    border-bottom: none;
+}
+
+.gptOptions li:hover {
+    background-color: #007BFF;
+    color: #fff;
+}
+
+/* ChatGPT Button */
+#chatgptButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    background-color: #007BFF;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#chatgptButton:hover {
+    background-color: #0056b3;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Button Hover Effect */
+#saveBtn:hover {
+    background-color: #0056b3; /* Darker blue */
+}
+
+/* Dropdown Menu Hover Effect */
+#saveOptions li:hover {
+    background-color: #f1f1f1;
+    color: #007BFF;
+}
+
+/* Smooth Dropdown Animation */
+#saveOptions {
+    transition: all 0.3s ease;
+}
+
+#uploadOptions li:hover {
+    background-color: #f5f5f5; /* Highlight on hover */
+}
+
+.tui-image-editor .tui-control-point {
+    background-color: #FF0000 !important; /* 🔴 Change control point color */
+    border: 2px solid #000000 !important; /* ⚫ Change border color */
+}
+
+</style>
+<body>
+
+<div id="payment-status"></div>
+
+
+<div id="progressContainer">
+    <div id="progressBar"></div>  <div id="progressNumber" style="visibility: hidden;"></div>
+</div>
+ 
+
+<div id="menu">
+
+
+ 
+	 <button id="annotateBtn" title="Annotate">
+       <img src="../toolbar_res/number-3.png" width="30px" style="vertical-align: middle; margin-right: 5px;" />
+    </button>
+    <a id="scrshtHistory" title="View all screenshots" href="scrsht_history.html" target="_blank">
+        <i class="fa-solid fa-images"></i>
+    </a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp
+ 
+
+<div id="uploadContainer" style="position: relative; display: inline-block;">
+    <button id="uploadBtn" title="Upload & get link" style="padding: 0px; color: white; border: none; border-radius: 5px; cursor: pointer;">
+        <i class="fas fa-upload"></i>
+    </button>
+    <!-- Dropdown Menu -->
+   <!-- <ul id="uploadOptions" style="display: none; position: absolute; top: 110%; left: 0; background-color: white; border: 1px solid #ccc; border-radius: 5px; padding: 0; margin: 0; list-style: none; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); z-index: 1000;">
+        <li style="padding: 10px; cursor: pointer; transition: background-color 0.2s;" id="uploadToSecondary">Upload 2</li>
+    </ul>-->
+</div>
+
+	 
+
+	 
+	 
+	<div id="saveContainer" style="position: relative; display: inline-block;">
+    <button id="saveBtn" title="Save PNG" style="padding: 0px; color: white; border: none; border-radius: 5px; cursor: pointer;">
+        <i class="fas fa-save"></i>
+    </button>
+    <!-- Dropdown Menu -->
+    <ul id="saveOptions" style="display: none; position: absolute; top: 110%; left: 0; background-color: white; border: 1px solid #ccc; border-radius: 5px; padding: 0; margin: 0; list-style: none; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); z-index: 1000;">
+        <li style="padding: 10px; cursor: pointer; transition: background-color 0.2s;" id="downloadJpeg">Download JPEG</li>
+        <li style="padding: 10px; cursor: pointer; transition: background-color 0.2s;" id="downloadWebp">Download WebP</li>
+    </ul>
+</div>
+ <button id="copyBtn" title="Copy">
+        <i class="fas fa-copy"></i>
+    </button>    
+	
+    <button id="pdfBtn" title="Download PDF">
+        <i class="fas fa-file-pdf"></i>
+    </button>
+    <button id="pdflinksBtn" title="Download PDF with Links">
+        <i class="fas fa-link"></i>
+    </button>
+   
+	<button id="emailgmail" title="gmail">
+        <i class="fas fa-envelope"></i>
+    </button>
+	
+	<button id="whatsappButton" title="Share on WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+    </button>
+<div id="chatgptWrapper" style="position: relative; display: inline-block;">
+    <button id="chatgptButton" title="Ask to ChatGPT" style="padding: 10px; color: white; border: none; border-radius: 5px; cursor: pointer;">
+        <img src="../toolbar_res/chatgpt.png" width="20px" style="vertical-align: middle; margin-right: 5px;" />
+    </button>
+
+    <!-- Dropdown Options -->
+    <ul class="gptOptions" id="gptOptions" style="display: none; position: absolute; top: 100%; left: 0; background-color: #ffffff; border: 1px solid #ccc; border-radius: 5px; padding: 0; margin: 0; list-style: none; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); z-index: 999;">
+        <li id="gptScrnshot">📸 Screenshot</li>
+        <li id="gptSummarize">📝 Summarize screenshot</li>
+        <li id="gptExplain">💡 Explain screenshot</li>
+        <li id="gptAnswer">❓ Answer screenshot</li>
+        <li id="gptTranslate">🌐 Translate screenshot</li>
+        <li id="gptTrascribe">🎤 Transcribe screenshot</li>
+        <li id="gptRecreate">🎨 Recreate screenshot</li>
+        <li id="gptTransform">✨ Transform style</li>
+        <li id="gptLatex">🧮 Equation into LaTex</li>
+        <li id="gptExpert">🎓 Experts Explain</li>
+    </ul>
+</div>
+   
+
+  <button id="rateus" title="Rate us please" style="padding: 10px; color: white; border: none; border-radius: 5px; cursor: pointer;right:50px;position:fixed;">
+     <a href="https://chromewebstore.google.com/detail/scrsht-screenshot-tool/okmipgoegollhjhphbokjdljbbddnbpd/reviews" target="_blank" ><i class="fa-solid fa-star"></i>  </a>
+    </button>
+	
+	
+</div>
+
+
+
+
+
+<div id="tui-image-editor-container"></div>
+<div id="annotationDashboard" style="margin-top:30px;">
+   <div style="display:inline !important; position:fixed !important;"> <span>Annotations</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;&nbsp;&nbsp;
+<button id="uploadBtn2" title="Upload &amp; get link" style="padding: 0px;color: #171717;border: none;border-radius: 5px;cursor: pointer;">
+        <i class="fas fa-upload"></i>
+Save    </button> </div>
+
+</div>
+   <!-- 
+<div id="content"></div>-->
+</body>
+</html>

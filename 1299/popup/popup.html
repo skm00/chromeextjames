@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Screenshot Options</title>
+
+  <style>
+    /* General Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f6f8fa;
+      margin: 0;
+      width: 300px;
+      /* Increased width */
+      height: auto;
+    }
+
+    .container {
+      background: #ffffff;
+      border-radius: 6px;
+      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.08);
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 6px;
+      padding-top: 1px;
+      padding-bottom: 1px;
+    }
+
+    h1 {
+      color: #4a4a4a;
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 8px;
+      text-align: center;
+    }
+
+    .button {
+      flex: 1;
+      padding: 8px 10px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 12px;
+      font-weight: bold;
+      text-align: center;
+      transition: all 0.3s ease;
+    }
+
+    /* Specific Button Styles */
+    .button#selectArea,
+    .button#selecto,
+    .button#selectscroll,.button#selectAreahd {
+      background: #ffecb8;
+      color: #000;
+    }
+
+    .button#selectArea:hover,
+    .button#selecto:hover,
+    .button#selectscroll:hover,.button#selectAreahd:hover {
+      background: #fdd9c1;
+    }
+
+    .button#allPage,
+    .button#captureBody,
+    .button#openDashboard,
+    .button#openToDo {
+      background: #d9f7e9;
+      color: #1a6731;
+    }
+
+    .button#allPage:hover,
+    .button#captureBody:hover,
+    .button#openDashboard:hover,
+    .button#openToDo:hover {
+      background: #c2eedb;
+    }
+
+    .button#capturefragment,
+    .button#allShow {
+      background: #d9f7e9;
+      color: #1a6731;
+    }
+
+    .button#capturefragment:hover,
+    .button#allShow:hover {
+      background: #c2eedb;
+    }
+
+    .button#screenrecorder {
+      background: #f0e68c;
+      color: #665d1e;
+    }
+
+    .button#screenrecorder:hover {
+      background: #ece08b;
+    }
+
+    .button#pdfcontroller {
+      background: #e02f2f;
+      /* A strong PDF-like red */
+      color: #ffffff;
+      /* White text for contrast */
+      border: 1px solid #c1272d;
+      padding: 10px 20px;
+      font-weight: bold;
+      border-radius: 4px;
+      transition: background 0.3s ease;
+    }
+
+    .button#pdfcontroller:hover {
+      background: #c1272d;
+      /* Slightly darker red on hover */
+    }
+
+
+    .button#bookmarktabs {
+      background: #ffe4e1;
+      color: #b22222;
+    }
+
+    .button#bookmarktabs:hover {
+      background: #fdd8d5;
+    }
+
+    .button:active {
+      transform: scale(0.98);
+    }
+
+    /* Flex Containers */
+    .button-row {
+      display: flex;
+      gap: 8px;
+      width: 94%;
+      margin-right: 20px;
+    }
+
+    .spacer {
+      height: 3px;
+    }
+
+    #progressBarContainer {
+      width: 100%;
+      height: 20px;
+      background-color: #f0f0f0;
+      border-radius: 5px;
+      overflow: hidden;
+      margin-top: 10px;
+      display: none;
+    }
+
+    #progressBar {
+      height: 100%;
+      background-color: #0078d4;
+      width: 0%;
+      transition: width 0.1s linear;
+    }
+
+    /* Define the shake animation */
+    @keyframes shake {
+      0% {
+        transform: translateX(0);
+      }
+
+      10% {
+        transform: translateX(-5px);
+      }
+
+      20% {
+        transform: translateX(5px);
+      }
+
+      30% {
+        transform: translateX(-5px);
+      }
+
+      40% {
+        transform: translateX(5px);
+      }
+
+      50% {
+        transform: translateX(-5px);
+      }
+
+      60% {
+        transform: translateX(5px);
+      }
+
+      70% {
+        transform: translateX(-5px);
+      }
+
+      80% {
+        transform: translateX(5px);
+      }
+
+      90% {
+        transform: translateX(-5px);
+      }
+
+      100% {
+        transform: translateX(0);
+      }
+    }
+
+    /* Apply the shake animation to the "Rate Us" button */
+    a h1 {
+      display: inline-block;
+      /* Required for transform to work */
+      animation: shake 1.5s 1;
+      /* Apply the shake animation */
+    }
+
+    /* Optional: Add hover effect to stop the shake on hover */
+    a:hover h1 {
+      animation: none;
+      /* Stop the shake animation on hover */
+    }
+	#to-be-hidden{width:100%}
+	
+  </style>
+
+</head>
+
+<body>
+  <div class="container">
+    <div class="button-row ">
+
+      <!-- <a href="https://forms.gle/yGy2YbGAi3GWatnEZ9" target="_blank" style="text-decoration:none;"><h1><span style="color:pink;"> Site you use these </span> screenshot</h1></a>-->
+      <a href="https://chromewebstore.google.com/detail/scrsht-screenshot-fullpag/okmipgoegollhjhphbokjdljbbddnbpd/reviews?hl=en&authuser=0"
+        style="text-decoration:none;align-items:end;" target="_blank">
+        <h1>&nbsp;&nbsp;Rate Us </h1>
+      </a>
+
+      <!-- CHANGE THIS TO THE WEBSITE WHERE YOU ARE HOSTING HTML -->
+      <a id="payment-link" href="https://way2enjoy.com/chrome/index.html" alt="Upgrade before we turn monthly"
+        style="text-decoration:none;align-items:end;" target="_blank">
+        <h1 id="payment-indicator">&nbsp;&nbsp;lifetime@19$ </h1>
+      </a>
+
+      <!-- CHANGE THIS TO THE WEBSITE WHERE YOU ARE HOSTING HTML -->
+      <a href="https://way2enjoy.com/chrome/subs.html" style="display:none;" target="_blank" id="subs-btn">subscription</a>
+      <a href="#" style="text-decoration:none;text-align:end;color: cadetblue;padding-top: 0px;" target="_blank"
+        id="scrshtHistory" title="View all screenshots" class="button">Logs </a>
+
+
+    </div>
+
+    <!-- Row for Select Area and Select Area Old -->
+    <div class="button-row">
+
+      <button id="selectArea" title="drag the cursor till you want screenshot" class="button">Select</button> 
+	  <button id="selecto" title="old area select screenshot" class="button">Select<sup>Old</sup></button>
+      <button id="selectscroll" title="select + scroll , Most Popular" class="button">Scroll</button>
+           <button id="selectAreahd" title="HD screenshot" class="button">HD</button>
+           <button id="selectAreagif" title="GIF screenshot" class="button">GIF</button>
+
+
+    </div>
+
+    <div class="spacer"></div>
+    <div id="to-be-hidden">
+    <div class="button-row">
+
+
+    </div>
+
+
+      <!-- Row for This Tab and Capture Fragment -->
+      <div class="button-row">
+        <button id="allShow" title="it will capture full tab on click" class="button">Tab</button>
+        <button id="capturefragment" title="Capture a specific fragment of the page" class="button">Fragment
+          <sup></sup></button>
+
+        <button id="capturesave" title="save visible part" class="button"><img id="select_save_dir"
+            src="/toolbar_res/hor_save.png" /> </button>
+        <button id="capturecopy" title="Copy visible part" class="button"><img id="select_copy_dir"
+            src="/toolbar_res/hor_copy.png" /></button>
+      </div>
+
+      <div class="spacer"></div>
+
+      <!-- Row for Full Page and Capture Body -->
+      <div class="button-row">
+        <button id="allPage" title="full page screenshot" class="button">Full Webpage <sup></sup></button>
+        <button id="captureBody" title="Capture the entire body of the page"
+          class="button">FullPage<sup>Old</sup></button>
+      </div>
+
+      <div class="spaccer"></div>
+
+
+
+      <div class="spacer"></div>
+
+      <button id="screenrecorder" title="Record tab, page or full window" class="button">
+        <img src="../toolbar_res/facetime-button.png" alt="Recording Icon" style="width: 16px; height: 16px;">
+        <span>Screen Recording</span>
+      </button>
+
+      <div class="spacer"></div>
+
+      <div class="button-row">
+        <button id="pdfcontroller" title="Merge,Split,Convert PDF" class="button">PDF Merge Split Convert
+          Compress<sup></sup></button>
+      </div>
+
+      <div class="button-row">
+        <button id="openDashboard" title="Open collection dashboard" class="button">Bookmark<sup></sup></button>
+        <button id="openToDo" title="Open ToDo dashboard" class="button">ToDo List<sup></sup></button>
+      </div>
+
+      <button id="enablerightclick" style="display:none;" title="it enables right click on sites where it is disabled"
+        class="button">Enable Right Click</button>
+
+      <div id="progressBarContainer">
+        <div id="progressBar"></div>
+      </div>
+	  
+	 <script src="./popup.js"></script>
+
+
+    <script defer="defer" src="../popup_smart/popup.js"></script>
+    <link href="../popup_smart/popup.css" rel="stylesheet">  
+	  
+	  
+	     <div id="app" data-v-app="">
+      <div id="popup" data-v-927d188e="">
+        <header class="header" data-v-193728d0="" data-v-927d188e="">
+          <div class="screen-shot is-active" data-v-193728d0=""><img src="data:image/png;base64,yy=" alt=""
+              data-v-193728d0=""><span data-v-193728d0=""></span></div>
+        </header>
+        <div class="screen-shot" data-v-46e78dcd="" data-v-927d188e="">
+          <div class="screen-container" data-v-46e78dcd="">
+            <div class="screen-item  fullpagenewyy" id="fullpagenewyy" data-v-46e78dcd=""><img
+                src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDIzLjEuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IuWbvuWxgl8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCIKCSB2aWV3Qm94PSIwIDAgMTE1IDE2NSIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMTE1IDE2NTsiIHhtbDpzcGFjZT0icHJlc2VydmUiPgo8c3R5bGUgdHlwZT0idGV4dC9jc3MiPgoJLnN0MHtmaWxsOiMwRTc4REQ7fQoJLnN0MXtmaWxsOiNFN0VBRUQ7fQo8L3N0eWxlPgo8Zz4KCTxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik0xMDguNywxNjIuNUg2LjNjLTIuMiwwLTQtMS44LTQtNFY2LjVjMC0yLjIsMS44LTQsNC00aDEwMi4zYzIuMiwwLDQsMS44LDQsNHYxNTIKCQlDMTEyLjcsMTYwLjcsMTEwLjksMTYyLjUsMTA4LjcsMTYyLjV6Ii8+CjwvZz4KPGNpcmNsZSBjbGFzcz0ic3QxIiBjeD0iMjAuNSIgY3k9IjIwLjUiIHI9IjEzLjUiLz4KPGNpcmNsZSBjbGFzcz0ic3QxIiBjeD0iMjAuNSIgY3k9IjUyLjUiIHI9IjEzLjUiLz4KPGNpcmNsZSBjbGFzcz0ic3QxIiBjeD0iMjAuNSIgY3k9Ijg0LjUiIHI9IjEzLjUiLz4KPGNpcmNsZSBjbGFzcz0ic3QxIiBjeD0iMjAuNSIgY3k9IjExNi41IiByPSIxMy41Ii8+CjxwYXRoIGNsYXNzPSJzdDEiIGQ9Ik00MS41LDEwaDQwYzAuOCwwLDEuNSwwLjcsMS41LDEuNXYxYzAsMC44LTAuNywxLjUtMS41LDEuNWgtNDBjLTAuOCwwLTEuNS0wLjctMS41LTEuNXYtMQoJQzQwLDEwLjcsNDAuNywxMCw0MS41LDEweiIvPgo8cGF0aCBjbGFzcz0ic3QxIiBkPSJNNDEuNSwxOWg2NWMwLjgsMCwxLjUsMC43LDEuNSwxLjV2MWMwLDAuOC0wLjcsMS41LTEuNSwxLjVoLTY1Yy0wLjgsMC0xLjUtMC43LTEuNS0xLjV2LTEKCUM0MCwxOS43LDQwLjcsMTksNDEuNSwxOXoiLz4KPHBhdGggY2xhc3M9InN0MSIgZD0iTTQxLjUsMjdoNTVjMC44LDAsMS41LDAuNywxLjUsMS41djFjMCwwLjgtMC43LDEuNS0xLjUsMS41aC01NWMtMC44LDAtMS41LTAuNy0xLjUtMS41di0xCglDNDAsMjcuNyw0MC43LDI3LDQxLjUsMjd6Ii8+CjxwYXRoIGNsYXNzPSJzdDEiIGQ9Ik00MS41LDQyaDQwYzAuOCwwLDEuNSwwLjcsMS41LDEuNXYxYzAsMC44LTAuNywxLjUtMS41LDEuNWgtNDBjLTAuOCwwLTEuNS0wLjctMS41LTEuNXYtMQoJQzQwLDQyLjcsNDAuNyw0Miw0MS41LDQyeiIvPgo8cGF0aCBjbGFzcz0ic3QxIiBkPSJNNDEuNSw1MWg2NWMwLjgsMCwxLjUsMC43LDEuNSwxLjV2MWMwLDAuOC0wLjcsMS41LTEuNSwxLjVoLTY1Yy0wLjgsMC0xLjUtMC43LTEuNS0xLjV2LTEKCUM0MCw1MS43LDQwLjcsNTEsNDEuNSw1MXoiLz4KPHBhdGggY2xhc3M9InN0MSIgZD0iTTQxLjUsNTloNTVjMC44LDAsMS41LDAuNywxLjUsMS41djFjMCwwLjgtMC43LDEuNS0xLjUsMS41aC01NWMtMC44LDAtMS41LTAuNy0xLjUtMS41di0xCglDNDAsNTkuNyw0MC43LDU5LDQxLjUsNTl6Ii8+CjxwYXRoIGNsYXNzPSJzdDEiIGQ9Ik00MC41LDc0aDQwYzAuOCwwLDEuNSwwLjcsMS41LDEuNXYxYzAsMC44LTAuNywxLjUtMS41LDEuNWgtNDBjLTAuOCwwLTEuNS0wLjctMS41LTEuNXYtMQoJQzM5LDc0LjcsMzkuNyw3NCw0MC41LDc0eiIvPgo8cGF0aCBjbGFzcz0ic3QxIiBkPSJNNDAuNSw4M2g2NWMwLjgsMCwxLjUsMC43LDEuNSwxLjV2MWMwLDAuOC0wLjcsMS41LTEuNSwxLjVoLTY1Yy0wLjgsMC0xLjUtMC43LTEuNS0xLjV2LTEKCUMzOSw4My43LDM5LjcsODMsNDAuNSw4M3oiLz4KPHBhdGggY2xhc3M9InN0MSIgZD0iTTQwLjUsOTFoNTVjMC44LDAsMS41LDAuNywxLjUsMS41djFjMCwwLjgtMC43LDEuNS0xLjUsMS41aC01NWMtMC44LDAtMS41LTAuNy0xLjUtMS41di0xCglDMzksOTEuNywzOS43LDkxLDQwLjUsOTF6Ii8+CjxwYXRoIGNsYXNzPSJzdDEiIGQ9Ik00MC41LDEwNmg0MGMwLjgsMCwxLjUsMC43LDEuNSwxLjV2MWMwLDAuOC0wLjcsMS41LTEuNSwxLjVoLTQwYy0wLjgsMC0xLjUtMC43LTEuNS0xLjV2LTEKCUMzOSwxMDYuNywzOS43LDEwNiw0MC41LDEwNnoiLz4KPHBhdGggY2xhc3M9InN0MSIgZD0iTTQwLjUsMTE1aDY1YzAuOCwwLDEuNSwwLjcsMS41LDEuNXYxYzAsMC44LTAuNywxLjUtMS41LDEuNWgtNjVjLTAuOCwwLTEuNS0wLjctMS41LTEuNXYtMQoJQzM5LDExNS43LDM5LjcsMTE1LDQwLjUsMTE1eiIvPgo8cGF0aCBjbGFzcz0ic3QxIiBkPSJNNDAuNSwxMjNoNTVjMC44LDAsMS41LDAuNywxLjUsMS41djFjMCwwLjgtMC43LDEuNS0xLjUsMS41aC01NWMtMC44LDAtMS41LTAuNy0xLjUtMS41di0xCglDMzksMTIzLjcsMzkuNywxMjMsNDAuNSwxMjN6Ii8+CjxwYXRoIGNsYXNzPSJzdDEiIGQ9Ik0xMCwxMzRoOTRjMS43LDAsMywxLjMsMywzdjRjMCwxLjctMS4zLDMtMywzSDEwYy0xLjcsMC0zLTEuMy0zLTN2LTRDNywxMzUuMyw4LjMsMTM0LDEwLDEzNHoiLz4KPHBhdGggY2xhc3M9InN0MSIgZD0iTTEwLDE0OGg5NGMxLjcsMCwzLDEuMywzLDN2NGMwLDEuNy0xLjMsMy0zLDNIMTBjLTEuNywwLTMtMS4zLTMtM3YtNEM3LDE0OS4zLDguMywxNDgsMTAsMTQ4eiIvPgo8L3N2Zz4K"
+                alt="Full Page" id="FullPage_new" data-v-46e78dcd=""><span class="screen-title" data-v-46e78dcd="">Full
+                Page</span><span class="screen-shortcut" data-v-46e78dcd="">ALT + B</span></div>
+            <div class="screen-group" data-v-46e78dcd="">
+              <div class="screen-item visiblenewyy" id="visiblenewyy" data-v-46e78dcd=""><img
+                  src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBzdGFuZGFsb25lPSJubyI/PjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+PHN2ZyB0PSIxNjgyMzI4NDk3MjMyIiBjbGFzcz0iaWNvbiIgdmlld0JveD0iMCAwIDEwMjQgMTAyNCIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHAtaWQ9IjMzNjUiIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPjxwYXRoIGQ9Ik05MjQuODc3IDE0MC4yMjJIMTEyLjU1NGMtMzIuMjM1IDAtNTguNTYgMjYuMzI2LTU4LjU2IDU4LjU2djQ0NS45MTloOTI5LjQ0NFYxOTguNzgzYzAtMzIuMjM1LTI2LjMyNi01OC41Ni01OC41Ni01OC41NnpNNTMuOTk0IDc0NC42M2MwIDMyLjIzNSAyNi4zMjUgNTguNTYgNTguNTYgNTguNTZoMzIyLjg4OGwtMTEuMjgzIDk1LjYzaC02OS44NDJjLTE0LjUwNiAwLTI2LjMyNSAxMS44Mi0yNi4zMjUgMjYuMzI2czExLjgyIDI2LjMyNSAyNi4zMjUgMjYuMzI1aDMyOC43OTdjMTQuNTA2IDAgMjYuMzI2LTExLjgyIDI2LjMyNi0yNi4zMjVzLTExLjgyLTI2LjMyNS0yNi4zMjYtMjYuMzI1aC02OS44NDJMNjAxLjk5IDgwMy4xOWgzMjIuODg3YzMyLjIzNSAwIDU4LjU2LTI2LjMyNSA1OC41Ni01OC41NnYtNTUuMzM3SDUzLjk5NXY1NS4zMzd6IiBmaWxsPSIjMEU3OEREIiBwLWlkPSIzMzY2Ij48L3BhdGg+PC9zdmc+"
+                  alt="Visible Part" id="VisiblePart_new" data-v-46e78dcd=""><span class="screen-title"
+                  data-v-46e78dcd="">Visible Part</span><span class="screen-shortcut" data-v-46e78dcd="">ALT + A</span>
+              </div>
+              <div class="screen-item selectnewyy" id="selectnewyy" data-v-46e78dcd=""><img
+                  src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDIxLjEuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IuWbvuWxgl8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCIKCSB2aWV3Qm94PSIwIDAgNjUgNTIiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDY1IDUyOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+CjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+Cgkuc3Qwe2ZpbGw6IzBFNzhERDt9Cgkuc3Qxe2ZpbGw6bm9uZTtzdHJva2U6I0ZGRkZGRjtzdHJva2UtbWl0ZXJsaW1pdDoxMDtzdHJva2UtZGFzaGFycmF5OjIuMDEyLDIuMDEyO30KCS5zdDJ7ZmlsbDojRkZGRkZGO30KCS5zdDN7ZmlsbDpub25lO3N0cm9rZTojRkZGRkZGO3N0cm9rZS1taXRlcmxpbWl0OjEwO30KPC9zdHlsZT4KPGc+Cgk8cGF0aCBjbGFzcz0ic3QwIiBkPSJNNjAsNTFINmMtMi4yLDAtNC0xLjgtNC00VjVjMC0yLjIsMS44LTQsNC00aDU0YzIuMiwwLDQsMS44LDQsNHY0MkM2NCw0OS4yLDYyLjIsNTEsNjAsNTF6Ii8+CjwvZz4KPHBhdGggY2xhc3M9InN0MSIgZD0iTTU2LDQ2SDEwYy0yLjIsMC00LTEuOC00LTRWMTBjMC0yLjIsMS44LTQsNC00aDQ2YzIuMiwwLDQsMS44LDQsNHYzMkM2MCw0NC4yLDU4LjIsNDYsNTYsNDZ6Ii8+CjxnPgoJPGxpbmUgY2xhc3M9InN0MiIgeDE9IjQ4IiB5MT0iMTIuNSIgeDI9IjM2IiB5Mj0iMjQuNSIvPgoJPGc+CgkJPGxpbmUgY2xhc3M9InN0MyIgeDE9IjQyLjkiIHkxPSIxNy42IiB4Mj0iMzYiIHkyPSIyNC41Ii8+CgkJPGc+CgkJCTxwb2x5Z29uIGNsYXNzPSJzdDIiIHBvaW50cz0iMzguNCwxNS4xIDQ4LDEyLjUgNDUuNCwyMi4xIAkJCSIvPgoJCTwvZz4KCTwvZz4KPC9nPgo8Zz4KCTxsaW5lIGNsYXNzPSJzdDIiIHgxPSIyMiIgeTE9IjM4LjUiIHgyPSIzNCIgeTI9IjI2LjUiLz4KCTxnPgoJCTxsaW5lIGNsYXNzPSJzdDMiIHgxPSIyNy4xIiB5MT0iMzMuNCIgeDI9IjM0IiB5Mj0iMjYuNSIvPgoJCTxnPgoJCQk8cG9seWdvbiBjbGFzcz0ic3QyIiBwb2ludHM9IjMxLjYsMzUuOSAyMiwzOC41IDI0LjYsMjguOSAJCQkiLz4KCQk8L2c+Cgk8L2c+CjwvZz4KPC9zdmc+Cg=="
+                  alt="Selected Area" id="SelectedArea_new" data-v-46e78dcd=""><span class="screen-title"
+                  data-v-46e78dcd="">Selected Area</span><span class="screen-shortcut" data-v-46e78dcd="">ALT + C</span>
+              </div>
+            </div>
+          </div>
+          <div class="editor-content" data-v-46e78dcd=""><i class="iconfont icon-upload-image"
+              data-v-46e78dcd=""></i><span data-v-46e78dcd="">Annotate Local &amp; Clipboard Image</span></div>
+          <div class="upload-image" data-v-46e78dcd=""><i class="iconfont icon-editor" data-v-46e78dcd=""></i><span
+              data-v-46e78dcd="">Edit web page text content</span></div>
+        </div>
+        <div class="footer" data-v-2bcad353="" data-v-927d188e="">
+          <div data-v-2bcad353=""><svg class="icon" aria-hidden="true" data-v-2bcad353="">
+              <use xlink:href="#icon-xingzhuang60kaobei2" data-v-2bcad353=""></use>
+            </svg><span data-v-2bcad353=""></span></div><i class="iconfont icon-shezhi1" data-v-2bcad353=""></i>
+        </div>
+      </div>
+    </div> 
+	  
+	  
+    </div>
+
+   
+
+    <!-- <div id="app"></div> -->
+
+
+  </div>
+
+
+</body>
+
+</html>

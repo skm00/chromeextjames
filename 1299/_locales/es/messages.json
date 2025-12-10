@@ -1,0 +1,455 @@
+{
+   "area_copy": {
+      "message": "Copiar"
+   },
+   "edit_curve1": {
+      "message": "Curved arrow, Right click for undo"
+   },
+   "editor_arrow10": {
+      "message": "10"
+   },
+   "editor_arrow11": {
+      "message": "11"
+   },
+   "editor_arrow12": {
+      "message": "12"
+   },
+   "editor_arrow13": {
+      "message": "13"
+   },
+   "editor_arrow14": {
+      "message": "14"
+   },
+   "editor_arrow15": {
+      "message": "15"
+   },
+   "editor_arrow16": {
+      "message": "16"
+   },
+   "editor_arrow17": {
+      "message": "17"
+   },
+   "editor_arrow18": {
+      "message": "18"
+   },
+   "editor_arrow19": {
+      "message": "19"
+   },
+   "editor_arrow2": {
+      "message": "2"
+   },
+   "editor_arrow20": {
+      "message": "20"
+   },
+   "editor_arrow21": {
+      "message": "21"
+   },
+   "editor_arrow3": {
+      "message": "3"
+   },
+   "editor_arrow4": {
+      "message": "4"
+   },
+   "editor_arrow5": {
+      "message": "5"
+   },
+   "editor_arrow6": {
+      "message": "6"
+   },
+   "editor_arrow7": {
+      "message": "7"
+   },
+   "editor_arrow8": {
+      "message": "8"
+   },
+   "editor_arrow9": {
+      "message": "9"
+   },
+   "editor_clipboard": {
+      "message": "COPIAR"
+   },
+   "editor_content": {
+      "message": "Texto"
+   },
+   "editor_copy": {
+      "message": "COPIAR A"
+   },
+   "editor_copy_clipboard": {
+      "message": "Éxito"
+   },
+   "editor_copy_tip": {
+      "message": "Copia exitosa"
+   },
+   "popup_recording_tab": {
+      "message": "Esta pestaña"
+   },
+   "popup_screenshot": {
+      "message": "Captura de pantalla"
+   },
+   "popup_screenshot_editcontent": {
+      "message": "Editar contenido de texto de la página web"
+   },
+   "popup_screenshot_select": {
+      "message": "Área seleccionada"
+   },
+   "popup_screenshot_uploadfiles": {
+      "message": "Anotar imagen local y del portapapeles"
+   },
+   "popup_screenshot_visible": {
+      "message": "Parte visible"
+   },
+   "popup_screenshot_whole": {
+      "message": "Página completa"
+   },
+   "popup_uploadd": {
+      "message": "Subir"
+   },
+   "preview_video_download": {
+      "message": "Descargar"
+   },
+   "record_cancel": {
+      "message": "Cancelar"
+   },
+   "record_save": {
+      "message": "Guardar"
+   },
+   "screenshot_app_about": {
+      "message": "Acerca de"
+   },
+   "screenshot_app_copyright": {
+      "message": "%company% Todos los derechos reservados."
+   },
+   "screenshot_app_exit": {
+      "message": "Salir"
+   },
+   "screenshot_app_help": {
+      "message": "Ayuda"
+   },
+   "screenshot_app_hotkey_failtoregister1": {
+      "message": "No se pudo registrar una tecla de acceso directo:"
+   },
+   "screenshot_app_hotkey_failtoregister2": {
+      "message": "Probablemente otra aplicación ya está usando. Haga clic en este mensaje para abrir el cuadro de diálogo/Opciones."
+   },
+   "screenshot_app_language_code": {
+      "message": "ES"
+   },
+   "screenshot_app_language_name": {
+      "message": "Español"
+   },
+   "screenshot_app_language_name_eng": {
+      "message": "Spanish"
+   },
+   "screenshot_app_menu_gallery": {
+      "message": "Mi galería (%username%)"
+   },
+   "screenshot_app_menu_sign_in": {
+      "message": "Ingresar"
+   },
+   "screenshot_app_menu_sign_out": {
+      "message": "Desconectar"
+   },
+   "screenshot_app_options": {
+      "message": "Opciones"
+   },
+   "screenshot_app_options_autoclose": {
+      "message": "Cerrar automáticamente la ventana de carga"
+   },
+   "screenshot_app_options_autocopy": {
+      "message": "Copiar automáticamente un enlace después de cargar"
+   },
+   "screenshot_app_options_capturecursor": {
+      "message": "Captura de un cursor en una screenshot"
+   },
+   "screenshot_app_options_configure_system_proxy": {
+      "message": "Configurar"
+   },
+   "screenshot_app_options_current_system_proxy": {
+      "message": "System proxy"
+   },
+   "screenshot_app_options_error_hotkeyequal": {
+      "message": "No se puede establecer las mismas teclas de acceso rápido para diferentes funciones. Por favor cambia una de las teclas de acceso rápido."
+   },
+   "screenshot_app_options_error_hotkeyinvalid": {
+      "message": "Una de sus teclas de acceso rápido no es válida. Si desea desactivar la tecla de acceso directo que, por favor, desactive la casilla de verificación correspondiente."
+   },
+   "screenshot_app_options_formats": {
+      "message": "Formato"
+   },
+   "screenshot_app_options_general": {
+      "message": "General"
+   },
+   "screenshot_app_options_hotkeygeneral": {
+      "message": "Tecla de acceso directo general"
+   },
+   "screenshot_app_options_hotkeys": {
+      "message": "Teclas de acceso rápido"
+   },
+   "screenshot_app_options_hotkeysavefullscreen": {
+      "message": "Instantánea salvamento de la pantalla completa"
+   },
+   "screenshot_app_options_hotkeyuploadfullscreen": {
+      "message": "Subida instantánea de la pantalla completa"
+   },
+   "screenshot_app_options_httpsproxy": {
+      "message": "HTTP(S) proxy"
+   },
+   "screenshot_app_options_jpegquality": {
+      "message": "Calidad JPEG"
+   },
+   "screenshot_app_options_keepselection": {
+      "message": "Mantenga la posición área seleccionada"
+   },
+   "screenshot_app_options_language": {
+      "message": "Idioma"
+   },
+   "screenshot_app_options_manualproxy": {
+      "message": "Configuración manual del proxy"
+   },
+   "screenshot_app_options_noproxy": {
+      "message": "No proxy"
+   },
+   "screenshot_app_options_optimize_always": {
+      "message": "Siempre"
+   },
+   "screenshot_app_options_optimize_never": {
+      "message": "Nunca"
+   },
+   "screenshot_app_options_optimize_screenshots": {
+      "message": "Optimizar imágenes (OptiPNG)"
+   },
+   "screenshot_app_options_optimize_uploadonly": {
+      "message": "Sólo al cargar"
+   },
+   "screenshot_app_options_proxy": {
+      "message": "Proxy"
+   },
+   "screenshot_app_options_proxyport": {
+      "message": "Puerto"
+   },
+   "screenshot_app_options_showbubbles": {
+      "message": "Mostrar notificaciones acerca de copiar y guardar"
+   },
+   "screenshot_app_options_system_proxy_not_set": {
+      "message": "No Configurado (conexión directa)"
+   },
+   "screenshot_app_options_systemproxy": {
+      "message": "Utilice la configuración de proxy del sistema"
+   },
+   "screenshot_app_options_uploadformat": {
+      "message": "Sube con el formato"
+   },
+   "screenshot_app_signed_in_as": {
+      "message": "Conectado como"
+   },
+   "screenshot_app_signin_dialog_caption": {
+      "message": "Registrarse"
+   },
+   "screenshot_app_signin_error_caption": {
+      "message": "scrsht sesión errora"
+   },
+   "screenshot_app_signin_error_text": {
+      "message": "scrsht: Se produjo un error al iniciar sesión. Por favor vuelva a intentarlo."
+   },
+   "screenshot_app_take_screenshot": {
+      "message": "Tome una captura de pantalla"
+   },
+   "screenshot_app_terms": {
+      "message": "scrsht Condiciones del servicio"
+   },
+   "screenshot_app_tray_tooltip": {
+      "message": "Presione \"%hotkey_main%\"en el teclado para tomar una captura de pantalla"
+   },
+   "screenshot_plugin_announce_do_not_show": {
+      "message": "No mostrar este mensaje otra vez"
+   },
+   "screenshot_plugin_cancel": {
+      "message": "Cancelar"
+   },
+   "screenshot_plugin_chrome_38_retina_bug": {
+      "message": ""
+   },
+   "screenshot_plugin_chrome_bug_copy": {
+      "message": ""
+   },
+   "screenshot_plugin_clear": {
+      "message": "Borrar selección"
+   },
+   "screenshot_plugin_close": {
+      "message": "Cerrar"
+   },
+   "screenshot_plugin_copy": {
+      "message": "Copiar"
+   },
+   "screenshot_plugin_ctypes_error": {
+      "message": "Error: Firefox ctypes  no pudo cargar scrsht."
+   },
+   "screenshot_plugin_edit_arrow": {
+      "message": "Flecha"
+   },
+   "screenshot_plugin_edit_arrow_circle": {
+      "message": "Circle+Line use Right Click/CTRL+ Z for Undo"
+   },
+   "screenshot_plugin_edit_arrow_rect": {
+      "message": "Rectangle+Line  use Right Click/CTRL+ Z for Undo"
+   },
+   "screenshot_plugin_edit_blur": {
+      "message": "Mancha"
+   },
+   "screenshot_plugin_edit_circle": {
+      "message": "Círculo"
+   },
+   "screenshot_plugin_edit_color": {
+      "message": "Color"
+   },
+   "screenshot_plugin_edit_line": {
+      "message": "Línea"
+   },
+   "screenshot_plugin_edit_marker": {
+      "message": "Marcador"
+   },
+   "screenshot_plugin_edit_pencil": {
+      "message": "Pluma"
+   },
+   "screenshot_plugin_edit_rect": {
+      "message": "Rectángulo"
+   },
+   "screenshot_plugin_edit_text": {
+      "message": "Texto"
+   },
+   "screenshot_plugin_edit_undo": {
+      "message": "Deshacer"
+   },
+   "screenshot_plugin_editonline": {
+      "message": "Editar una captura de pantalla en línea"
+   },
+   "screenshot_plugin_error_capt": {
+      "message": "Error"
+   },
+   "screenshot_plugin_fullscreen": {
+      "message": "Seleccionar pantalla completa"
+   },
+   "screenshot_plugin_go_to_mac_store": {
+      "message": "Pedimos disculpas por las molestias, pero la extensión scrsht sólo funciona en equipos con Windows."
+   },
+   "screenshot_plugin_image_hosting_incorrect_response": {
+      "message": "Estructura JSON incorrecta en respuesta desde el servidor de alojamiento de imágenes"
+   },
+   "screenshot_plugin_incorrect_size": {
+      "message": "Tamaño incorrecto"
+   },
+   "screenshot_plugin_npapi_deprecated_message": {
+      "message": ""
+   },
+   "screenshot_plugin_npapi_not_found": {
+      "message": ""
+   },
+   "screenshot_plugin_open": {
+      "message": "Abrir"
+   },
+   "screenshot_plugin_optimize_dialog_capt": {
+      "message": "Optimización de una captura de pantalla"
+   },
+   "screenshot_plugin_other_os": {
+      "message": ""
+   },
+   "screenshot_plugin_print": {
+      "message": "Imprimir"
+   },
+   "screenshot_plugin_retry": {
+      "message": "Vuelva a intentarlo"
+   },
+   "screenshot_plugin_save": {
+      "message": "Guardar"
+   },
+   "screenshot_plugin_screenshot_copied_to_clipboard": {
+      "message": "Su pantalla se copia al portapapeles"
+   },
+   "screenshot_plugin_screenshot_error_reload_browser": {
+      "message": ""
+   },
+   "screenshot_plugin_screenshot_saved": {
+      "message": "Captura de pantalla se guarda en %filename%. Haga clic aquí para abrir la carpeta."
+   },
+   "screenshot_plugin_screenshot_uploaded_link_copied": {
+      "message": "Captura de pantalla se carga. Enlace se copia en el portapapeles."
+   },
+   "screenshot_plugin_share": {
+      "message": "Compartir en redes sociales"
+   },
+   "screenshot_plugin_share_facebook": {
+      "message": "Compartir en Facebook"
+   },
+   "screenshot_plugin_share_googlesearch": {
+      "message": "Buscar imágenes similares en Google"
+   },
+   "screenshot_plugin_share_pinterest": {
+      "message": "Compartir en Pinterest"
+   },
+   "screenshot_plugin_share_sendmail": {
+      "message": "Send via email"
+   },
+   "screenshot_plugin_share_tineyesearch": {
+      "message": "Buscar imágenes similares en Tineye"
+   },
+   "screenshot_plugin_share_twitter": {
+      "message": "Compartir en Twitter"
+   },
+   "screenshot_plugin_share_vk": {
+      "message": "Compartir en VK"
+   },
+   "screenshot_plugin_share_whatsapp": {
+      "message": "Share on Whatsapp"
+   },
+   "screenshot_plugin_tooltip": {
+      "message": "Seleccionar zona"
+   },
+   "screenshot_plugin_upl_fail_cancel_uploading_screenshot": {
+      "message": "Cancelar - cancela la posibilidad de subir una captura de pantalla"
+   },
+   "screenshot_plugin_upl_fail_check_proxy_settings": {
+      "message": "Por favor, asegúrese de que la configuración es correcta y el proxy no bloquear las solicitudes scrsht."
+   },
+   "screenshot_plugin_upl_fail_continue_open_scrsht_proxy": {
+      "message": "Continuar - abrir la configuración de proxy scrsht"
+   },
+   "screenshot_plugin_upl_fail_continue_open_system_proxy": {
+      "message": "Continuar - abrir la configuración de proxy del sistema"
+   },
+   "screenshot_plugin_upl_fail_scrsht_uses_proxy": {
+      "message": "Actualmente scrsht está configurado para utilizar este proxy: %proxy%"
+   },
+   "screenshot_plugin_upl_fail_scrsht_uses_system_proxy": {
+      "message": "scrsht utiliza la configuración de proxy del sistema actual: %proxy%"
+   },
+   "screenshot_plugin_upl_fail_try_again_with_current_settings": {
+      "message": "Try Again - reintentar utilizando la configuración actual"
+   },
+   "screenshot_plugin_upload": {
+      "message": "Subir a scrsht.com"
+   },
+   "screenshot_plugin_upload_error_capt": {
+      "message": "Error al subir"
+   },
+   "screenshot_plugin_upload_error_detailed_info": {
+      "message": "Nformación detallada"
+   },
+   "screenshot_plugin_upload_failed": {
+      "message": "Falló al cargar "
+   },
+   "screenshot_plugin_upload_failed_retry": {
+      "message": "Error de subida. Vuelva a intentar"
+   },
+   "screenshot_plugin_uploading_window_capt": {
+      "message": "Carga de imágenes"
+   },
+   "screenshotplugin_default_title": {
+      "message": "Capturar pantalla"
+   },
+   "screenshotplugin_name": {
+      "message": "Capturar pantalla y grabación de pantalla"
+   },
+   "screenshotplugin_short_description": {
+      "message": "Captura de pantalla de la página, página completa, graba pestaña, ventana o pantalla, guarda como imagen, PDF o sube al servidor. Selecciona un área, edita tu captura de pantalla."
+   }
+}

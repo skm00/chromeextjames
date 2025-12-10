@@ -1,0 +1,455 @@
+{
+   "area_copy": {
+      "message": "Kopiera"
+   },
+   "edit_curve1": {
+      "message": "Curved arrow, Right click for undo"
+   },
+   "editor_arrow10": {
+      "message": "10"
+   },
+   "editor_arrow11": {
+      "message": "11"
+   },
+   "editor_arrow12": {
+      "message": "12"
+   },
+   "editor_arrow13": {
+      "message": "13"
+   },
+   "editor_arrow14": {
+      "message": "14"
+   },
+   "editor_arrow15": {
+      "message": "15"
+   },
+   "editor_arrow16": {
+      "message": "16"
+   },
+   "editor_arrow17": {
+      "message": "17"
+   },
+   "editor_arrow18": {
+      "message": "18"
+   },
+   "editor_arrow19": {
+      "message": "19"
+   },
+   "editor_arrow2": {
+      "message": "2"
+   },
+   "editor_arrow20": {
+      "message": "20"
+   },
+   "editor_arrow21": {
+      "message": "21"
+   },
+   "editor_arrow3": {
+      "message": "3"
+   },
+   "editor_arrow4": {
+      "message": "4"
+   },
+   "editor_arrow5": {
+      "message": "5"
+   },
+   "editor_arrow6": {
+      "message": "6"
+   },
+   "editor_arrow7": {
+      "message": "7"
+   },
+   "editor_arrow8": {
+      "message": "8"
+   },
+   "editor_arrow9": {
+      "message": "9"
+   },
+   "editor_clipboard": {
+      "message": "KOPIERA"
+   },
+   "editor_content": {
+      "message": "Text"
+   },
+   "editor_copy": {
+      "message": "KOPIERA TILL"
+   },
+   "editor_copy_clipboard": {
+      "message": "Lyckades"
+   },
+   "editor_copy_tip": {
+      "message": "Kopierat"
+   },
+   "popup_recording_tab": {
+      "message": "Denna flik"
+   },
+   "popup_screenshot": {
+      "message": "Skärmdump"
+   },
+   "popup_screenshot_editcontent": {
+      "message": "Redigera webbsidans textinnehåll"
+   },
+   "popup_screenshot_select": {
+      "message": "Valt område"
+   },
+   "popup_screenshot_uploadfiles": {
+      "message": "Kommentera lokal eller urklippsbild"
+   },
+   "popup_screenshot_visible": {
+      "message": "Synlig del"
+   },
+   "popup_screenshot_whole": {
+      "message": "Hela sidan"
+   },
+   "popup_uploadd": {
+      "message": "Ladda upp"
+   },
+   "preview_video_download": {
+      "message": "Ladda ner"
+   },
+   "record_cancel": {
+      "message": "Avbryt"
+   },
+   "record_save": {
+      "message": "Spara"
+   },
+   "screenshot_app_about": {
+      "message": "Om"
+   },
+   "screenshot_app_copyright": {
+      "message": "%company% Alla rättigheter reserverade."
+   },
+   "screenshot_app_exit": {
+      "message": "Lämna"
+   },
+   "screenshot_app_help": {
+      "message": "Hjälp"
+   },
+   "screenshot_app_hotkey_failtoregister1": {
+      "message": "Misslyckades registrera snabbtangent"
+   },
+   "screenshot_app_hotkey_failtoregister2": {
+      "message": "Förmodligen använder en annan applikation redan den. Klicka på detta meddelande för att öppna dialogruta för alternativ"
+   },
+   "screenshot_app_language_code": {
+      "message": "SV"
+   },
+   "screenshot_app_language_name": {
+      "message": "Svenska"
+   },
+   "screenshot_app_language_name_eng": {
+      "message": "Swedish"
+   },
+   "screenshot_app_menu_gallery": {
+      "message": "Mitt galleri (%username%)"
+   },
+   "screenshot_app_menu_sign_in": {
+      "message": "Logga in..."
+   },
+   "screenshot_app_menu_sign_out": {
+      "message": "Logga ut"
+   },
+   "screenshot_app_options": {
+      "message": "Alternativ"
+   },
+   "screenshot_app_options_autoclose": {
+      "message": "Stänger automatiskt nedladdat fönster"
+   },
+   "screenshot_app_options_autocopy": {
+      "message": "Kopiera automatiskt en länk efter ledladdning"
+   },
+   "screenshot_app_options_capturecursor": {
+      "message": "Fånga en markör på en skärmdump"
+   },
+   "screenshot_app_options_configure_system_proxy": {
+      "message": "Konfigurera"
+   },
+   "screenshot_app_options_current_system_proxy": {
+      "message": "System proxy"
+   },
+   "screenshot_app_options_error_hotkeyequal": {
+      "message": "Du kan inte samma snabbtangent för flera funktioner. Ändra en av snabbtangenterna."
+   },
+   "screenshot_app_options_error_hotkeyinvalid": {
+      "message": "En av snabbtangenterna är ur funktion. Om du vill inaktivera den snabbtangenten, bocka av motsvarande kryssruta."
+   },
+   "screenshot_app_options_formats": {
+      "message": "Format"
+   },
+   "screenshot_app_options_general": {
+      "message": "Allmän"
+   },
+   "screenshot_app_options_hotkeygeneral": {
+      "message": "Allmänna snabbtangenter"
+   },
+   "screenshot_app_options_hotkeys": {
+      "message": "Snabbtangenter"
+   },
+   "screenshot_app_options_hotkeysavefullscreen": {
+      "message": "Omedelbart sparande av fullskärm"
+   },
+   "screenshot_app_options_hotkeyuploadfullscreen": {
+      "message": "Omedelbar nedladdning av fullskärm"
+   },
+   "screenshot_app_options_httpsproxy": {
+      "message": "HTTP(S) proxy"
+   },
+   "screenshot_app_options_jpegquality": {
+      "message": "JPEG kvalitet"
+   },
+   "screenshot_app_options_keepselection": {
+      "message": "Behåll det valda områdets position"
+   },
+   "screenshot_app_options_language": {
+      "message": "Språk"
+   },
+   "screenshot_app_options_manualproxy": {
+      "message": "Manuell proxy konfigurering"
+   },
+   "screenshot_app_options_noproxy": {
+      "message": "Ingen proxy"
+   },
+   "screenshot_app_options_optimize_always": {
+      "message": "Alltid"
+   },
+   "screenshot_app_options_optimize_never": {
+      "message": "Aldrig"
+   },
+   "screenshot_app_options_optimize_screenshots": {
+      "message": "Optimera skärmdumpar (OptiPNG)"
+   },
+   "screenshot_app_options_optimize_uploadonly": {
+      "message": "Endast vid nedladdning"
+   },
+   "screenshot_app_options_proxy": {
+      "message": "Proxy"
+   },
+   "screenshot_app_options_proxyport": {
+      "message": "Port"
+   },
+   "screenshot_app_options_showbubbles": {
+      "message": "Visa meddelande om kopiering och spara"
+   },
+   "screenshot_app_options_system_proxy_not_set": {
+      "message": "Inte upprättad (direktanslutning)"
+   },
+   "screenshot_app_options_systemproxy": {
+      "message": "Använd system proxy inställningar"
+   },
+   "screenshot_app_options_uploadformat": {
+      "message": "Nedladdning enligt format"
+   },
+   "screenshot_app_signed_in_as": {
+      "message": "Logga in som"
+   },
+   "screenshot_app_signin_dialog_caption": {
+      "message": "Logga in"
+   },
+   "screenshot_app_signin_error_caption": {
+      "message": "scrsht inloggningsfel"
+   },
+   "screenshot_app_signin_error_text": {
+      "message": "scrsht: Ett fel uppstod under inloggning. Försök igen."
+   },
+   "screenshot_app_take_screenshot": {
+      "message": "Ta en screenshot"
+   },
+   "screenshot_app_terms": {
+      "message": "scrsht Villkor"
+   },
+   "screenshot_app_tray_tooltip": {
+      "message": "Tryck \"%hotkey_main%\" på ditt tangentbord för att ta en skärmdump"
+   },
+   "screenshot_plugin_announce_do_not_show": {
+      "message": "Visa inte detta meddelande igen"
+   },
+   "screenshot_plugin_cancel": {
+      "message": "Avbryt"
+   },
+   "screenshot_plugin_chrome_38_retina_bug": {
+      "message": ""
+   },
+   "screenshot_plugin_chrome_bug_copy": {
+      "message": ""
+   },
+   "screenshot_plugin_clear": {
+      "message": "Rensa val"
+   },
+   "screenshot_plugin_close": {
+      "message": "Stäng"
+   },
+   "screenshot_plugin_copy": {
+      "message": "Kopiera"
+   },
+   "screenshot_plugin_ctypes_error": {
+      "message": "Felmeddelande: Firefox CTypes misslyckades att ladda scrsht. "
+   },
+   "screenshot_plugin_edit_arrow": {
+      "message": "Pil"
+   },
+   "screenshot_plugin_edit_arrow_circle": {
+      "message": "Circle+Line use Right Click/CTRL+ Z for Undo"
+   },
+   "screenshot_plugin_edit_arrow_rect": {
+      "message": "Rectangle+Line  use Right Click/CTRL+ Z for Undo"
+   },
+   "screenshot_plugin_edit_blur": {
+      "message": "Suddig"
+   },
+   "screenshot_plugin_edit_circle": {
+      "message": "Cirkel"
+   },
+   "screenshot_plugin_edit_color": {
+      "message": "Färg"
+   },
+   "screenshot_plugin_edit_line": {
+      "message": "Linje"
+   },
+   "screenshot_plugin_edit_marker": {
+      "message": "Markör"
+   },
+   "screenshot_plugin_edit_pencil": {
+      "message": "Penna"
+   },
+   "screenshot_plugin_edit_rect": {
+      "message": "Rektangel"
+   },
+   "screenshot_plugin_edit_text": {
+      "message": "Text"
+   },
+   "screenshot_plugin_edit_undo": {
+      "message": "Ångra"
+   },
+   "screenshot_plugin_editonline": {
+      "message": "Redigera en shreenshot online"
+   },
+   "screenshot_plugin_error_capt": {
+      "message": "Fel"
+   },
+   "screenshot_plugin_fullscreen": {
+      "message": "Välj fullskärm"
+   },
+   "screenshot_plugin_go_to_mac_store": {
+      "message": "Vi ber om ursäkt för olägenheten, men scrsht fungerar bara på Windows datorer."
+   },
+   "screenshot_plugin_image_hosting_incorrect_response": {
+      "message": "Felaktig JSON struktur som svar från bildens värdserver"
+   },
+   "screenshot_plugin_incorrect_size": {
+      "message": "Fel storlek"
+   },
+   "screenshot_plugin_npapi_deprecated_message": {
+      "message": ""
+   },
+   "screenshot_plugin_npapi_not_found": {
+      "message": ""
+   },
+   "screenshot_plugin_open": {
+      "message": "Öppna"
+   },
+   "screenshot_plugin_optimize_dialog_capt": {
+      "message": "Optimera skärmdump"
+   },
+   "screenshot_plugin_other_os": {
+      "message": ""
+   },
+   "screenshot_plugin_print": {
+      "message": "Skriv ut"
+   },
+   "screenshot_plugin_retry": {
+      "message": "Försök igen"
+   },
+   "screenshot_plugin_save": {
+      "message": "Spara"
+   },
+   "screenshot_plugin_screenshot_copied_to_clipboard": {
+      "message": "Din skärmdump har kopierats till klippbord"
+   },
+   "screenshot_plugin_screenshot_error_reload_browser": {
+      "message": ""
+   },
+   "screenshot_plugin_screenshot_saved": {
+      "message": "Skärmdump sparades till %filename%. Klicka här för att öppna den i mappen."
+   },
+   "screenshot_plugin_screenshot_uploaded_link_copied": {
+      "message": "Screenshot nedladdad. Länk kopierad till ditt klippbord."
+   },
+   "screenshot_plugin_share": {
+      "message": "Dela på sociala nätverk"
+   },
+   "screenshot_plugin_share_facebook": {
+      "message": "Dela på Facebook"
+   },
+   "screenshot_plugin_share_googlesearch": {
+      "message": "Sök liknande bilder på Google"
+   },
+   "screenshot_plugin_share_pinterest": {
+      "message": "Dela på Pinterest"
+   },
+   "screenshot_plugin_share_sendmail": {
+      "message": "Skicka via e-mejl"
+   },
+   "screenshot_plugin_share_tineyesearch": {
+      "message": "Sök liknande bilder på Tineye"
+   },
+   "screenshot_plugin_share_twitter": {
+      "message": "Dela på Twitter"
+   },
+   "screenshot_plugin_share_vk": {
+      "message": "Dela på VK"
+   },
+   "screenshot_plugin_share_whatsapp": {
+      "message": "Share on Whatsapp"
+   },
+   "screenshot_plugin_tooltip": {
+      "message": "Välj område"
+   },
+   "screenshot_plugin_upl_fail_cancel_uploading_screenshot": {
+      "message": "Avbryt - avbryt nedladdning av skärmdump"
+   },
+   "screenshot_plugin_upl_fail_check_proxy_settings": {
+      "message": "Kontrollera att konfigureringen är korrekt och att proxy inte blockerar scrsht förfrågningar."
+   },
+   "screenshot_plugin_upl_fail_continue_open_scrsht_proxy": {
+      "message": "Fortsätt - öppna scrsht proxy konfigurering"
+   },
+   "screenshot_plugin_upl_fail_continue_open_system_proxy": {
+      "message": "Fortsätt - öppna system proxy konfigurering"
+   },
+   "screenshot_plugin_upl_fail_scrsht_uses_proxy": {
+      "message": "Nuvarande scrsht är konfigurerad att använda denna proxy: %proxy%"
+   },
+   "screenshot_plugin_upl_fail_scrsht_uses_system_proxy": {
+      "message": "scrsht använder nuvarande system proxy inställningar: %proxy%"
+   },
+   "screenshot_plugin_upl_fail_try_again_with_current_settings": {
+      "message": "Pröva igen - försök med nuvarande inställningar"
+   },
+   "screenshot_plugin_upload": {
+      "message": "Ladda ner till scrsht.com"
+   },
+   "screenshot_plugin_upload_error_capt": {
+      "message": "Nedladdningsfel"
+   },
+   "screenshot_plugin_upload_error_detailed_info": {
+      "message": "Detaljerad information"
+   },
+   "screenshot_plugin_upload_failed": {
+      "message": "Nedladdning misslyckades"
+   },
+   "screenshot_plugin_upload_failed_retry": {
+      "message": "Nedladdning misslyckades. Försök igen?"
+   },
+   "screenshot_plugin_uploading_window_capt": {
+      "message": "Laddar ner bild"
+   },
+   "screenshotplugin_default_title": {
+      "message": "Ta en Screenshot"
+   },
+   "screenshotplugin_name": {
+      "message": "Skärmdump och skärminspelning"
+   },
+   "screenshotplugin_short_description": {
+      "message": "Ta skärmdump av sida, hel sida, spela in flik, fönster eller skärm, spara som bild, PDF eller ladda upp till server. Välj område, redigera din skärmdump."
+   }
+}
