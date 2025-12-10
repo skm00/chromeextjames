@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const allPageButton = document.getElementById("allPage");
   const selectArea = document.getElementById("selectArea");
     const selectAreahd = document.getElementById("selectAreahd");
- // const selectAreagif = document.getElementById("selectAreagif");
+  const selectAreagif = document.getElementById("selectAreagif");
 
   const progressBarContainer = document.getElementById("progressBarContainer");
   const progressBar = document.getElementById("progressBar");
@@ -57,6 +57,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const enablerightclickyy = document.getElementById("enablerightclick");
   const capturefragment = document.getElementById("capturefragment");
   const captureBodyBtn = document.getElementById("captureBody");
+  const defaultGifLabel = selectAreagif ? selectAreagif.textContent : "GIF";
   const paymentIndicator = document.getElementById("payment-indicator");
   const toBeHidden = document.getElementById("to-be-hidden");
   const paymentLink = document.getElementById("payment-link");
@@ -214,32 +215,6 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
 
-  selectAreagif.addEventListener("click", () => {
-    var buttonId = selectAreagif.id; // Use selectAreagif to get the ID
-    setMode(buttonId);
-    sendButtonClickData(buttonId);
-    selectAreagif.innerHTML = "Drag & Select Area";
-    // Change the style
-    selectAreagif.style.color = "black";
-    selectAreagif.style.backgroundColor = "#ffc107";
-    const timestamp = new Date().toISOString(); // Get the current timestamp in ISO format
-    chrome.storage.local.get({ buttonClickHistory: [] }, (result) => {
-      const clickHistory = result.buttonClickHistory;
-      clickHistory.push({ buttonId, timestamp }); // Add the new timestamp
-      chrome.storage.local.set({ buttonClickHistory: clickHistory }, () => {
-        console.log("Timestamp saved to chrome.storage.local");
-      });
-    });
-    chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
-      chrome.scripting.executeScript({
-        target: { tabId: tabs[0].id },
-        files: ["./js/capture-areagif.js"],
-      });
-    });
-  });
-
-
-
 
   selectAreahd.addEventListener("click", () => {
     var buttonIdhdd = selectAreahd.id; 
@@ -271,6 +246,14 @@ selectAreagif.addEventListener("click", async () => {
   const buttonId = selectAreagif.id;
   setMode(buttonId);
   sendButtonClickData(buttonId);
+
+  const timestamp = new Date().toISOString();
+  chrome.storage.local.get({ buttonClickHistory: [] }, (result) => {
+    const clickHistory = result.buttonClickHistory;
+    clickHistory.push({ buttonId, timestamp });
+    chrome.storage.local.set({ buttonClickHistory: clickHistory });
+  });
+
   const tabs = await chrome.tabs.query({});
   const hasYouTubeTab = tabs.some(tab => {
     if (!tab.url) return false;
@@ -283,13 +266,19 @@ selectAreagif.addEventListener("click", async () => {
       return false;
     }
   });
+
   if (hasYouTubeTab) {
+    selectAreagif.textContent = defaultGifLabel;
+    selectAreagif.style.backgroundColor = "#ffecb8";
+    selectAreagif.style.color = "#000";
     showWarning("GIF recording is blocked while YouTube is open. Please close all YouTube tabs.");
     return;
   }
+
   selectAreagif.textContent = "Starting GIF Recorder...";
   selectAreagif.style.backgroundColor = "#4CAF50";
   selectAreagif.style.color = "white";
+
   const [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
   await chrome.scripting.executeScript({
     target: { tabId: tab.id },

@@ -417,9 +417,90 @@ try {
     }))
 })();
 
-// here is new code to trigger that screen recorder 
+// here is new code to trigger that screen recorder
 
  // ==================== GIF RECORDER USING chrome.desktopCapture (WORKS ON X.COM, WIX, EVERYWHERE) ====================
+
+const OFFSCREEN_URL = "offscreen.html";
+let isGifRecording = false;
+
+async function ensureOffscreenDocument() {
+    if (chrome.offscreen.hasDocument) {
+        const hasDoc = await chrome.offscreen.hasDocument();
+        if (hasDoc) {
+            return;
+        }
+    }
+
+    await chrome.offscreen.createDocument({
+        url: OFFSCREEN_URL,
+        reasons: ["USER_MEDIA"],
+        justification: "Record the active tab as an animated GIF"
+    });
+}
+
+async function requestTabStreamId() {
+    return new Promise(resolve => {
+        chrome.desktopCapture.chooseDesktopMedia(["tab"], streamId => {
+            resolve(streamId || null);
+        });
+    });
+}
+
+async function beginGifRecording(area) {
+    if (isGifRecording) {
+        return;
+    }
+
+    await ensureOffscreenDocument();
+    const streamId = await requestTabStreamId();
+
+    if (!streamId) {
+        return;
+    }
+
+    isGifRecording = true;
+    chrome.runtime.sendMessage({
+        type: "START_GIF_RECORDING",
+        streamId,
+        area
+    });
+}
+
+function endGifRecording() {
+    if (!isGifRecording) {
+        return;
+    }
+
+    isGifRecording = false;
+    chrome.runtime.sendMessage({
+        type: "STOP_GIF_RECORDING"
+    });
+}
+
+chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
+    if (message && message.action === "startGifCapture") {
+        beginGifRecording(message.area || { x: 0, y: 0, width: 800, height: 600 });
+        return true;
+    }
+
+    if (message && message.action === "stopGifCapture") {
+        endGifRecording();
+        return false;
+    }
+
+    if (message && message.type === "GIF_FINISHED" && message.blobUrl) {
+        isGifRecording = false;
+        chrome.downloads.download({
+            url: message.blobUrl,
+            filename: `scrsht-${Date.now()}.gif`,
+            saveAs: true
+        });
+        return false;
+    }
+
+    return false;
+});
  
  
  

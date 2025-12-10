@@ -45,7 +45,7 @@ async function startGifCapture(streamId) {
     quality: 10,
     width: area.width,
     height: area.height,
-    workerScript: URL.createObjectURL(new Blob([`postMessage({});`], { type: 'application/javascript' }))  // Placeholder; gif.js handles
+    workerScript: chrome.runtime.getURL('js/gif.worker.js')
   });
 
   gif.on('finished', (blob) => {
