@@ -75,8 +75,7 @@
       console.log("capture-areagif.js: Sending startGifCapture with full area:", fullArea);  // Debug
       chrome.runtime.sendMessage({
         action: 'startGifCapture',
-        area: fullArea,
-        tabId: await new Promise(resolve => chrome.tabs.query({active: true, currentWindow: true}, tabs => resolve(tabs[0].id)))  // Include tabId for safety
+        area: fullArea
       });
       
       showIndicator();
