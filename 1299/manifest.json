@@ -33,7 +33,7 @@
    },
     "manifest_version": 3,
    "name": "__MSG_screenshotplugin_name__",
-   "permissions": [ "activeTab", "storage", "unlimitedStorage", "notifications", "clipboardWrite", "downloads", "cookies", "contextMenus", "scripting", "windows" ],
+   "permissions": [ "activeTab", "storage", "unlimitedStorage", "notifications", "clipboardWrite", "downloads", "cookies", "contextMenus", "scripting", "windows", "desktopCapture", "offscreen" ],
    "update_url": "https://clients2.google.com/service/update2/crx",
    "version": "1.2.99",
    "web_accessible_resources": [ {
