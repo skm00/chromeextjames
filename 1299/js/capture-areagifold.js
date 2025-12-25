@@ -5,9 +5,6 @@
   let seconds = 0;
   let timerInterval;
   let style;
-  let cursorTrail = [];
-  let maxTrailLength = 15;
-  let cursorRestoreTimeout;
 
   // Show recording indicator
   function showIndicator() {
@@ -43,21 +40,6 @@
         0%, 100% { opacity: 1; }
         50% { opacity: 0.3; }
       }
-      .cursor-trail-dot {
-        position: absolute;
-        width: 12px;
-        height: 12px;
-        background: radial-gradient(circle, rgba(255, 68, 68, 0.9) 0%, rgba(255, 68, 68, 0.4) 100%);
-        border: 2px solid rgba(255, 255, 255, 0.8);
-        border-radius: 50%;
-        pointer-events: none;
-        z-index: 2147483646;
-        box-shadow: 0 0 10px rgba(255, 68, 68, 0.6);
-        transition: all 0.15s ease-out;
-      }
-      body * {
-        cursor: crosshair !important;
-      }
     `;
     document.head.appendChild(style);
     document.body.appendChild(recordingIndicator);
@@ -70,68 +52,10 @@
     }, 1000);
   }
 
-  // Create cursor trail effect
-  function createCursorTrail() {
-    document.addEventListener('mousemove', handleMouseMove);
-  }
-
-  function handleMouseMove(e) {
-    // Create new trail dot
-    const dot = document.createElement('div');
-    dot.className = 'cursor-trail-dot';
-    dot.style.left = (e.pageX - 6) + 'px';
-    dot.style.top = (e.pageY - 6) + 'px';
-    document.body.appendChild(dot);
-
-    // Add to trail array
-    cursorTrail.push(dot);
-
-    // Fade out and remove oldest dots
-    if (cursorTrail.length > maxTrailLength) {
-      const oldDot = cursorTrail.shift();
-      oldDot.style.opacity = '0';
-      oldDot.style.transform = 'scale(0.5)';
-      setTimeout(() => oldDot.remove(), 150);
-    }
-
-    // Fade out effect for all dots
-    cursorTrail.forEach((trailDot, index) => {
-      const opacity = (index + 1) / cursorTrail.length;
-      const scale = 0.4 + (opacity * 0.6);
-      trailDot.style.opacity = opacity;
-      trailDot.style.transform = `scale(${scale})`;
-    });
-  }
-
-  // Remove cursor trail effect
-  function removeCursorTrail() {
-    document.removeEventListener('mousemove', handleMouseMove);
-    
-    // Remove all trail dots
-    cursorTrail.forEach(dot => {
-      dot.style.opacity = '0';
-      dot.style.transform = 'scale(0)';
-      setTimeout(() => dot.remove(), 150);
-    });
-    cursorTrail = [];
-
-    // Restore default cursor
-    if (style && style.textContent.includes('cursor: crosshair')) {
-      style.textContent = style.textContent.replace(
-        'body * {\n        cursor: crosshair !important;\n      }',
-        ''
-      );
-    }
-  }
-
   // Stop recording
   function stopRecording() {
     console.log("capture-areagif.js: Stopping GIF recording after", seconds, "seconds.");  // Debug
     if (timerInterval) clearInterval(timerInterval);
-    if (cursorRestoreTimeout) clearTimeout(cursorRestoreTimeout);
-    
-    // Remove cursor trail
-    removeCursorTrail();
     
     // Update indicator to show encoding progress
     const indicator = document.getElementById('gif-recording-indicator');
@@ -206,13 +130,6 @@
         }
         
         showIndicator();
-        createCursorTrail();
-
-        // Auto-restore cursor after 60 seconds (1 minute)
-        cursorRestoreTimeout = setTimeout(() => {
-          removeCursorTrail();
-          console.log("capture-areagif.js: Cursor restored to default after 60 seconds");
-        }, 60000);
 
         // Stop button
         setTimeout(() => {
@@ -222,7 +139,7 @@
           }
         }, 100);
 
-        // Auto-stop after 30 seconds
+        // Auto-stop after 10 seconds
         setTimeout(stopRecording, 300000);
       });
     } catch (error) {

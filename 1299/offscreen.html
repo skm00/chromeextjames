@@ -1,11 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <script src="gif.js"></script>  <!-- Include downloaded gif.js here -->
+  <title>Offscreen Document - GIF Recorder</title>
+ 
+  <script src="gif.js"></script>
 </head>
 <body>
   <video id="video" style="display: none;"></video>
   <canvas id="canvas" style="display: none;"></canvas>
+  <script>
+    console.log('=== offscreen.html: Body loaded, GIF available:', typeof GIF !== 'undefined');
+    console.log('=== offscreen.html: Chrome runtime available:', typeof chrome !== 'undefined' && typeof chrome.runtime !== 'undefined');
+  </script>
   <script src="offscreen.js"></script>
 </body>
 </html>

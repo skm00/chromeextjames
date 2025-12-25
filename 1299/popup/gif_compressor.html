@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GIF Compressor</title>
+  <style>
+    body { font-family: sans-serif; padding: 20px; text-align: center; color: #333; }
+    .container { max-width: 600px; margin: 0 auto; }
+    
+    .upload-box {
+      border: 2px dashed #ff6b35; padding: 30px; border-radius: 8px;
+      cursor: pointer; background: #fff5f0; margin-bottom: 20px;
+    }
+    .upload-box:hover { background: #ffe0d0; }
+    
+    .controls { display: flex; gap: 10px; justify-content: center; margin: 15px 0; }
+    label { font-size: 0.9em; font-weight: bold; }
+    select, input { padding: 5px; border-radius: 4px; border: 1px solid #ccc; }
+
+    .btn {
+      background: #ff6b35; color: white; border: none; padding: 10px 20px;
+      font-size: 16px; border-radius: 5px; cursor: pointer; transition: 0.2s;
+    }
+    .btn:disabled { background: #ccc; cursor: not-allowed; }
+    .btn:hover:not(:disabled) { background: #e55a2b; }
+
+    /* New Progress Bar Styles */
+    #progress-wrapper { display: none; margin: 15px 0; }
+    progress { width: 100%; height: 20px; accent-color: #4e7837; }
+    
+    #status { margin: 10px 0; font-weight: bold; min-height: 20px; }
+    #preview-container { margin-top: 20px; max-width: 100%; overflow: hidden; }
+    img { max-width: 100%; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+    
+    #gif-hidden { display: none; }
+	
+.cssbuttons-io-button {
+  background: #a370f0;
+  color: white;
+  font-family: inherit;
+  padding: 0.35em;
+  padding-left: 1.2em;
+  font-size: 17px;
+  font-weight: 500;
+  border-radius: 0.9em;
+  border: none;
+  letter-spacing: 0.05em;
+  display: flex;
+  align-items: center;
+  box-shadow: inset 0 0 1.6em -0.6em #714da6;
+  overflow: hidden;
+  position: relative;
+  height: 2.8em;
+  padding-right: 3.3em;
+  cursor: pointer;
+}
+
+.cssbuttons-io-button .icon {
+  background: white;
+  margin-left: 1em;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2.2em;
+  width: 2.2em;
+  border-radius: 0.7em;
+  box-shadow: 0.1em 0.1em 0.6em 0.2em #7b52b9;
+  right: 0.3em;
+  transition: all 0.3s;
+}
+
+.cssbuttons-io-button:hover .icon {
+  width: calc(100% - 0.6em);
+}
+
+.cssbuttons-io-button .icon svg {
+  width: 1.1em;
+  transition: transform 0.3s;
+  color: #7b52b9;
+}
+
+.cssbuttons-io-button:hover .icon svg {
+  transform: translateX(0.1em);
+}
+
+.cssbuttons-io-button:active .icon {
+  transform: scale(0.95);
+}
+
+	
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h2>GIF Compressor</h2>
+
+  <div class="upload-box" id="uploadTrigger">
+    <p>Click to upload GIF</p>
+    <input type="file" id="fileInput" accept="image/gif" style="display: none">
+  </div>
+
+  <div class="controls">
+    <div>
+      <label>Scale:</label>
+      <select id="scale">
+        <option value="1">100% (Original)</option>
+		 <option value="0.90">90%</option>
+        <option value="0.80">80%</option>
+        <option value="0.70">70%</option>
+        <option value="0.60">60%</option>
+
+        <option value="0.5" selected>50% (Recommended)</option>
+	 <option value="0.40">40%</option>
+
+        <option value="0.3">30% (Heavy)</option>
+      </select>
+    </div>
+    <div>
+      <label>FPS:</label>
+      <select id="fps">
+        <option value="15">15 FPS (Smooth)</option>
+        <option value="10" selected>10 FPS (Standard)</option>
+        <option value="5">5 FPS (Low Size)</option>
+      </select>
+    </div>
+  </div>
+
+  <button id="processBtn" class="btn" disabled>Compress GIF</button>
+  <div id="downlodbtn" ></div>
+
+  <div id="progress-wrapper">
+    <label>Processing. May take 2-3 minutes...</label>
+    <progress id="progressBar" value="0" max="100"></progress>
+  </div>
+
+  <div id="status"></div>
+  <div id="preview-container"></div>
+  
+  <img id="gif-hidden">
+</div>
+
+
+
+
+
+
+<script src="../libs/gif/libgif.js"></script>
+<script src="../libs/gif/gif.js"></script>
+<script src="./gif_compressor-new.js"></script>
+
+</body>
+</html>

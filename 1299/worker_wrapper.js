@@ -402,8 +402,64 @@ try {
                 T(e.url, e.suffix);
                 break;
             case S:
-                n("stop")
+                n("stop");
+                break;
         }
+        
+        // Handle GIF recording messages
+        if (e.action === 'startGifCapture') {
+            console.log('=== worker_wrapper.js: Received startGifCapture request ===');
+            console.log('Message:', e);
+            console.log('Sender:', r);
+            console.log('Tab ID:', r.tab ? r.tab.id : 'NO TAB');
+            
+            if (!r.tab || !r.tab.id) {
+                console.error('worker_wrapper.js: No tab ID in sender!');
+                n({ success: false, error: 'No tab ID' });
+                return false;
+            }
+            
+            handleStartGifCapture(e, r.tab.id).then(() => {
+                console.log('worker_wrapper.js: handleStartGifCapture succeeded');
+                n({ success: true });
+            }).catch(error => {
+                console.error('worker_wrapper.js: handleStartGifCapture failed:', error);
+                n({ success: false, error: error.message });
+            });
+            return true;
+        }
+        
+        if (e.action === 'stopGifCapture') {
+            console.log('=== worker_wrapper.js: Received stopGifCapture request ===');
+            handleStopGifCapture().then(() => {
+                console.log('worker_wrapper.js: handleStopGifCapture succeeded');
+                n({ success: true });
+            }).catch(error => {
+                console.error('worker_wrapper.js: handleStopGifCapture failed:', error);
+                n({ success: false, error: error.message });
+            });
+            return true;
+        }
+        
+        if (e.type === 'GIF_FINISHED') {
+            console.log('=== worker_wrapper.js: GIF rendering finished, downloading... ===');
+            console.log('Blob URL:', e.blobUrl);
+            handleGifFinished(e.blobUrl, r.tab ? r.tab.id : null);
+        }
+        
+        if (e.type === 'GIF_ENCODING_PROGRESS') {
+            console.log('worker_wrapper.js: GIF encoding progress:', Math.round(e.progress * 100) + '%');
+            // Forward progress to the active tab
+            chrome.tabs.query({ active: true, currentWindow: true }).then(tabs => {
+                if (tabs[0]) {
+                    chrome.tabs.sendMessage(tabs[0].id, {
+                        type: 'GIF_ENCODING_PROGRESS',
+                        progress: e.progress
+                    }).catch(err => console.log('Could not send progress to tab:', err));
+                }
+            });
+        }
+        
         var o, a
     })), chrome.runtime.onInstalled.addListener((function(e) {
         "install" === e.reason && a.setAllStorage({
@@ -417,90 +473,145 @@ try {
     }))
 })();
 
-// here is new code to trigger that screen recorder
+// here is new code to trigger that screen recorder 
 
  // ==================== GIF RECORDER USING chrome.desktopCapture (WORKS ON X.COM, WIX, EVERYWHERE) ====================
 
-const OFFSCREEN_URL = "offscreen.html";
-let isGifRecording = false;
+let offscreenDocumentPromise = null;
 
+// Ensure offscreen document exists (create once, reuse)
 async function ensureOffscreenDocument() {
-    if (chrome.offscreen.hasDocument) {
-        const hasDoc = await chrome.offscreen.hasDocument();
-        if (hasDoc) {
-            return;
-        }
-    }
-
-    await chrome.offscreen.createDocument({
-        url: OFFSCREEN_URL,
-        reasons: ["USER_MEDIA"],
-        justification: "Record the active tab as an animated GIF"
-    });
-}
-
-async function requestTabStreamId() {
-    return new Promise(resolve => {
-        chrome.desktopCapture.chooseDesktopMedia(["tab"], streamId => {
-            resolve(streamId || null);
-        });
-    });
-}
-
-async function beginGifRecording(area) {
-    if (isGifRecording) {
+  if (offscreenDocumentPromise) {
+    console.log('ensureOffscreenDocument: Reusing existing promise');
+    return offscreenDocumentPromise;
+  }
+  
+  offscreenDocumentPromise = (async () => {
+    try {
+      console.log('ensureOffscreenDocument: Checking for existing contexts...');
+      const existingContexts = await chrome.runtime.getContexts({
+        contextTypes: ['OFFSCREEN_DOCUMENT']
+      });
+      
+      console.log('ensureOffscreenDocument: Existing contexts:', existingContexts.length);
+      
+      if (existingContexts.length > 0) {
+        console.log('ensureOffscreenDocument: Offscreen document already exists');
         return;
+      }
+      
+      console.log('ensureOffscreenDocument: Creating new offscreen document...');
+      await chrome.offscreen.createDocument({
+        url: 'offscreen.html',
+        reasons: ['USER_MEDIA'],
+        justification: 'GIF recording from tab capture'
+      });
+      
+      console.log('ensureOffscreenDocument: Created offscreen document successfully');
+      
+      // Wait a bit for the document to initialize
+      await new Promise(resolve => setTimeout(resolve, 500));
+      console.log('ensureOffscreenDocument: Initialization wait complete');
+    } catch (error) {
+      console.error('ensureOffscreenDocument: Error:', error);
+      offscreenDocumentPromise = null; // Reset on error
+      throw error;
     }
+  })();
+  
+  return offscreenDocumentPromise;
+}
 
+async function handleStartGifCapture(message, tabId) {
+  try {
+    console.log('handleStartGifCapture: Starting for tab', tabId);
+    
+    // Ensure offscreen document exists
     await ensureOffscreenDocument();
-    const streamId = await requestTabStreamId();
-
-    if (!streamId) {
-        return;
-    }
-
-    isGifRecording = true;
-    chrome.runtime.sendMessage({
-        type: "START_GIF_RECORDING",
-        streamId,
-        area
-    });
-}
-
-function endGifRecording() {
-    if (!isGifRecording) {
-        return;
-    }
-
-    isGifRecording = false;
-    chrome.runtime.sendMessage({
-        type: "STOP_GIF_RECORDING"
-    });
-}
-
-chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
-    if (message && message.action === "startGifCapture") {
-        beginGifRecording(message.area || { x: 0, y: 0, width: 800, height: 600 });
-        return true;
-    }
-
-    if (message && message.action === "stopGifCapture") {
-        endGifRecording();
-        return false;
-    }
-
-    if (message && message.type === "GIF_FINISHED" && message.blobUrl) {
-        isGifRecording = false;
-        chrome.downloads.download({
-            url: message.blobUrl,
-            filename: `scrsht-${Date.now()}.gif`,
-            saveAs: true
+    console.log('handleStartGifCapture: Offscreen document ready');
+    
+    // Get stream ID for the specific tab using chrome.tabCapture.getMediaStreamId
+    const streamId = await new Promise((resolve, reject) => {
+      try {
+        chrome.tabCapture.getMediaStreamId({ targetTabId: tabId }, (id) => {
+          if (chrome.runtime.lastError) {
+            console.error('getMediaStreamId error:', chrome.runtime.lastError.message);
+            reject(new Error(chrome.runtime.lastError.message));
+          } else if (!id) {
+            console.error('getMediaStreamId returned empty ID');
+            reject(new Error('Failed to get stream ID'));
+          } else {
+            console.log('Got stream ID:', id);
+            resolve(id);
+          }
         });
-        return false;
+      } catch (err) {
+        console.error('Exception in getMediaStreamId:', err);
+        reject(err);
+      }
+    });
+    
+    console.log('handleStartGifCapture: Sending to offscreen document, streamId:', streamId);
+    
+    // Send to offscreen document - try/catch to see if there's an error
+    try {
+      const response = await chrome.runtime.sendMessage({
+        type: 'START_GIF_RECORDING',
+        streamId: streamId,
+        area: message.area || { x: 0, y: 0, width: 1920, height: 1080 }
+      });
+      
+      console.log('handleStartGifCapture: Offscreen document response:', response);
+      
+      if (chrome.runtime.lastError) {
+        console.error('handleStartGifCapture: Runtime error after sending:', chrome.runtime.lastError.message);
+        throw new Error(chrome.runtime.lastError.message);
+      }
+    } catch (sendError) {
+      console.error('handleStartGifCapture: Exception sending message to offscreen:', sendError);
+      throw sendError;
     }
+  } catch (error) {
+    console.error('handleStartGifCapture: Failed with error:', error);
+    throw error;
+  }
+}
 
-    return false;
-});
- 
- 
- 
+async function handleStopGifCapture() {
+  try {
+    await chrome.runtime.sendMessage({
+      type: 'STOP_GIF_RECORDING'
+    });
+    console.log('Sent stop message to offscreen document');
+  } catch (error) {
+    console.error('Failed to stop GIF capture:', error);
+    throw error;
+  }
+}
+
+function handleGifFinished(blobUrl, tabId) {
+  // Download the GIF
+  const timestamp = new Date().toISOString().replace(/[:.]/g, '-');
+  chrome.downloads.download({
+    url: blobUrl,
+    filename: `SCRSHT_GIF_${timestamp}.gif`,
+    saveAs: true
+  }, (downloadId) => {
+    if (chrome.runtime.lastError) {
+      console.error('Download failed:', chrome.runtime.lastError);
+    } else {
+      console.log('GIF download started with ID:', downloadId);
+      
+      // Notify the tab that encoding is complete
+      chrome.tabs.query({ active: true, currentWindow: true }).then(tabs => {
+        if (tabs[0]) {
+          chrome.tabs.sendMessage(tabs[0].id, {
+            type: 'GIF_ENCODING_COMPLETE'
+          }).catch(err => console.log('Could not send completion to tab:', err));
+        }
+      });
+    }
+  });
+}
+
+

@@ -1,13 +1,16 @@
-// capture-areagif.js
+// capture-areagif.js - Spotlight Highlighter Version
 (function() {
   console.log("capture-areagif.js: Script injected and starting full-tab GIF recording!");  // Debug
 
   let seconds = 0;
   let timerInterval;
   let style;
-  let cursorTrail = [];
-  let maxTrailLength = 15;
   let cursorRestoreTimeout;
+  let spotlightElement;
+  let pointerElement;
+  let highlightBoxes = [];
+  let isHighlighting = false;
+  let highlightStart = null;
 
   // Show recording indicator
   function showIndicator() {
@@ -36,24 +39,94 @@
       <button id="stop-gif-recording" style="margin-left: 10px; padding: 4px 12px; background: #BDC1C6; color: black; border: none; border-radius: 4px; cursor: pointer; font-weight: bold;">X</button>
     `;
     
-    // Add pulsing animation
+    // Add animations and styles
     style = document.createElement('style');
     style.textContent = `
       @keyframes pulse {
         0%, 100% { opacity: 1; }
         50% { opacity: 0.3; }
       }
-      .cursor-trail-dot {
+      @keyframes pointerPulse {
+        0%, 100% { 
+          transform: translate(-50%, -50%) scale(1);
+          opacity: 1;
+        }
+        50% { 
+          transform: translate(-50%, -50%) scale(1.1);
+          opacity: 0.8;
+        }
+      }
+      @keyframes highlightFade {
+        0% { opacity: 0; }
+        100% { opacity: 1; }
+      }
+      .cursor-spotlight {
         position: absolute;
-        width: 12px;
-        height: 12px;
-        background: radial-gradient(circle, rgba(255, 68, 68, 0.9) 0%, rgba(255, 68, 68, 0.4) 100%);
-        border: 2px solid rgba(255, 255, 255, 0.8);
+        width: 120px;
+        height: 120px;
         border-radius: 50%;
         pointer-events: none;
+        z-index: 2147483645;
+        background: radial-gradient(circle, 
+          rgba(255, 235, 59, 0.15) 0%, 
+          rgba(255, 235, 59, 0.08) 40%, 
+          transparent 70%);
+        box-shadow: 0 0 40px rgba(255, 235, 59, 0.3),
+                    inset 0 0 30px rgba(255, 235, 59, 0.1);
+        transition: all 0.1s ease-out;
+      }
+      .cursor-pointer {
+        position: absolute;
+        width: 16px;
+        height: 16px;
+        pointer-events: none;
         z-index: 2147483646;
-        box-shadow: 0 0 10px rgba(255, 68, 68, 0.6);
-        transition: all 0.15s ease-out;
+        animation: pointerPulse 1.5s ease-in-out infinite;
+      }
+      .cursor-pointer::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 12px;
+        height: 12px;
+        background: #fbbf24;
+        border: 2px solid #ffffff;
+        border-radius: 50%;
+        box-shadow: 0 0 10px rgba(251, 191, 36, 0.6),
+                    0 2px 4px rgba(0, 0, 0, 0.3);
+      }
+      .cursor-pointer::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 4px;
+        height: 4px;
+        background: #ffffff;
+        border-radius: 50%;
+      }
+      .highlight-box {
+        position: absolute;
+        background: rgba(251, 191, 36, 0.2);
+        border: 2px solid #fbbf24;
+        pointer-events: none;
+        z-index: 2147483644;
+        animation: highlightFade 0.3s ease-out;
+        box-shadow: 0 0 20px rgba(251, 191, 36, 0.4),
+                    inset 0 0 20px rgba(251, 191, 36, 0.1);
+      }
+      .highlight-box::before {
+        content: '';
+        position: absolute;
+        top: -4px;
+        left: -4px;
+        right: -4px;
+        bottom: -4px;
+        border: 1px solid rgba(251, 191, 36, 0.3);
+        border-radius: 2px;
       }
       body * {
         cursor: crosshair !important;
@@ -70,50 +143,122 @@
     }, 1000);
   }
 
-  // Create cursor trail effect
-  function createCursorTrail() {
+  // Create cursor spotlight effect
+  function createCursorSpotlight() {
+    // Create spotlight
+    spotlightElement = document.createElement('div');
+    spotlightElement.className = 'cursor-spotlight';
+    document.body.appendChild(spotlightElement);
+    
+    // Create pointer
+    pointerElement = document.createElement('div');
+    pointerElement.className = 'cursor-pointer';
+    document.body.appendChild(pointerElement);
+    
     document.addEventListener('mousemove', handleMouseMove);
+    document.addEventListener('mousedown', handleMouseDown);
+    document.addEventListener('mouseup', handleMouseUp);
+    document.addEventListener('dblclick', handleDoubleClick);
   }
 
   function handleMouseMove(e) {
-    // Create new trail dot
-    const dot = document.createElement('div');
-    dot.className = 'cursor-trail-dot';
-    dot.style.left = (e.pageX - 6) + 'px';
-    dot.style.top = (e.pageY - 6) + 'px';
-    document.body.appendChild(dot);
-
-    // Add to trail array
-    cursorTrail.push(dot);
-
-    // Fade out and remove oldest dots
-    if (cursorTrail.length > maxTrailLength) {
-      const oldDot = cursorTrail.shift();
-      oldDot.style.opacity = '0';
-      oldDot.style.transform = 'scale(0.5)';
-      setTimeout(() => oldDot.remove(), 150);
+    // Update spotlight position
+    if (spotlightElement) {
+      spotlightElement.style.left = (e.pageX - 60) + 'px';
+      spotlightElement.style.top = (e.pageY - 60) + 'px';
+    }
+    
+    // Update pointer position
+    if (pointerElement) {
+      pointerElement.style.left = (e.pageX) + 'px';
+      pointerElement.style.top = (e.pageY) + 'px';
     }
 
-    // Fade out effect for all dots
-    cursorTrail.forEach((trailDot, index) => {
-      const opacity = (index + 1) / cursorTrail.length;
-      const scale = 0.4 + (opacity * 0.6);
-      trailDot.style.opacity = opacity;
-      trailDot.style.transform = `scale(${scale})`;
-    });
+    // Update highlight box while dragging
+    if (isHighlighting && highlightStart) {
+      const currentBox = highlightBoxes[highlightBoxes.length - 1];
+      if (currentBox) {
+        const x = Math.min(highlightStart.x, e.pageX);
+        const y = Math.min(highlightStart.y, e.pageY);
+        const width = Math.abs(e.pageX - highlightStart.x);
+        const height = Math.abs(e.pageY - highlightStart.y);
+        
+        currentBox.style.left = x + 'px';
+        currentBox.style.top = y + 'px';
+        currentBox.style.width = width + 'px';
+        currentBox.style.height = height + 'px';
+      }
+    }
   }
 
-  // Remove cursor trail effect
-  function removeCursorTrail() {
-    document.removeEventListener('mousemove', handleMouseMove);
-    
-    // Remove all trail dots
-    cursorTrail.forEach(dot => {
-      dot.style.opacity = '0';
-      dot.style.transform = 'scale(0)';
-      setTimeout(() => dot.remove(), 150);
+  function handleMouseDown(e) {
+    // Start highlighting with drag
+    if (e.button === 0) { // Left click only
+      isHighlighting = true;
+      highlightStart = { x: e.pageX, y: e.pageY };
+      
+      const highlightBox = document.createElement('div');
+      highlightBox.className = 'highlight-box';
+      highlightBox.style.left = e.pageX + 'px';
+      highlightBox.style.top = e.pageY + 'px';
+      highlightBox.style.width = '0px';
+      highlightBox.style.height = '0px';
+      document.body.appendChild(highlightBox);
+      
+      highlightBoxes.push(highlightBox);
+    }
+  }
+
+  function handleMouseUp(e) {
+    if (isHighlighting) {
+      isHighlighting = false;
+      
+      // Remove small accidental highlights (less than 10x10 pixels)
+      const currentBox = highlightBoxes[highlightBoxes.length - 1];
+      if (currentBox) {
+        const width = parseInt(currentBox.style.width);
+        const height = parseInt(currentBox.style.height);
+        
+        if (width < 10 || height < 10) {
+          currentBox.remove();
+          highlightBoxes.pop();
+        }
+      }
+      
+      highlightStart = null;
+    }
+  }
+
+  function handleDoubleClick(e) {
+    // Double-click to clear all highlights
+    highlightBoxes.forEach(box => {
+      box.style.opacity = '0';
+      setTimeout(() => box.remove(), 300);
     });
-    cursorTrail = [];
+    highlightBoxes = [];
+  }
+
+  // Remove cursor effects
+  function removeCursorEffects() {
+    document.removeEventListener('mousemove', handleMouseMove);
+    document.removeEventListener('mousedown', handleMouseDown);
+    document.removeEventListener('mouseup', handleMouseUp);
+    document.removeEventListener('dblclick', handleDoubleClick);
+    
+    // Remove spotlight and pointer
+    if (spotlightElement) {
+      spotlightElement.remove();
+      spotlightElement = null;
+    }
+    
+    if (pointerElement) {
+      pointerElement.remove();
+      pointerElement = null;
+    }
+    
+    // Remove all highlight boxes
+    highlightBoxes.forEach(box => box.remove());
+    highlightBoxes = [];
 
     // Restore default cursor
     if (style && style.textContent.includes('cursor: crosshair')) {
@@ -130,8 +275,8 @@
     if (timerInterval) clearInterval(timerInterval);
     if (cursorRestoreTimeout) clearTimeout(cursorRestoreTimeout);
     
-    // Remove cursor trail
-    removeCursorTrail();
+    // Remove cursor effects
+    removeCursorEffects();
     
     // Update indicator to show encoding progress
     const indicator = document.getElementById('gif-recording-indicator');
@@ -206,11 +351,11 @@
         }
         
         showIndicator();
-        createCursorTrail();
+        createCursorSpotlight();
 
         // Auto-restore cursor after 60 seconds (1 minute)
         cursorRestoreTimeout = setTimeout(() => {
-          removeCursorTrail();
+          removeCursorEffects();
           console.log("capture-areagif.js: Cursor restored to default after 60 seconds");
         }, 60000);
 

@@ -33,11 +33,129 @@ chrome.tabs.query({ status: "complete" }, (tabs) => {
   });
 });
 
+
+window.onload = async function () {
+  document
+    .querySelectorAll(
+      "#selecto, #allShow, #allPage, #screenrecorder, #capturesave, #capturecopy"
+    )
+    .forEach((element) => {
+      element.addEventListener("click", function () {
+        let mode = this.id;
+        console.log(this);
+        console.log(mode);
+        chrome.runtime.sendMessage({ cmd: "mode", mode: mode });
+      });
+    });
+
+  document.getElementById("openDashboard").addEventListener("click", () => {
+    var buttonId = openDashboard.id;
+    //  sendButtonClickData(buttonId);
+
+    chrome.runtime.sendMessage({ cmd: "open_dashboard" });
+  });
+
+  document.getElementById("scrshtHistory").addEventListener("click", () => {
+    var buttonId = scrshtHistory.id;
+    //   sendButtonClickData(buttonId);
+
+    chrome.runtime.sendMessage({ cmd: "scrsht_history" });
+  });
+
+  document.getElementById("openToDo").addEventListener("click", () => {
+    var buttonId = openToDo.id;
+    //  sendButtonClickData(buttonId);
+    chrome.runtime.sendMessage({ cmd: "open_todo_dashboard" });
+  });
+};
+
+
+
+function sendButtonClickData(buttonId) {
+  fetch("https://scrsht.com/track-button-click.php", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      buttonId: buttonId,
+      timestamp: new Date().toISOString(),
+    }),
+  })
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+      return response.json();
+    })
+    .then((data) => {
+      console.log("Button click tracked successfully:", data);
+    })
+    .catch((error) => {
+      console.error("Error sending button click data:", error);
+    });
+}
+
+function setMode(mode) {
+  chrome.storage.local.set({ mode: mode }, function () {
+    // console.log('Mode set to:', mode);
+  });
+}
+
+function getMode(callback) {
+  chrome.storage.local.get(["mode"], function (result) {
+    callback(result.mode || "selectArea");
+  });
+}
+
+
+
+
 document.addEventListener("DOMContentLoaded", function () {
   const allPageButton = document.getElementById("allPage");
   const selectArea = document.getElementById("selectArea");
-    const selectAreahd = document.getElementById("selectAreahd");
-  const selectAreagif = document.getElementById("selectAreagif");
+  const selectAreahd = document.getElementById("selectAreahd");
+   const selectAreagifselector = document.getElementById("selectAreagifselector");
+
+
+selectAreagifselector.addEventListener("click", async () => {
+
+  const buttonId = selectAreagifselector.id;
+  setMode(buttonId);
+  sendButtonClickData(buttonId);
+
+  // IMPORTANT: await chrome.tabs.query
+  const tabs = await chrome.tabs.query({});
+
+  const hasYouTubeTab = tabs.some(tab => {
+    if (!tab.url) return false;
+    try {
+      const url = new URL(tab.url);
+      return (
+        url.hostname === "www.youtube.com" ||
+        url.hostname === "youtube.com" ||
+        url.hostname === "youtu.be"
+      );
+    } catch {
+      return false;
+    }
+  });
+
+  if (hasYouTubeTab) {
+    mainconttt.style.display = "block";
+    showWarning("GIF recording is blocked while YouTube is open. Please close all YouTube tabs.");
+    return;
+  } else {
+    mainconttt.style.display = "none";
+  }
+
+  window.location.href = "gif-selector.html";
+});
+
+
+  const selectAreagifold = document.getElementById("selectAreagifold");
+
+
 
   const progressBarContainer = document.getElementById("progressBarContainer");
   const progressBar = document.getElementById("progressBar");
@@ -57,11 +175,17 @@ document.addEventListener("DOMContentLoaded", function () {
   const enablerightclickyy = document.getElementById("enablerightclick");
   const capturefragment = document.getElementById("capturefragment");
   const captureBodyBtn = document.getElementById("captureBody");
-  const defaultGifLabel = selectAreagif ? selectAreagif.textContent : "GIF";
   const paymentIndicator = document.getElementById("payment-indicator");
   const toBeHidden = document.getElementById("to-be-hidden");
   const paymentLink = document.getElementById("payment-link");
   const subBtn = document.getElementById("subs-btn");
+
+  const mainconttt = document.getElementById("mainconttt");
+
+  const paidsecmsg = document.getElementById("paidsecmsg");
+  const compressgif = document.getElementById("compressgif");
+
+
 
   const serverURL = "https://paypal-server-beta.vercel.app/api";
 
@@ -103,18 +227,28 @@ document.addEventListener("DOMContentLoaded", function () {
               if (Object.keys(countResult).length != 0) {
                 let count = countResult["show-count"];
                 if (10 - count > 0)
-                  paymentIndicator.textContent = `${10 - count} free uses left 19$ lifetime`;
+                //  paymentIndicator.textContent = `${10 - count} free uses left 19$ lifetime`;
+			                  paymentIndicator.textContent = ``;
+
+			
                 else
                   paymentIndicator.textContent = `No free uses left (19$ lifetime)`;
                 count += 1;
                 if (count > 10) {
-                  toBeHidden.style.display = "none";
+                //  toBeHidden.style.display = "none";
+                 toBeHidden.style.pointerEvents = "none";
+				 paidsecmsg.textContent = "Paid section is disabled. Upgrade to activate.";
+				 
+				 
                 }
                 chrome.storage.sync
                   .set({ "show-count": count })
                   .then(() => console.log("Count updated"));
               } else {
-                paymentIndicator.textContent = `10 free uses left`;
+             //   paymentIndicator.textContent = `10 free uses left`;
+			                paymentIndicator.textContent = ``;
+ 
+			 
                 chrome.storage.sync
                   .set({ "show-count": 0 })
                   .then(() => console.log("Count initiated"));
@@ -188,6 +322,12 @@ document.addEventListener("DOMContentLoaded", function () {
     var buttonIdyytyt = selectoyyy.id;
     setMode(buttonIdyytyt);
     sendButtonClickData(buttonIdyytyt);
+    chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
+      chrome.scripting.executeScript({
+        target: { tabId: tabs[0].id },
+        files: ["./js/capture-area-old.js"],
+      });
+    });
   });
 
   selectArea.addEventListener("click", () => {
@@ -215,7 +355,6 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
 
-
   selectAreahd.addEventListener("click", () => {
     var buttonIdhdd = selectAreahd.id; 
     setMode(buttonIdhdd);
@@ -240,52 +379,8 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-
-// === GIF BUTTON (selectAreagif) ===
-selectAreagif.addEventListener("click", async () => {
-  const buttonId = selectAreagif.id;
-  setMode(buttonId);
-  sendButtonClickData(buttonId);
-
-  const timestamp = new Date().toISOString();
-  chrome.storage.local.get({ buttonClickHistory: [] }, (result) => {
-    const clickHistory = result.buttonClickHistory;
-    clickHistory.push({ buttonId, timestamp });
-    chrome.storage.local.set({ buttonClickHistory: clickHistory });
-  });
-
-  const tabs = await chrome.tabs.query({});
-  const hasYouTubeTab = tabs.some(tab => {
-    if (!tab.url) return false;
-    try {
-      const url = new URL(tab.url);
-      return url.hostname === "www.youtube.com" ||
-             url.hostname === "youtube.com" ||
-             url.hostname === "youtu.be";
-    } catch {
-      return false;
-    }
-  });
-
-  if (hasYouTubeTab) {
-    selectAreagif.textContent = defaultGifLabel;
-    selectAreagif.style.backgroundColor = "#ffecb8";
-    selectAreagif.style.color = "#000";
-    showWarning("GIF recording is blocked while YouTube is open. Please close all YouTube tabs.");
-    return;
-  }
-
-  selectAreagif.textContent = "Starting GIF Recorder...";
-  selectAreagif.style.backgroundColor = "#4CAF50";
-  selectAreagif.style.color = "white";
-
-  const [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
-  await chrome.scripting.executeScript({
-    target: { tabId: tab.id },
-    files: ["./js/capture-areagif.js"]
-  });
-  console.log("Injected capture-areagif.js into tab:", tab.id);  // Debug log
-});
+ 
+ 
 
 
 
@@ -450,44 +545,31 @@ function showWarning(message) {
     sendButtonClickData(buttonId);
     chrome.runtime.sendMessage({ cmd: "open_todo_dashboard" });
   });
+  
+  
+  // ———————————————————————
+// Open GIF Compressor Page
+// ———————————————————————
+if(compressgif)
+{
+document.getElementById('compressgif').addEventListener('click', () => {
+	  const buttonId = compressgif.id;
+  setMode(buttonId);
+  sendButtonClickData(buttonId);
+  chrome.tabs.create({
+    url: chrome.runtime.getURL('popup/gif_compressor.html')
+  });
+});
+}
+  
+  
+  
+  
+  
+  
 });
 
-function sendButtonClickData(buttonId) {
-  fetch("https://scrsht.com/track-button-click.php", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({
-      buttonId: buttonId,
-      timestamp: new Date().toISOString(),
-    }),
-  })
-    .then((response) => {
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
-      }
-      return response.json();
-    })
-    .then((data) => {
-      console.log("Button click tracked successfully:", data);
-    })
-    .catch((error) => {
-      console.error("Error sending button click data:", error);
-    });
-}
 
-function setMode(mode) {
-  chrome.storage.local.set({ mode: mode }, function () {
-    // console.log('Mode set to:', mode);
-  });
-}
-
-function getMode(callback) {
-  chrome.storage.local.get(["mode"], function (result) {
-    callback(result.mode || "selectArea");
-  });
-}
 
 function downloadImage(dataUrl, filename) {
   const a = document.createElement('a');
@@ -497,3 +579,5 @@ function downloadImage(dataUrl, filename) {
   a.click();
   document.body.removeChild(a);
 }
+
+

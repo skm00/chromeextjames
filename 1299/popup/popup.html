@@ -17,7 +17,7 @@
     html,
     body {
       font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #f6f8fa;
+     /*   background-color: #f6f8fa;*/
       margin: 0;
       width: 300px;
       /* Increased width */
@@ -233,7 +233,7 @@
 
 </head>
 
-<body>
+<body  id="mainconttt">
   <div class="container">
     <div class="button-row ">
 
@@ -263,11 +263,23 @@
       <button id="selectArea" title="drag the cursor till you want screenshot" class="button">Select</button> 
 	  <button id="selecto" title="old area select screenshot" class="button">Select<sup>Old</sup></button>
       <button id="selectscroll" title="select + scroll , Most Popular" class="button">Scroll</button>
-           <button id="selectAreahd" title="HD screenshot" class="button">HD</button>
-           <button id="selectAreagif" title="GIF screenshot" class="button">GIF</button>
-
+       
 
     </div>
+	
+	<div class="button-row" style="margin-top: 2px; display: flex; gap: 5px; justify-content: center; flex-wrap: wrap;">
+  <button id="selectAreahd" title="Capture HD screenshot" class="button">HD</button>
+ <!-- <button id="selectAreagif" title="Record GIF" class="button">GIF</button>-->
+    <button id="selectAreagifselector" title="Record GIF" class="button">GIF </button>
+
+  <button id="compressgif" title="Compress large GIFs (100MB → 5MB)" class="button" 
+          style="background: #ff6b35; color: white; border: none;">
+    Comp GIF
+  </button>
+</div>
+	
+	
+    <div id="paidsecmsg"></div>
 
     <div class="spacer"></div>
     <div id="to-be-hidden">
@@ -278,6 +290,10 @@
 
 
       <!-- Row for This Tab and Capture Fragment -->
+	  
+	  
+
+	  
       <div class="button-row">
         <button id="allShow" title="it will capture full tab on click" class="button">Tab</button>
         <button id="capturefragment" title="Capture a specific fragment of the page" class="button">Fragment

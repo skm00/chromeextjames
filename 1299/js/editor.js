@@ -1091,9 +1091,15 @@ document.addEventListener('DOMContentLoaded', () => {
             type: "popup",
         }, newWindow => {
             const tabId = newWindow.tabs[0].id;
-
+console.log('11111');
             chrome.tabs.onUpdated.addListener(function listener(updatedTabId, changeInfo) {
+				console.log('22222');
+
+				
                 if (updatedTabId === tabId && changeInfo.status === "complete") {
+					console.log('33333');
+
+					
                     chrome.scripting.executeScript({
                         target: { tabId: tabId },
                         func: (query, dataURL) => {

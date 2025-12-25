@@ -260,34 +260,30 @@
         removeOverlay();
     });
   
-    // FIXED: Save Button with improved hideoverlay
+    // Save Button: multi-pass capture, then automatically download
     saveBtn.addEventListener("click", (e) => {
         e.stopPropagation();
-        hideoverlayImmediate();
+        hideoverlay();
         doMultiPassCapture("save");
     });
-    
-    // FIXED: Copy Button with improved hideoverlay
+    // Copy Button: multi-pass capture, then copy image to clipboard
     copyBtn.addEventListener("click", (e) => {
         e.stopPropagation();
-        hideoverlayImmediate();
+        hideoverlay();
         doMultiPassCapture("copy");
     });
-    
-    // FIXED: Edit Button with improved hideoverlay
+    // Edit Button: multi-pass capture, then send to your editor
     editBtn.addEventListener("click", (e) => {
         e.stopPropagation();
-        hideoverlayImmediate();
+        hideoverlay();
         doMultiPassCapture("edit");
     });
-    
-    // FIXED: Upload Button with improved hideoverlay
+    // Upload Button: multi-pass capture, then upload
     uploadBtn.addEventListener("click", (e) => {
         e.stopPropagation();
-        hideoverlayImmediate();
+        hideoverlay();
         doMultiPassCapture("upload");
     });
-    
     function hideFixedElements() {
         document.querySelectorAll("*").forEach(el => {
             const style = window.getComputedStyle(el);
@@ -310,47 +306,45 @@
     // -- The "multi-pass" capture approach -------------------------------------
     function doMultiPassCapture(actionType) {
         hideFixedElements(); // Hide fixed elements before capture
-        
-        // Wait longer to ensure overlay is completely hidden before capture
-        setTimeout(() => {
-            const rect = selectionBox.getBoundingClientRect();
-            // Convert viewport-based rect to document-based coordinates
-            const absoluteLeft = window.scrollX + rect.left;
-            const absoluteTop = window.scrollY + rect.top;
-            const width = rect.width;
-            const height = rect.height;
-            
-            // Remove the overlay to avoid it showing up in screenshots.
-            removeOverlay(/*keep DOM = false*/);
-            
-            // Ensure UI changes are applied before capturing
-            requestAnimationFrame(() => {
-                // This does the heavy lifting of:
-                // 1) Scrolling the page in increments
-                // 2) Capturing each portion
-                // 3) Storing them in a large offscreen canvas
-                // 4) Returning final dataURL
-                multiPassCapture(absoluteLeft, absoluteTop, width, height, function (dataUrl) {
-                    restoreFixedElements();
-                    // dataUrl is the complete stitched image
-                    // your usual logic:
-                    if (actionType === "save") {
-                        downloadDataUrl(dataUrl, "screenshot.png");
-                    } else if (actionType === "copy") {
-                        copyDataUrlToClipboard(dataUrl);
-                    } else if (actionType === "edit") {
-                        // e.g., send to background or open new tab
-                        chrome.runtime.sendMessage({ cmd: "imgSrc", imgSrc: dataUrl });
-                    } else if (actionType === "upload") {
-                        uploadImage(dataUrl, { left: absoluteLeft, top: absoluteTop, width, height });
-                    }
-                });
+        // Hide UI so it doesn't appear in capture
+        overlay.style.backgroundColor = "transparent";
+        selectionBox.style.backgroundColor = "transparent";
+        selectionBox.style.border = "none";
+        buttonContainer.style.display = "none";
+        const rect = selectionBox.getBoundingClientRect();
+        // Convert viewport-based rect to document-based coordinates
+        const absoluteLeft = window.scrollX + rect.left;
+        const absoluteTop = window.scrollY + rect.top;
+        const width = rect.width;
+        const height = rect.height;
+        // Remove the overlay to avoid it showing up in screenshots.
+        removeOverlay(/*keep DOM = false*/);
+        // Ensure UI changes are applied before capturing
+        requestAnimationFrame(() => {
+            // This does the heavy lifting of:
+            // 1) Scrolling the page in increments
+            // 2) Capturing each portion
+            // 3) Storing them in a large offscreen canvas
+            // 4) Returning final dataURL
+            multiPassCapture(absoluteLeft, absoluteTop, width, height, function (dataUrl) {
+                restoreFixedElements();
+                // dataUrl is the complete stitched image
+                // your usual logic:
+                if (actionType === "save") {
+                    downloadDataUrl(dataUrl, "screenshot.png");
+                } else if (actionType === "copy") {
+                    copyDataUrlToClipboard(dataUrl);
+                } else if (actionType === "edit") {
+                    // e.g., send to background or open new tab
+                    chrome.runtime.sendMessage({ cmd: "imgSrc", imgSrc: dataUrl });
+                } else if (actionType === "upload") {
+                    uploadImage(dataUrl, { left: absoluteLeft, top: absoluteTop, width, height });
+                }
             });
-        }, 200); // Increased delay to 200ms to ensure overlay is hidden
+        });
     }
-    
     /**
-     * The core function that scrolls the page in small "tiles" to capture the entire
+     * The core function that scrolls the page in small “tiles” to capture the entire
      * chosen rectangle. It stitches them into a single final image via an offscreen canvas.
      *
      * @param {Number} selLeft The selection's left in document coords
@@ -480,14 +474,8 @@
         xhr.onload = function () {
             if (xhr.status === 200) {
                 console.log("Upload success:", xhr.responseText);
-                try {
-                    const url = new DOMParser()
-                        .parseFromString(xhr.responseText, "text/html")
-                        .querySelector("share").innerHTML;
-                    window.open(url, "_blank");
-                } catch (err) {
-                    console.error("Error parsing server response:", err);
-                }
+                // For example, parse server response (if it gives you a shareable URL)
+                // ...
             } else {
                 console.error("Upload failed:", xhr.statusText);
             }
@@ -543,69 +531,32 @@
         });
         return btn;
     }
-    
-    // FIXED: Improved hideoverlay function - removes all delays and conditions
-    function hideoverlayImmediate() {
-        const overlayttt = document.getElementById("scrshtAreaOverlay");
-        const selectionBoxEl = document.getElementById("scrshtAreaselectionBox");
-        const hiddenButton = document.getElementById("hiddenbtnscrsht");
-        
-        // Hide button container immediately
-        if (hiddenButton) {
-            hiddenButton.style.display = "none";
-        }
-        
-        // Make overlay transparent immediately
-        if (overlayttt) {
-            overlayttt.style.backgroundColor = "transparent";
-            overlayttt.style.border = "none";
-            overlayttt.style.outline = "none";
-        }
-        
-        // Make selection box transparent immediately
-        if (selectionBoxEl) {
-            selectionBoxEl.style.backgroundColor = "transparent";
-            selectionBoxEl.style.border = "none";
-            selectionBoxEl.style.outline = "none";
-        }
-    }
-    
-    // auto edit clicks starts here
+    // auto edit clicks starts here hideoverlay
     function checkAndTrigger() {
         const hiddenButton = document.getElementById("hiddenbtnscrsht");
         if (hiddenButton) {
             const isFlex = getComputedStyle(hiddenButton).display === "flex";
             if (isFlex) {
-                hideoverlayImmediate();
                 hiddenButton.style.display = "none";
                 const overlaytttyr = document.getElementById("scrshtAreaOverlay");
-                if (overlaytttyr) {
-                    overlaytttyr.style.backgroundColor = "transparent";
-                    overlaytttyr.style.border = "none";
-                    overlaytttyr.style.outline = "none";
-                }
+                overlaytttyr.style.backgroundColor = "transparent";
                 const overlaytttyrtytt = document.getElementById("scrshtAreaselectionBox");
-                if (overlaytttyrtytt) {
-                    overlaytttyrtytt.style.backgroundColor = "transparent";
-                    overlaytttyrtytt.style.border = "none";
-                    overlaytttyrtytt.style.outline = "none";
-                }
+                overlaytttyrtytt.style.backgroundColor = "transparent";
+                overlaytttyrtytt.style.border = "none";
+                overlaytttyrtytt.style.outline = "none";
+                overlaytttyr.style.border = "none";
+                overlaytttyr.style.outline = "none";
                 triggerSelectEditClick();
                 clearInterval(checkInterval);
             }
         }
     }
     const checkInterval = setInterval(checkAndTrigger, 2000);
-    
     function triggerSelectEditClick() {
         const overlaytttyr = document.getElementById("scrshtAreaOverlay");
-        if (overlaytttyr) {
-            overlaytttyr.style.backgroundColor = "transparent";
-        }
+        overlaytttyr.style.backgroundColor = "transparent";
         const overlaytttyrtytt = document.getElementById("scrshtAreaselectionBox");
-        if (overlaytttyrtytt) {
-            overlaytttyrtytt.style.backgroundColor = "transparent";
-        }
+        overlaytttyrtytt.style.backgroundColor = "transparent";
         setTimeout(() => {
             const selectEditButton = document.getElementById("select_edit");
             if (selectEditButton) {
@@ -613,9 +564,19 @@
             } else {
                 console.error("Element with id 'select_edit' not found!");
             }
-        }, 150);
+        }, 150); // Delay of 100 milliseconds
     }
-    
+    function hideoverlay() {
+        setTimeout(() => {
+            const overlayttt = document.getElementById("scrshtAreaOverlay");
+            const hiddenButton = document.getElementById("hiddenbtnscrsht");
+            if (window.getComputedStyle(hiddenButton).display === "flex") {
+                overlayttt.style.backgroundColor = "transparent";
+                overlayttt.style.border = "none";
+                overlayttt.style.outline = "none";
+            }
+        }, 100);
+    }
     // -- Position the button container, pinned at top-center of viewport --------
     function positionButtons() {
         const bcWidth = buttonContainer.offsetWidth;

@@ -22,6 +22,12 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
 });
 
 
+
+ 
+ 
+
+
+
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
   console.log("Received message:", message);
 
@@ -34,9 +40,13 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
     sendResponse({ success: true });
     return true;
   }
+  
+  
 });
 
 
+
+ 
 
 
 // Initialize or migrate collections on extension load

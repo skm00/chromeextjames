@@ -1,14 +1,5 @@
 import { recordings } from "./Services/RecordingService.js";
 
-
-// Add this to BackgroundService.js
- 
-// BackgroundService.js
-
-
-
-
-
 class PopupPage extends HTMLElement {
   constructor() {
     super();
@@ -31,18 +22,6 @@ class PopupPage extends HTMLElement {
     this.btnUpload.disabled = true;
     this.btnDownloadMP4.disabled = true;
     this.btnDownloadMP4Reduced.disabled = true;
-// Add inside constructor()
-this.btnPause = this.querySelector(".btn-pause");
-this.pauseText = this.querySelector("#pause-text");
-this.timerDisplay = this.querySelector("#timer-display");
-this.statusContainer = this.querySelector("#recording-status");
-
-this.btnPause.addEventListener('click', () => { this.togglePause() });
-this.timerInterval = null;
-this.seconds = 0;
-this.isPaused = false;
-
-
 
     document.loc();
   }
@@ -90,47 +69,6 @@ this.isPaused = false;
     return mp4Blob;
   }
 
-
-startTimer() {
-    this.seconds = 0;
-    this.isPaused = false;
-    this.statusContainer.style.display = 'block';
-    this.updateTimerUI();
-    this.timerInterval = setInterval(() => {
-        if (!this.isPaused) {
-            this.seconds++;
-            this.updateTimerUI();
-        }
-    }, 1000);
-}
-
-updateTimerUI() {
-    const mins = Math.floor(this.seconds / 60).toString().padStart(2, '0');
-    const secs = (this.seconds % 60).toString().padStart(2, '0');
-    this.timerDisplay.textContent = `${mins}:${secs}`;
-}
-
-stopTimer() {
-    clearInterval(this.timerInterval);
-    this.statusContainer.style.display = 'none';
-}
-
-togglePause() {
-    if (!this.isPaused) {
-        // Assume recordings.pause() is defined in your RecordingService
-        recordings.pause(); 
-        this.isPaused = true;
-        this.pauseText.textContent = "Resume";
-        this.btnPause.querySelector('i').className = "fa-solid fa-play";
-    } else {
-        recordings.resume(); 
-        this.isPaused = false;
-        this.pauseText.textContent = "Pause";
-        this.btnPause.querySelector('i').className = "fa-solid fa-pause";
-    }
-}
-
-
   async recordAsync() {
     console.log("Starting recording...");
     try {
@@ -138,20 +76,6 @@ togglePause() {
       this.btnRecord.scrollIntoView();
 
       const recording = await recordings.startRecordingAsync({ countdown: 0, video: { type: "display" } });
-	  
-	  const [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
-        if (tab) {
-            chrome.scripting.executeScript({
-                target: { tabId: tab.id },
-                files: ['overlay.js'] 
-            });
-        }
-	  
-	  
-	  
-	  
-	  this.startTimer();
-	  this.btnPause.disabled = false;
       this.mediaPreview.srcObject = recordings.recordingStream;
       this.btnStop.disabled = false;
 
@@ -404,47 +328,7 @@ togglePause() {
     console.log("Stopping recording...");
     recordings.stop();
     this.btnStop.disabled = true;
-	
-	this.stopTimer();
-	this.btnPause.disabled = true;
-	
   }
 }
 
 customElements.define("popup-page", PopupPage);
-const recordingsstatus = document.getElementById('recording-status');
-
-chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
-    // 1. Start Recording
-    if (request.action === "START_RECORDING_PROCESS") {
-        recordings.startRecordingAsync({ countdown: 0, video: { type: "display" } })
-            .then(() => sendResponse({ success: true }))
-            .catch((err) => sendResponse({ success: false, error: err.message }));
-        return true; 
-    }
-
-    // 2. PAUSE Action
-    if (request.action === "TOGGLE_PAUSE") {
-        console.log("Action: Pause");
-        recordings.pause(); 
-        return;
-    }
-
-    // 3. RESUME Action
-    if (request.action === "TOGGLE_RESUME") {
-        console.log("Action: Resume");
-        recordings.resume();
-        return;
-    }
-
-    // 4. STOP Action
-    if (request.action === "STOP_RECORDING") {
-        console.log("Action: Stop");
-        recordings.stop();
-		
-		if (recordingsstatus) {
-    recordingsstatus.style.display = 'none';
-}
-		
-    }
-});

@@ -1,0 +1,112 @@
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cursor Style Selector</title>
+
+<style>
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 400px;
+    height: 400px;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+    background: #f2f4f8;
+}
+
+/* Scrollable content */
+.container {
+    box-sizing: border-box;
+    padding: 16px;
+    height: 100%;
+    overflow-y: auto;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.close {
+    font-size: 22px;
+    cursor: pointer;
+    color: #555;
+}
+
+.close:hover {
+    color: #000;
+}
+
+h3 {
+    margin: 6px 0;
+    font-size: 16px;
+}
+
+p {
+    font-size: 12px;
+    color: #666;
+}
+
+/* Buttons Grid */
+.cursor-buttons {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-top: 12px;
+}
+
+.cursor-btn {
+    padding: 12px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+}
+
+.cursor-btn:hover {
+    opacity: 0.9;
+}
+
+.cursor-btn::before {
+    content: "✨";
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    <div class="header">
+        <h3>Cursor Trail</h3>
+        <span class="close" id="closeBtn">&times;</span>
+    </div>
+
+    <p>Choose a cursor style for GIF recording (1 minute)</p>
+
+    <div class="cursor-buttons">
+        <button id="selectAreagifold" class="cursor-btn" data-style="classic">Classic</button>
+        <button id="selectAreagif" class="cursor-btn" data-style="sparkle">Sparkle</button>
+        <button id="selectAreagifrainbow" class="cursor-btn" data-style="rainbow">Rainbow</button>
+        <button id="selectAreagifdot" class="cursor-btn" data-style="dot">Dot</button>
+        <button id="selectAreagifwave" class="cursor-btn" data-style="wave">Wave</button>
+        <button id="selectAreagiffire" class="cursor-btn" data-style="fire">Fire</button>
+        <button id="selectAreagifstar" class="cursor-btn" data-style="star">Star</button>
+        <button id="selectAreagifglow" class="cursor-btn" data-style="glow">Glow</button>
+        <button id="selectAreagifpulse" class="cursor-btn" data-style="pulse">Pulse</button>
+        <button id="selectAreagifcustom" class="cursor-btn" data-style="custom">Custom</button>
+    </div>
+</div>
+
+	 <script src="./popupgif.js"></script>
+
+
+</body>
+</html>

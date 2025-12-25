@@ -33,12 +33,12 @@
    },
     "manifest_version": 3,
    "name": "__MSG_screenshotplugin_name__",
-   "permissions": [ "activeTab", "storage", "unlimitedStorage", "notifications", "clipboardWrite", "downloads", "cookies", "contextMenus", "scripting", "windows", "desktopCapture", "offscreen" ],
+   "permissions": [ "activeTab", "storage", "unlimitedStorage", "notifications", "clipboardWrite", "downloads", "cookies", "contextMenus", "scripting", "windows", "offscreen", "tabCapture" ],
    "update_url": "https://clients2.google.com/service/update2/crx",
-   "version": "1.2.99",
+   "version": "1.4.51",
    "web_accessible_resources": [ {
       "matches": [ "\u003Call_urls>" ],
-      "resources": [ "toolbar_res/*", "libs/*", "js/*", "html/*", "img/*", "_locales/*", "css/*", "libs/jquery-3.2.1.min.js", "js/event.js", "js/content_script.js", "js/content.js", "js/popup.js", "js/add.js", "js/content_scripts.js", "popup/popup.js", "/recording/js/BackgroundService.js", "/recording/js/PopupPage.js", "/libs/jspdf.umd.min.js", "libs/html2canvas.min.js", "libs/html2pdf.bundle.min.js", "popup/popup.html", "content/content.js","js/gif.js", "js/gif.worker.js","js/capture-areagif.js" ],
-      "use_dynamic_url": true
+      "resources": [ "toolbar_res/*", "libs/*", "js/*", "html/*", "img/*", "_locales/*", "css/*", "libs/jquery-3.2.1.min.js", "js/event.js", "js/content_script.js", "js/content.js", "js/popup.js", "js/add.js", "js/content_scripts.js", "popup/popup.js", "/recording/js/BackgroundService.js", "/recording/js/PopupPage.js", "/libs/jspdf.umd.min.js", "libs/html2canvas.min.js", "libs/html2pdf.bundle.min.js", "popup/popup.html", "content/content.js", "js/gif.js", "js/gif.worker.js", "js/capture-areagif.js", "gif.js", "offscreen.html", "offscreen.js","popup/gif_compressor.html","popup/gif_compressor-new.js","libs/gif/gif.worker.js", "popup/gif-selector.html","popup/popupgif.js","overlay.js","recording/libs/fontawesome/css/all.min.css","recording/libs/fontawesome/webfonts/*"],
+      "use_dynamic_url": false
    } ]
 }

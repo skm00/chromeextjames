@@ -1,4 +1,4 @@
-// capture-areagif.js
+// capture-areagif.js - Ripple Effect Version
 (function() {
   console.log("capture-areagif.js: Script injected and starting full-tab GIF recording!");  // Debug
 
@@ -6,8 +6,8 @@
   let timerInterval;
   let style;
   let cursorTrail = [];
-  let maxTrailLength = 15;
   let cursorRestoreTimeout;
+  let clickRipples = [];
 
   // Show recording indicator
   function showIndicator() {
@@ -36,27 +36,68 @@
       <button id="stop-gif-recording" style="margin-left: 10px; padding: 4px 12px; background: #BDC1C6; color: black; border: none; border-radius: 4px; cursor: pointer; font-weight: bold;">X</button>
     `;
     
-    // Add pulsing animation
+    // Add animations
     style = document.createElement('style');
     style.textContent = `
       @keyframes pulse {
         0%, 100% { opacity: 1; }
         50% { opacity: 0.3; }
       }
-      .cursor-trail-dot {
+      @keyframes rippleExpand {
+        0% {
+          width: 0px;
+          height: 0px;
+          opacity: 1;
+        }
+        100% {
+          width: 80px;
+          height: 80px;
+          opacity: 0;
+        }
+      }
+      @keyframes cursorGlow {
+        0%, 100% { 
+          box-shadow: 0 0 15px rgba(59, 130, 246, 0.8), 0 0 30px rgba(59, 130, 246, 0.4);
+          transform: scale(1);
+        }
+        50% { 
+          box-shadow: 0 0 25px rgba(59, 130, 246, 1), 0 0 50px rgba(59, 130, 246, 0.6);
+          transform: scale(1.2);
+        }
+      }
+      .cursor-highlight {
         position: absolute;
-        width: 12px;
-        height: 12px;
-        background: radial-gradient(circle, rgba(255, 68, 68, 0.9) 0%, rgba(255, 68, 68, 0.4) 100%);
-        border: 2px solid rgba(255, 255, 255, 0.8);
+        width: 24px;
+        height: 24px;
+        border: 3px solid #3b82f6;
         border-radius: 50%;
         pointer-events: none;
         z-index: 2147483646;
-        box-shadow: 0 0 10px rgba(255, 68, 68, 0.6);
-        transition: all 0.15s ease-out;
+        background: radial-gradient(circle, rgba(59, 130, 246, 0.3) 0%, transparent 70%);
+        animation: cursorGlow 1.5s ease-in-out infinite;
+        box-shadow: 0 0 15px rgba(59, 130, 246, 0.8);
+      }
+      .cursor-highlight::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 4px;
+        height: 4px;
+        background: #3b82f6;
+        border-radius: 50%;
+      }
+      .click-ripple {
+        position: absolute;
+        border: 3px solid #f59e0b;
+        border-radius: 50%;
+        pointer-events: none;
+        z-index: 2147483645;
+        animation: rippleExpand 0.8s ease-out;
       }
       body * {
-        cursor: crosshair !important;
+        cursor: none !important;
       }
     `;
     document.head.appendChild(style);
@@ -70,55 +111,60 @@
     }, 1000);
   }
 
-  // Create cursor trail effect
-  function createCursorTrail() {
+  // Create cursor highlight
+  let cursorHighlight;
+  function createCursorHighlight() {
+    cursorHighlight = document.createElement('div');
+    cursorHighlight.className = 'cursor-highlight';
+    document.body.appendChild(cursorHighlight);
+    
     document.addEventListener('mousemove', handleMouseMove);
+    document.addEventListener('click', handleClick);
   }
 
   function handleMouseMove(e) {
-    // Create new trail dot
-    const dot = document.createElement('div');
-    dot.className = 'cursor-trail-dot';
-    dot.style.left = (e.pageX - 6) + 'px';
-    dot.style.top = (e.pageY - 6) + 'px';
-    document.body.appendChild(dot);
-
-    // Add to trail array
-    cursorTrail.push(dot);
-
-    // Fade out and remove oldest dots
-    if (cursorTrail.length > maxTrailLength) {
-      const oldDot = cursorTrail.shift();
-      oldDot.style.opacity = '0';
-      oldDot.style.transform = 'scale(0.5)';
-      setTimeout(() => oldDot.remove(), 150);
+    if (cursorHighlight) {
+      cursorHighlight.style.left = (e.pageX - 12) + 'px';
+      cursorHighlight.style.top = (e.pageY - 12) + 'px';
     }
-
-    // Fade out effect for all dots
-    cursorTrail.forEach((trailDot, index) => {
-      const opacity = (index + 1) / cursorTrail.length;
-      const scale = 0.4 + (opacity * 0.6);
-      trailDot.style.opacity = opacity;
-      trailDot.style.transform = `scale(${scale})`;
-    });
   }
 
-  // Remove cursor trail effect
-  function removeCursorTrail() {
-    document.removeEventListener('mousemove', handleMouseMove);
+  function handleClick(e) {
+    // Create ripple effect on click
+    const ripple = document.createElement('div');
+    ripple.className = 'click-ripple';
+    ripple.style.left = (e.pageX - 40) + 'px';
+    ripple.style.top = (e.pageY - 40) + 'px';
+    document.body.appendChild(ripple);
     
-    // Remove all trail dots
-    cursorTrail.forEach(dot => {
-      dot.style.opacity = '0';
-      dot.style.transform = 'scale(0)';
-      setTimeout(() => dot.remove(), 150);
-    });
-    cursorTrail = [];
+    clickRipples.push(ripple);
+    
+    // Remove ripple after animation
+    setTimeout(() => {
+      ripple.remove();
+      clickRipples = clickRipples.filter(r => r !== ripple);
+    }, 800);
+  }
+
+  // Remove cursor effects
+  function removeCursorEffects() {
+    document.removeEventListener('mousemove', handleMouseMove);
+    document.removeEventListener('click', handleClick);
+    
+    // Remove cursor highlight
+    if (cursorHighlight) {
+      cursorHighlight.remove();
+      cursorHighlight = null;
+    }
+    
+    // Remove all ripples
+    clickRipples.forEach(ripple => ripple.remove());
+    clickRipples = [];
 
     // Restore default cursor
-    if (style && style.textContent.includes('cursor: crosshair')) {
+    if (style && style.textContent.includes('cursor: none')) {
       style.textContent = style.textContent.replace(
-        'body * {\n        cursor: crosshair !important;\n      }',
+        'body * {\n        cursor: none !important;\n      }',
         ''
       );
     }
@@ -130,8 +176,8 @@
     if (timerInterval) clearInterval(timerInterval);
     if (cursorRestoreTimeout) clearTimeout(cursorRestoreTimeout);
     
-    // Remove cursor trail
-    removeCursorTrail();
+    // Remove cursor effects
+    removeCursorEffects();
     
     // Update indicator to show encoding progress
     const indicator = document.getElementById('gif-recording-indicator');
@@ -206,11 +252,11 @@
         }
         
         showIndicator();
-        createCursorTrail();
+        createCursorHighlight();
 
         // Auto-restore cursor after 60 seconds (1 minute)
         cursorRestoreTimeout = setTimeout(() => {
-          removeCursorTrail();
+          removeCursorEffects();
           console.log("capture-areagif.js: Cursor restored to default after 60 seconds");
         }, 60000);
 
