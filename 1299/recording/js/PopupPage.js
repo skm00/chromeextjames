@@ -1,13 +1,30 @@
 import { recordings } from "./Services/RecordingService.js";
 
-
-// Add this to BackgroundService.js
- 
-// BackgroundService.js
-
-
-
-
+const overlayManager = {
+  async showOverlayOnAllTabs() {
+    const tabs = await chrome.tabs.query({}).catch(() => []);
+    await Promise.allSettled(
+      tabs.map((tab) =>
+        chrome.scripting
+          .executeScript({
+            target: { tabId: tab.id },
+            files: ["overlay.js"],
+          })
+          .catch(() => {})
+      )
+    );
+  },
+  async cleanupOverlayOnAllTabs() {
+    const tabs = await chrome.tabs.query({}).catch(() => []);
+    await Promise.allSettled(
+      tabs.map((tab) =>
+        chrome.tabs
+          .sendMessage(tab.id, { action: "CLEANUP_OVERLAY" })
+          .catch(() => {})
+      )
+    );
+  },
+};
 
 class PopupPage extends HTMLElement {
   constructor() {
@@ -138,20 +155,11 @@ togglePause() {
       this.btnRecord.scrollIntoView();
 
       const recording = await recordings.startRecordingAsync({ countdown: 0, video: { type: "display" } });
-	  
-	  const [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
-        if (tab) {
-            chrome.scripting.executeScript({
-                target: { tabId: tab.id },
-                files: ['overlay.js'] 
-            });
-        }
-	  
-	  
-	  
-	  
-	  this.startTimer();
-	  this.btnPause.disabled = false;
+
+      await overlayManager.showOverlayOnAllTabs();
+
+      this.startTimer();
+      this.btnPause.disabled = false;
       this.mediaPreview.srcObject = recordings.recordingStream;
       this.btnStop.disabled = false;
 
@@ -172,8 +180,11 @@ togglePause() {
       this.btnDownloadMP4Reduced.disabled = false;
 
       this.btnDownload.scrollIntoView();
+
+      await overlayManager.cleanupOverlayOnAllTabs();
     } catch (error) {
       console.error("Recording error:", error);
+      await overlayManager.cleanupOverlayOnAllTabs();
       this.btnRecord.disabled = false;
     }
   }
@@ -400,13 +411,15 @@ togglePause() {
 
 
 
-  stop() {
+  async stop() {
     console.log("Stopping recording...");
     recordings.stop();
     this.btnStop.disabled = true;
 	
 	this.stopTimer();
 	this.btnPause.disabled = true;
+
+    await overlayManager.cleanupOverlayOnAllTabs();
 	
   }
 }
@@ -417,10 +430,16 @@ const recordingsstatus = document.getElementById('recording-status');
 chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
     // 1. Start Recording
     if (request.action === "START_RECORDING_PROCESS") {
-        recordings.startRecordingAsync({ countdown: 0, video: { type: "display" } })
-            .then(() => sendResponse({ success: true }))
-            .catch((err) => sendResponse({ success: false, error: err.message }));
-        return true; 
+        (async () => {
+            try {
+                await recordings.startRecordingAsync({ countdown: 0, video: { type: "display" } });
+                await overlayManager.showOverlayOnAllTabs();
+                sendResponse({ success: true });
+            } catch (err) {
+                sendResponse({ success: false, error: err.message });
+            }
+        })();
+        return true;
     }
 
     // 2. PAUSE Action
@@ -445,6 +464,7 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
 		if (recordingsstatus) {
     recordingsstatus.style.display = 'none';
 }
-		
+
+        overlayManager.cleanupOverlayOnAllTabs();
     }
 });
